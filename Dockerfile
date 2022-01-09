@@ -5,6 +5,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -qq crudini
 
+COPY ckanext/ckanext-branding /usr/lib/ckan/venv/src/ckanext/ckanext-branding
+RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding
+
 COPY entrypoint/custom-entrypoint.sh /
 RUN chmod +x custom-entrypoint.sh
 

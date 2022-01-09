@@ -1,0 +1,14 @@
+# branding-js:
+#   filter: rjsmin
+#   output: ckanext-branding/%(version)s-branding.js
+#   contents:
+#     - js/branding.js
+#   extra:
+#     preload:
+#       - base/main
+
+# branding-css:
+#   filter: cssrewrite
+#   output: ckanext-branding/%(version)s-branding.css
+#   contents:
+#     - css/branding.css

@@ -12,13 +12,19 @@ shopt -s expand_aliases
 
 #ckan
 conf_set ckan.site_title "catalogue-tools4msp"
-#conf_set ckan.site_description ""
+conf_set ckan.site_description "This is the portal of the catalogue-tools4msp project."
 #conf_set ckan.site_logo ""
 #conf_set ckan.site_intro_text ""
-#conf_set ckan.site_about "
-## About
+conf_set ckan.site_about "
+# About
 #$(conf_get ckan.site_intro_text)
-#"
+
+# Developers
+Source code available at [gitlab.com/gisdev.io/catalogue-tools4msp](https://gitlab.com/gisdev.io/catalogue-tools4msp).
+
+# Administrators
+Harvesting operations can be monitored at [/harvest](/harvest).
+"
 
 #ckanext-branding
 conf_set_list ckan.plugins "branding"

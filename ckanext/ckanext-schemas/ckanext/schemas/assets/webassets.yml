@@ -1,0 +1,14 @@
+# schemas-js:
+#   filter: rjsmin
+#   output: ckanext-schemas/%(version)s-schemas.js
+#   contents:
+#     - js/schemas.js
+#   extra:
+#     preload:
+#       - base/main
+
+# schemas-css:
+#   filter: cssrewrite
+#   output: ckanext-schemas/%(version)s-schemas.css
+#   contents:
+#     - css/schemas.css

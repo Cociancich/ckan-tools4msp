@@ -46,6 +46,18 @@ services:
     ports:
       - "5000:5000"
 
+  ckan-harvester-fetch:
+    << : *default-common-ckan-extra
+    command: ckan --config=/etc/ckan/production.ini harvester fetch-consumer
+
+  ckan-harverster-gather:
+    << : *default-common-ckan-extra
+    command: ckan --config=/etc/ckan/production.ini harvester gather-consumer
+
+  ckan-harvester-run:
+    << : *default-common-ckan-extra
+    command: bash -c 'while [ 1 ]; do ckan --config=/etc/ckan/production.ini harvester run; sleep 10m; done'
+
   db:
     image: registry.gitlab.com/gisdev.io/ckan/postgresql
     environment:

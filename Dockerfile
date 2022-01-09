@@ -8,6 +8,9 @@ RUN apt-get update && \
 COPY ckanext/ckanext-branding /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 
+COPY ckanext/ckanext-schemas /usr/lib/ckan/venv/src/ckanext/ckanext-schemas
+RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-schemas
+
 COPY entrypoint/custom-entrypoint.sh /
 RUN chmod +x custom-entrypoint.sh
 

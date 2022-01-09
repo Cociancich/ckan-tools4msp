@@ -23,4 +23,7 @@ conf_set ckan.site_title "catalogue-tools4msp"
 #ckanext-branding
 conf_set_list ckan.plugins "branding"
 
+#ckanext-schemas
+conf_set_list ckan.plugins "schemas"
+
 exec "$@"

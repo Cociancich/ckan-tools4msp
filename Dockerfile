@@ -5,6 +5,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -qq crudini
 
+ARG CKANEXT_SCHEMING_VERSION=cee49eea5e69c800403432785ec4086a0611641c
+RUN ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-scheming.git@${CKANEXT_SCHEMING_VERSION}
+
 COPY ckanext/ckanext-branding /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 

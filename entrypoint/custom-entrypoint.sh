@@ -17,7 +17,8 @@ function conf_set_list() {
 #ckan
 conf_set ckan.site_title "catalogue-tools4msp"
 conf_set ckan.site_description "This is the portal of the catalogue-tools4msp project."
-#conf_set ckan.site_logo ""
+conf_set ckan.site_logo "/mspmed.png"
+conf_set ckan.favicon "favicon.png"
 #conf_set ckan.site_intro_text ""
 conf_set ckan.site_about "
 # About

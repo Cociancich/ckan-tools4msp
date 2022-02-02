@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, .main {
+  @apply bg-white !important;
+  background-image: none !important;
+}
+
+.masthead {
+  @apply bg-primary !important;
+  background-image: none !important;
+}
+.site-footer {
+  @apply bg-secondary !important;
+  background-image: none !important;
+}
+.account-masthead {
+  @apply bg-light !important;
+  background-image: none !important;
+}
+.account-masthead .account ul li {
+  @apply border-primary !important;
+}
+.account-masthead .account ul li a {
+  @apply text-primary !important;
+}
+.account-masthead .account ul li a:hover {
+  @apply text-white !important;
+  @apply bg-primary !important;
+}
+
+.hero {
+  @apply bg-white !important;
+}
+
+.homepage [role=main] {
+  padding: 0px !important;
+}
+
+.homepage [role=main] .hero {
+  max-height: 350px;
+}
+
+.homepage [role=main] .hero img {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.masthead hgroup h1 {
+  font-weight: 400 !important;
+  letter-spacing: unset !important;
+  margin: 0 !important;
+}
+
+.masthead hgroup h1, .masthead hgroup h2 {
+  float: none !important;
+}
+
+.site-footer a {
+  @apply text-light !important;
+}
+
+.site-footer, .site-footer label, .site-footer small {
+  @apply text-light !important;
+}

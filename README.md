@@ -38,3 +38,10 @@ docker attach catalogue-tools4msp_ckan
 (Pdb) restart
 (Pdb) c
 ```
+
+For modifications to CSS with livereload
+```
+cd cnext/cnext-branding
+npm install
+npm run dev
+```

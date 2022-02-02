@@ -22,3 +22,19 @@ This command will delete all the containers and all the volumes (`-v`).
 ``` 
 docker-compose down -v
 ```
+
+## Development
+
+Run development environment with
+
+```
+# This will create the containers, ckan container will have a pdb session active
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --force-recreate -d
+# So attach to the session
+docker attach catalogue-tools4msp_ckan
+# Start the server
+(Pdb) c
+# On source changes
+(Pdb) restart
+(Pdb) c
+```

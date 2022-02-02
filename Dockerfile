@@ -19,8 +19,9 @@ RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 COPY ckanext/ckanext-schemas /usr/lib/ckan/venv/src/ckanext/ckanext-schemas
 RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-schemas
 
-COPY entrypoint/custom-entrypoint.sh /
-RUN chmod +x custom-entrypoint.sh
+COPY --chmod=+x entrypoint/custom-entrypoint.sh entrypoint/dev-entrypoint.sh /
+
+COPY patches /patches
 
 USER ckan
 ENTRYPOINT ["/bin/bash", "/custom-entrypoint.sh"]

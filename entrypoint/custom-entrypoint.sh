@@ -4,11 +4,15 @@ set -e
 /ckan-entrypoint.sh
 
 conf="/etc/ckan/production.ini"
-alias conf_set="crudini --set $conf app:main"
-alias conf_get="crudini --get $conf app:main"
-alias conf_set_list="crudini --set --list --list-sep=' ' $conf app:main"
-
-shopt -s expand_aliases
+function conf_set() { crudini --set "$conf" app:main "$@"; }
+function conf_get() { crudini --get "$conf" app:main "$@"; }
+function conf_set_list() {
+    param="$1"
+    shift
+    for var in "$@"; do
+        crudini --set --list --list-sep=' ' "$conf" app:main "$param" "$var"
+    done
+}
 
 #ckan
 conf_set ckan.site_title "catalogue-tools4msp"
@@ -27,17 +31,17 @@ Harvesting operations can be monitored at [/harvest](/harvest).
 "
 
 #ckanext-branding
-conf_set_list ckan.plugins "branding"
+conf_set_list ckan.plugins branding
 
 #ckanext-scheming
-conf_set_list ckan.plugins "scheming_datasets schemas"
+conf_set_list ckan.plugins scheming_datasets schemas
 conf_set scheming.dataset_schemas "ckanext.schemas:custom_schema.yaml ckanext.schemas:msp_data.json ckanext.schemas:msp_portal.json ckanext.schemas:msp_tool.json"
 
 #ckanext-schemas
-conf_set_list ckan.plugins "schemas"
+conf_set_list ckan.plugins schemas
 
 #ckanext-harvest
-conf_set_list ckan.plugins "harvest ckan_harvester"
+conf_set_list ckan.plugins harvest ckan_harvester
 conf_set ckan.harvest.mq.type "redis"
 conf_set ckan.harvest.mq.hostname "redis"
 #conf_set ckan.harvest.protect_fields "notes tags topics"

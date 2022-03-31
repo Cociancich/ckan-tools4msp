@@ -36,6 +36,7 @@ conf_set_list ckan.plugins branding
 #ckanext-scheming
 conf_set_list ckan.plugins scheming_datasets schemas
 conf_set scheming.dataset_schemas "ckanext.schemas:custom_schema.yaml ckanext.schemas:msp_data.json ckanext.schemas:msp_portal.json ckanext.schemas:msp_tool.json"
+conf_set ckan.search.show_all_types true
 
 #ckanext-schemas
 conf_set_list ckan.plugins schemas

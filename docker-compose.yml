@@ -24,6 +24,8 @@ x-common-ckan:
     POSTGRES_PASSWORD: ckan
     DS_RO_PASS: datastore
     CKAN_INI: /etc/ckan/production.ini
+    OAUTH2_CLIENT_ID: SET_OAUTH2_CLIENT_ID
+    OAUTH2_CLIENT_SECRET: SET_OAUTH2_CLIENT_SECRET
   volumes:
     - ckan_storage:/var/lib/ckan
 

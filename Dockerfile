@@ -13,6 +13,11 @@ RUN wget -q https://raw.githubusercontent.com/ckan/ckanext-harvest/${CKANEXT_HAR
     ckan-pip3 --no-cache install -r requirements-ckanext-harvest.txt && \
     ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-harvest.git@${CKANEXT_HARVEST_VERSION}
 
+ARG CKANEXT_OAUTH2_VERSION=3633240df15112af591fbd7f87739681acf1af5a
+RUN wget -q https://raw.githubusercontent.com/FedericOldani/ckanext-oauth2/${CKANEXT_OAUTH2_VERSION}/requirements.txt -O requirements-ckanext-oauth2.txt && \
+    ckan-pip3 --no-cache install -r requirements-ckanext-oauth2.txt && \
+    ckan-pip3 --no-cache install git+https://github.com/FedericOldani/ckanext-oauth2.git@${CKANEXT_OAUTH2_VERSION}
+
 COPY ckanext/ckanext-branding /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 

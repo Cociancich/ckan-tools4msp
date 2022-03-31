@@ -8,10 +8,10 @@ RUN apt-get update && \
 ARG CKANEXT_SCHEMING_VERSION=1307aedec8ae8b1c4c86d33ede654a3d9afe7fa3
 RUN ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-scheming.git@${CKANEXT_SCHEMING_VERSION}
 
-ARG CKANEXT_HARVEST_VERSION=protect-fields
-RUN wget -q https://raw.githubusercontent.com/frafra/ckanext-harvest/${CKANEXT_HARVEST_VERSION}/pip-requirements.txt -O requirements-ckanext-harvest.txt && \
+ARG CKANEXT_HARVEST_VERSION=b17eb5e714a28c26de8be6150de4d1ed4c815c13
+RUN wget -q https://raw.githubusercontent.com/ckan/ckanext-harvest/${CKANEXT_HARVEST_VERSION}/pip-requirements.txt -O requirements-ckanext-harvest.txt && \
     ckan-pip3 --no-cache install -r requirements-ckanext-harvest.txt && \
-    ckan-pip3 --no-cache install git+https://github.com/frafra/ckanext-harvest.git@${CKANEXT_HARVEST_VERSION}
+    ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-harvest.git@${CKANEXT_HARVEST_VERSION}
 
 COPY ckanext/ckanext-branding /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding

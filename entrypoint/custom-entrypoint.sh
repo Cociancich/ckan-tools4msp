@@ -45,7 +45,7 @@ conf_set_list ckan.plugins schemas
 conf_set_list ckan.plugins harvest ckan_harvester
 conf_set ckan.harvest.mq.type "redis"
 conf_set ckan.harvest.mq.hostname "redis"
-#conf_set ckan.harvest.protect_fields "notes tags topics"
+#conf_set ckan.harvest.not_overwrite_fields "notes tags topics"
 
 [ "$CKAN_EXTRA" = "true" ] && ckan --config=$CKAN_INI harvester initdb
 

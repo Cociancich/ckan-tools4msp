@@ -35,5 +35,13 @@ class SchemasPlugin(plugins.SingletonPlugin):
 
     def before_index(self, pkg_dict):
         for field in ('category', 'web_services'):
-            pkg_dict["vocab_"+field] = json.loads(pkg_dict.get(field, '[]'))
+            data = pkg_dict.get(field)
+            if data:
+                try:
+                    data = json.loads(data)
+                except ValueError:
+                    data = []
+            else:
+                data = []
+            pkg_dict["vocab_"+field] = data
         return pkg_dict

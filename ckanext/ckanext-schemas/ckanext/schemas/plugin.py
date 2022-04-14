@@ -19,7 +19,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
 
     # IFacets
 
-    def _facets(self, facets_dict):
+    def dataset_facets(self, facets_dict, package_type):
         if 'groups' in facets_dict:
             del facets_dict['groups']
         facets_dict['vocab_category'] = toolkit._('Category')
@@ -28,8 +28,12 @@ class SchemasPlugin(plugins.SingletonPlugin):
         facets_dict['vocab_web_services'] = toolkit._('Web services')
         return facets_dict
 
-    def dataset_facets(self, facets_dict, package_type):
-        return self._facets(facets_dict)
+    def group_facets(self, facets_dict, group_type, package_type):
+        return self.dataset_facets(facets_dict, package_type)
+
+    def organization_facets(self, facets_dict, organization_type, package_type):
+        return self.dataset_facets(facets_dict, package_type)
+
 
     # IPackageController
 

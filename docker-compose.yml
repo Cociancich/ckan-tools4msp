@@ -10,7 +10,10 @@ x-common-ckan:
   build: .
   image: registry.gitlab.com/gisdev.io/ckan/main/ckan
   depends_on:
-    - db
+    db:
+      condition: service_healthy
+    solr:
+      condition: service_healthy
   environment:
     &default-common-env-ckan
     CKAN_SQLALCHEMY_URL: postgresql://ckan:ckan@db/ckan
@@ -33,7 +36,7 @@ services:
   ckan:
     << : *default-common-ckan
     healthcheck:
-      test: ["CMD", "wget", "-qO", "/dev/null", "http://ckan:5000"]
+      test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:5000"]
     ports:
       - "5000:5000"
 
@@ -52,8 +55,10 @@ services:
     image: registry.gitlab.com/gisdev.io/ckan/solr
     volumes:
       - solr_data:/opt/solr/server/solr/ckan/data
-  #  ports:
-  #    - 8983:8983
+    healthcheck:
+      test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:8983/solr/"]
+    #ports:
+    #  - 8983:8983
 
   redis:
     image: redis:6.2

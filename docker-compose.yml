@@ -29,17 +29,6 @@ x-common-ckan:
   volumes:
     - ckan_storage:/var/lib/ckan
 
-x-common-ckan-extra:
-  &default-common-ckan-extra
-  << : *default-common-ckan
-  depends_on:
-    ckan:
-      condition: service_healthy
-  environment:
-    &default-common-env-ckan-extra
-    << : *default-common-env-ckan
-    CKAN_EXTRA: "true"
-
 services:
   ckan:
     << : *default-common-ckan
@@ -47,18 +36,6 @@ services:
       test: ["CMD", "wget", "-qO", "/dev/null", "http://ckan:5000"]
     ports:
       - "5000:5000"
-
-  ckan-harvester-fetch:
-    << : *default-common-ckan-extra
-    command: ckan --config=/etc/ckan/production.ini harvester fetch-consumer
-
-  ckan-harverster-gather:
-    << : *default-common-ckan-extra
-    command: ckan --config=/etc/ckan/production.ini harvester gather-consumer
-
-  ckan-harvester-run:
-    << : *default-common-ckan-extra
-    command: bash -c 'while [ 1 ]; do ckan --config=/etc/ckan/production.ini harvester run; sleep 10m; done'
 
   db:
     image: registry.gitlab.com/gisdev.io/ckan/postgresql

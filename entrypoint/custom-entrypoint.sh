@@ -41,12 +41,6 @@ conf_set ckan.search.show_all_types true
 #ckanext-schemas
 conf_set_list ckan.plugins schemas
 
-#ckanext-harvest
-conf_set_list ckan.plugins harvest ckan_harvester
-conf_set ckan.harvest.mq.type "redis"
-conf_set ckan.harvest.mq.hostname "redis"
-#conf_set ckan.harvest.not_overwrite_fields "notes tags topics"
-
 #ckanext-oauth2
 conf_set_list ckan.plugins oauth2
 conf_set ckan.oauth2.authorization_endpoint https://accounts.google.com/o/oauth2/auth
@@ -59,7 +53,5 @@ conf_set ckan.oauth2.profile_api_user_field email
 conf_set ckan.oauth2.profile_api_fullname_field name
 conf_set ckan.oauth2.profile_api_mail_field email
 conf_set ckan.oauth2.authorization_header Authorization
-
-[ "$CKAN_EXTRA" = "true" ] && ckan --config=$CKAN_INI harvester initdb
 
 exec "$@"

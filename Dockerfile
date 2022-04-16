@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/gisdev.io/ckan/ckan
+FROM registry.gitlab.com/gisdev.io/ckan/ckan:dev-v2-9-gisdevio
 
 USER root
 ARG DEBIAN_FRONTEND=noninteractive

@@ -1,13 +1,19 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckanext.schemas.views import scheming
 
 import json
 
 
 class SchemasPlugin(plugins.SingletonPlugin):
+    plugins.implements(plugins.IBlueprint)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
+
+    # IBlueprint
+    def get_blueprint(self):
+        return [scheming]
 
     # IConfigurer
 

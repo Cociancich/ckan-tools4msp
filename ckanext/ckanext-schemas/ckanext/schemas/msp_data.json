@@ -420,6 +420,32 @@
       "form_placeholder": "Other download services."
     },
     {
+      "field_name": "derived_from",
+      "label": "Derived from",
+      "preset": "tag_string_autocomplete",
+      "help_text": "Select related datasets",
+      "form_attrs": {
+        "data-module": "autocomplete",
+        "data-module-tags": "",
+        "data-module-createtags": "false",
+        "data-module-source": "/scheming/api/util/dataset/autocomplete?incomplete=?",
+        "class": ""
+      }
+    },
+    {
+      "field_name": "successor_of",
+      "label": "Successor of",
+      "preset": "tag_string_autocomplete",
+      "help_text": "Select related datasets",
+      "form_attrs": {
+        "data-module": "autocomplete",
+        "data-module-tags": "",
+        "data-module-createtags": "false",
+        "data-module-source": "/scheming/api/util/dataset/autocomplete?incomplete=?",
+        "class": ""
+      }
+    },
+    {
       "field_name": "temporal_extent",
       "label": "Temporal extent",
       "preset": "date",

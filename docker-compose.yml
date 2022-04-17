@@ -14,6 +14,8 @@ x-common-ckan:
       condition: service_healthy
     solr:
       condition: service_healthy
+    redis:
+      condition: service_healthy
   environment:
     &default-common-env-ckan
     CKAN_SQLALCHEMY_URL: postgresql://ckan:ckan@db/ckan
@@ -62,3 +64,5 @@ services:
 
   redis:
     image: redis:6.2
+    healthcheck:
+      test: ["CMD", "redis-cli", "-e", "QUIT"]

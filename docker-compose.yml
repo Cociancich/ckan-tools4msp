@@ -41,6 +41,10 @@ services:
       test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:5000"]
     ports:
       - "5000:5000"
+    # Debug with pdb
+    #command: 'python -m pdb /usr/lib/ckan/venv/bin/ckan --config /etc/ckan/production.ini run --host 0.0.0.0 --passthrough-errors'
+    #tty: true
+    #stdin_open: true
 
   db:
     image: registry.gitlab.com/gisdev.io/ckan/postgresql

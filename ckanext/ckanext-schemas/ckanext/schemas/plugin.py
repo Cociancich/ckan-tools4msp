@@ -26,8 +26,9 @@ class SchemasPlugin(plugins.SingletonPlugin):
     # IFacets
 
     def dataset_facets(self, facets_dict, package_type):
-        if 'groups' in facets_dict:
-            del facets_dict['groups']
+        for facet in ('organization', 'groups', 'tags', 'res_format', 'license_id'):
+            if facet in facets_dict:
+                del facets_dict[facet]
         facets_dict['vocab_category'] = toolkit._('Category')
         facets_dict['sub_category'] = toolkit._('Sub Category')
         facets_dict['owner'] = toolkit._('Owner')

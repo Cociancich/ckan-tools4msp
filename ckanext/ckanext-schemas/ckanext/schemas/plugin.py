@@ -33,6 +33,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
         facets_dict['sub_category'] = toolkit._('Sub Category')
         facets_dict['owner'] = toolkit._('Owner')
         facets_dict['vocab_web_services'] = toolkit._('Web services')
+        facets_dict['vocab_domain_area'] = toolkit._('Domain area')
         return facets_dict
 
     def group_facets(self, facets_dict, group_type, package_type):
@@ -45,13 +46,13 @@ class SchemasPlugin(plugins.SingletonPlugin):
     # IPackageController
 
     def before_index(self, pkg_dict):
-        for field in ('category', 'web_services'):
+        for field in ('category', 'web_services', 'domain_area'):
             data = pkg_dict.get(field)
             if data:
                 try:
                     data = json.loads(data)
                 except ValueError:
-                    data = []
+                    data = data.split(',')
             else:
                 data = []
             pkg_dict["vocab_"+field] = data

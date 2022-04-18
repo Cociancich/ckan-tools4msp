@@ -1,0 +1,10 @@
+{%- set values = data[field.field_name] -%}
+
+{% if values %}
+    <ul>
+    {%- for value in values.split(',') -%}
+        <li><a href="/dataset/{{ value }}">{{ value }}</a></li>
+    {%- endfor -%}
+    </ul>
+{% endif %}
+

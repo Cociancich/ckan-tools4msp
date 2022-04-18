@@ -424,6 +424,7 @@
       "label": "Derived from",
       "preset": "tag_string_autocomplete",
       "help_text": "Select related datasets",
+      "display_snippet": "multiple_datasets.html",
       "form_attrs": {
         "data-module": "autocomplete",
         "data-module-tags": "",
@@ -437,6 +438,7 @@
       "label": "Successor of",
       "preset": "tag_string_autocomplete",
       "help_text": "Select related datasets",
+      "display_snippet": "multiple_datasets.html",
       "form_attrs": {
         "data-module": "autocomplete",
         "data-module-tags": "",

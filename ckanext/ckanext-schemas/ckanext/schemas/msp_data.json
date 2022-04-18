@@ -420,8 +420,8 @@
       "form_placeholder": "Other download services."
     },
     {
-      "field_name": "derived_from",
-      "label": "Derived from",
+      "field_name": "derives_from_string",
+      "label": "Derives from",
       "preset": "tag_string_autocomplete",
       "help_text": "Select related datasets",
       "display_snippet": "multiple_datasets.html",
@@ -434,7 +434,7 @@
       }
     },
     {
-      "field_name": "successor_of",
+      "field_name": "child_of_string",
       "label": "Successor of",
       "preset": "tag_string_autocomplete",
       "help_text": "Select related datasets",

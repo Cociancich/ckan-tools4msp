@@ -42,10 +42,16 @@ class SchemasPlugin(plugins.SingletonPlugin):
     def organization_facets(self, facets_dict, organization_type, package_type):
         return self.dataset_facets(facets_dict, package_type)
 
-
     # IPackageController
 
     def before_index(self, pkg_dict):
+        for field in ('derives_from', 'child_of'):
+            data = pkg_dict.get(field+'_string')
+            if data:
+                data = data.split(',')
+            else:
+                data = []
+            pkg_dict[field] = data
         for field in ('category', 'web_services', 'domain_area'):
             data = pkg_dict.get(field)
             if data:

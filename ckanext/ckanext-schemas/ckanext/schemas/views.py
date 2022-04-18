@@ -13,7 +13,7 @@ def autocomplete(field):
             "userobj": toolkit.g.userobj,
         }
         query = {
-            "q": value,
+            "q": f"name:*{value}*",
             "include_private": True,
         }
         found = toolkit.get_action('package_search')(context,  query)

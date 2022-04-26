@@ -60,6 +60,11 @@ body, .main {
   float: none !important;
 }
 
+.account-masthead .account ul li a.image {
+  display: flex;
+  align-items: center;
+}
+
 .site-footer a {
   @apply text-light !important;
 }

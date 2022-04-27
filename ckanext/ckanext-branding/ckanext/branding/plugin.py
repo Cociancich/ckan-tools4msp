@@ -1,9 +1,73 @@
+import json
+from six import text_type
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+
+from ckan.common import config
+
+
+def get_featured_categories():
+    '''Return the value of the most_popular_groups config setting.
+
+    To enable showing the most popular groups, add this line to the
+    [app:main] section of your CKAN config file::
+
+      ckan.branding.featured_categories = ''
+
+    '''
+    value = config.get('ckan.branding.featured_categories', '[]')
+    try:
+        value = json.loads(value)
+    except ValueError:
+        value = [{'icon': 'fa-triangle-exclamation', 'label': 'Error decoding featured categories' }]
+    return value
+
+
+def get_featured_datasets():
+    '''Return the value of the most_popular_groups config setting.
+
+    To enable showing the most popular groups, add this line to the
+    [app:main] section of your CKAN config file::
+
+      ckan.branding.featured_datasets = ''
+
+    '''
+    value = config.get('ckan.branding.featured_datasets', '[]')
+    try:
+        value = json.loads(value)
+    except ValueError:
+        value = [{'icon': 'fa-triangle-exclamation', 'label': 'Error decoding featured datasets' }]
+    return value
+
+
+def branding_list_config(value, context):
+    if value == "":
+        return "[]"
+    try:
+        val = json.loads(value)
+    except ValueError:
+        raise toolkit.Invalid('Should be a valid JSON string')
+    
+    if type(val) is not list:
+        raise toolkit.Invalid('Root should be a json array - example: [{ ... }]')
+    
+    for idx, element in enumerate(val):
+        if not type(element) is dict:
+            raise toolkit.Invalid(f'Element {idx} should be a json object - example: {{ "key": "value" }}')
+        if "label" not in element:
+            raise toolkit.Invalid(f'Element {idx} should contain a "label" - example: {{ "label": "value" }}')
+        if "icon" not in element:       
+            raise toolkit.Invalid(f'Element {idx} should contain an "icon" - example: {{ "icon": "fa-fish" }}')
+        if "url" not in element:       
+            raise toolkit.Invalid(f'Element {idx} should contain an "url" - example: {{ "url": "dataset_identifier_or_category_identifier" }}')
+
+    return value
 
 
 class BrandingPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.ITemplateHelpers)
+
 
     # IConfigurer
 
@@ -12,3 +76,20 @@ class BrandingPlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic',
             'branding')
+
+    def update_config_schema(self, schema):
+        ignore_missing = toolkit.get_validator('ignore_missing')
+        schema.update({
+            'ckan.branding.featured_categories': [ignore_missing, text_type, branding_list_config],
+            'ckan.branding.featured_datasets': [ignore_missing, text_type, branding_list_config],
+        })
+        return schema
+
+    # ITemplateHelpers
+
+    def get_helpers(self):
+        return {
+            'branding_featured_categories': get_featured_categories,
+            'branding_featured_datasets': get_featured_datasets,
+        
+        }

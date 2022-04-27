@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="relative container mx-auto p-4 flex items-center z-10 justify-center md:justify-start">
-      <div class="content py-1 px-5 my-5 lg:max-w-xl max-w-sm md:max-w-md">
+      <div class="content py-1 px-5 my-5 lg:max-w-xl max-w-32 md:max-w-md">
         {% block promoted %}
           {% snippet 'home/snippets/promoted.html' %}
         {% endblock %}
@@ -33,36 +33,48 @@
     </div>
   </div>
 
-  <div class="container my-10">
-    <div class="grid grid-cols-2 gap-16">
-
-      <div class="">
-        {% block stats %}
-          {% snippet 'home/snippets/stats.html' %}
-        {% endblock %}
+  <div class="my-5 bg-primary text-white">
+    <div class="container py-5">
+      <h2 class="text-center mb-2">
+        {{ _('Featured Categories') }}
+      </h2>
+      <div class="flex flex-wrap justify-center gap-20 items-start content-center py-10">
+        {% for el in h.branding_featured_categories() %}
+          <div>
+            <a href="{% if el.url %}/msp-data/?vocab_category={{ el.url }}{% else %}#{% endif %}" class="w-32 flex flex-col items-center gap-4 hover:no-underline text-white">
+              <i class="fa-solid {{ el.icon }} fa-3x"></i>
+              <span class="text-2xl font-bold text-center">{{ el.label }}</span>
+            </a>
+          </div>
+        {% endfor %}
       </div>
-
-      <div>
-        {% block featured_organization %}
-          {% snippet 'home/snippets/featured_organization.html' %}
-        {% endblock %}
-      </div>
-
-      <div class="">
-        {% block featured_group %}
-          {% snippet 'home/snippets/featured_group.html' %}
-        {% endblock %}
-      </div>
-      
     </div>
   </div>
-</div>
 
+  <div class="my-5 ">
+    <div class="container py-5">
+      <h2 class="text-center mb-2">
+        {{ _('Featured Datasets') }}
+      </h2>
+      <div class="flex flex-wrap justify-center gap-20 items-start content-center py-10">
+        {% for el in h.branding_featured_datasets() %}
+          <div>
+            <a href="{% if el.url %}/msp-data/{{ el.url }}{% else %}#{% endif %}" class="w-32 flex flex-col items-center gap-4 hover:no-underline">
+              <i class="fa-solid {{ el.icon }} fa-3x"></i>
+              <span class="text-2xl font-bold text-center">{{ el.label }}</span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block styles %}
   {{ super() }}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css" integrity="sha512-qzgHTQ60z8RJitD5a28/c47in6WlHGuyRvMusdnuWWBB6fZ0DWG/KyfchGSBlLVeqAz+1LzNq+gGZkCSHnSd3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 {% endblock %}
 
 {% block scripts %}

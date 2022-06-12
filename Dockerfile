@@ -19,6 +19,8 @@ RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 COPY ckanext/ckanext-schemas /usr/lib/ckan/venv/src/ckanext/ckanext-schemas
 RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-schemas
 
+RUN ckan-pip3 install flask_debugtoolbar
+
 COPY --chmod=+x entrypoint/custom-entrypoint.sh entrypoint/dev-entrypoint.sh /
 
 USER ckan

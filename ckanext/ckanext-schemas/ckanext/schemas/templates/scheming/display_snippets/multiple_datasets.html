@@ -1,0 +1,17 @@
+{%- set name = data['name'] -%}
+{%- set values = data[field.field_name] -%}
+
+{% if values %}
+    <ul>
+    {%- for value in values.split(',') -%}
+        <li><a href="/dataset/{{ value }}">{{ value }}</a></li>
+    {%- endfor -%}
+    </ul>
+{% endif %}
+
+{% if field.field_name == 'derives_from_string' %}
+    Search for derived datasets: <a href="/dataset/?q=derives_from:{{ name }}">derives_from:{{ name }}</a>
+{% elif field.field_name == 'child_of_string' %}
+    Search for successive versions: <a href="/dataset/?q=child_of:{{ name }}">derives_from:{{ name }}</a>
+{% endif %}
+

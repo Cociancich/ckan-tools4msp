@@ -1,0 +1,26 @@
+{% ckan_extends %}
+
+{% block header_logo %}
+<div class="flex items-center gap-4">
+{% if g.site_logo %}
+    <a class="logo" href="{{ h.url_for('home.index') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+{% endif %}
+{% if g.site_title%}
+  <h1 class="font-display hover:no-underline text-4xl ml-5">
+    <a class="hover:no-underline visited:no-underline focus:no-underline" href="{{ h.url_for('home.index') }}">Tool4MSP</a>
+  </h1>
+{% endif %} 
+</div>
+{% endblock %}
+
+{% block header_account_notlogged %}
+<li>{% link_for _('Google login'), named_route='oauth2.login' %}</li>
+{{ super() }}
+{% endblock %}
+
+{% block header_site_navigation_tabs %}
+   {{ h.build_nav_main(
+       ('msp-data.search', _('Datasets')),
+       ('organization.index', _('Organizations')),
+       ('home.about', _('About')) ) }}
+{% endblock %}

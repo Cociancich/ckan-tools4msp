@@ -10,7 +10,12 @@ x-common-ckan:
   build: .
   image: registry.gitlab.com/gisdev.io/ckan/main/ckan
   depends_on:
-    - db
+    db:
+      condition: service_healthy
+    solr:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
   environment:
     &default-common-env-ckan
     CKAN_SQLALCHEMY_URL: postgresql://ckan:ckan@db/ckan
@@ -24,39 +29,22 @@ x-common-ckan:
     POSTGRES_PASSWORD: ckan
     DS_RO_PASS: datastore
     CKAN_INI: /etc/ckan/production.ini
+    OAUTH2_CLIENT_ID: SET_OAUTH2_CLIENT_ID
+    OAUTH2_CLIENT_SECRET: SET_OAUTH2_CLIENT_SECRET
   volumes:
     - ckan_storage:/var/lib/ckan
-
-x-common-ckan-extra:
-  &default-common-ckan-extra
-  << : *default-common-ckan
-  depends_on:
-    ckan:
-      condition: service_healthy
-  environment:
-    &default-common-env-ckan-extra
-    << : *default-common-env-ckan
-    CKAN_EXTRA: "true"
 
 services:
   ckan:
     << : *default-common-ckan
     healthcheck:
-      test: ["CMD", "wget", "-qO", "/dev/null", "http://ckan:5000"]
+      test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:5000"]
     ports:
       - "5000:5000"
-
-  ckan-harvester-fetch:
-    << : *default-common-ckan-extra
-    command: ckan --config=/etc/ckan/production.ini harvester fetch-consumer
-
-  ckan-harverster-gather:
-    << : *default-common-ckan-extra
-    command: ckan --config=/etc/ckan/production.ini harvester gather-consumer
-
-  ckan-harvester-run:
-    << : *default-common-ckan-extra
-    command: bash -c 'while [ 1 ]; do ckan --config=/etc/ckan/production.ini harvester run; sleep 10m; done'
+    # Debug with pdb
+    #command: 'python -m pdb /usr/lib/ckan/venv/bin/ckan --config /etc/ckan/production.ini run --host 0.0.0.0 --passthrough-errors'
+    #tty: true
+    #stdin_open: true
 
   db:
     image: registry.gitlab.com/gisdev.io/ckan/postgresql
@@ -73,8 +61,12 @@ services:
     image: registry.gitlab.com/gisdev.io/ckan/solr
     volumes:
       - solr_data:/opt/solr/server/solr/ckan/data
-  #  ports:
-  #    - 8983:8983
+    healthcheck:
+      test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:8983/solr/"]
+    #ports:
+    #  - 8983:8983
 
   redis:
     image: redis:6.2
+    healthcheck:
+      test: ["CMD", "redis-cli", "-e", "QUIT"]

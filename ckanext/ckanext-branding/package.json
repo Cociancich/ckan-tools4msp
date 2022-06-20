@@ -1,0 +1,17 @@
+{
+  "name": "ckanext-branding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/main.css -o ./ckanext/branding/public/main.css --minify",
+    "dev": "npx tailwindcss -i ./src/main.css -o ./ckanext/branding/public/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}

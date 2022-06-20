@@ -1,0 +1,42 @@
+From e888af835122a952fb8b5ffba224221e25a5a960 Mon Sep 17 00:00:00 2001
+From: Francesco Frassinelli <francesco.frassinelli@nina.no>
+Date: Mon, 1 Nov 2021 18:21:38 +0100
+Subject: [PATCH] Add passthrough_errors to cli/server.py
+
+---
+ ckan/cli/server.py | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/ckan/cli/server.py b/ckan/cli/server.py
+index 29d114b40..e53e60432 100644
+--- a/ckan/cli/server.py
++++ b/ckan/cli/server.py
+@@ -21,6 +21,8 @@ DEFAULT_PORT = 5000
+ @click.option(u"-p", u"--port", help=u"Port number")
+ @click.option(u"-r", u"--disable-reloader", is_flag=True,
+               help=u"Disable reloader")
++@click.option(u"-E", u"--passthrough_errors", is_flag=True,
++              help=u"Disable error caching (useful to hook debuggers)")
+ @click.option(
+     u"-t", u"--threaded", is_flag=True,
+     help=u"Handle each request in a separate thread"
+@@ -42,8 +44,8 @@ DEFAULT_PORT = 5000
+     help=u"Key file to use to enable SSL. Passing 'adhoc' will "
+     " automatically generate a new one (on each server reload).")
+ @click.pass_context
+-def run(ctx, host, port, disable_reloader, threaded, extra_files, processes,
+-        ssl_cert, ssl_key):
++def run(ctx, host, port, disable_reloader, passthrough_errors, threaded,
++        extra_files, processes, ssl_cert, ssl_key):
+     u"""Runs the Werkzeug development server"""
+ 
+     if tk.asbool(config.get("debug")):
+@@ -100,4 +102,5 @@ def run(ctx, host, port, disable_reloader, threaded, extra_files, processes,
+         processes=processes,
+         extra_files=extra_files,
+         ssl_context=ssl_context,
++        passthrough_errors=passthrough_errors,
+     )
+-- 
+2.31.1
+

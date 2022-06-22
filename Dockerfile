@@ -21,8 +21,6 @@ RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-schemas
 
 COPY --chmod=+x entrypoint/custom-entrypoint.sh entrypoint/dev-entrypoint.sh /
 
-COPY patches /patches
-
 USER ckan
 ENTRYPOINT ["/bin/bash", "/custom-entrypoint.sh"]
 CMD ["ckan","-c","/etc/ckan/production.ini", "run", "--host", "0.0.0.0"]

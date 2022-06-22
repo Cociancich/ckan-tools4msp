@@ -20,7 +20,7 @@
 This command will delete all the containers and all the volumes (`-v`).
 
 ``` 
-docker-compose down -v
+docker compose --profile prod down -v
 ```
 
 ## Development
@@ -29,14 +29,17 @@ Run development environment with
 
 ```
 # This will create the containers, ckan container will have a pdb session active
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --force-recreate -d
-# So attach to the session
-docker attach catalogue-tools4msp_ckan
+docker compose --profile dev build
+docker compose --profile dev run ckan-dev
 # Start the server
 (Pdb) c
 # On source changes
 (Pdb) restart
 (Pdb) c
+# Stop the server
+(Pdb) q
+# Stop the containers
+docker compose --profile prod down
 ```
 
 For modifications to CSS with livereload

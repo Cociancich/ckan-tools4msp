@@ -37,14 +37,28 @@ x-common-ckan:
 services:
   ckan:
     << : *default-common-ckan
+    profiles:
+      - prod
     healthcheck:
       test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:5000"]
     ports:
       - "5000:5000"
-    # Debug with pdb
-    #command: 'python -m pdb /usr/lib/ckan/venv/bin/ckan --config /etc/ckan/production.ini run --host 0.0.0.0 --passthrough-errors'
-    #tty: true
-    #stdin_open: true
+
+  ckan-dev:
+    << : *default-common-ckan
+    profiles:
+      - dev
+    ports:
+      - "5000:5000"
+    command: 'python -m pdb /usr/lib/ckan/venv/bin/ckan --config /etc/ckan/production.ini run --host 0.0.0.0 --passthrough-errors'
+    entrypoint: ["bash", "dev-entrypoint.sh"]
+    tty: true
+    stdin_open: true
+    user: root
+    volumes:
+      - ckan_storage:/var/lib/ckan
+      - ./ckanext/ckanext-branding:/usr/lib/ckan/venv/src/ckanext/ckanext-branding
+      - ./ckanext/ckanext-schemas:/usr/lib/ckan/venv/src/ckanext/ckanext-schemas
 
   db:
     image: registry.gitlab.com/gisdev.io/ckan/postgresql

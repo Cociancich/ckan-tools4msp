@@ -28,6 +28,8 @@
       "field_name": "pdm_partner",
       "label": "Partner",
       "preset": "select",
+      "form_snippet": null,
+      "display_snippet": null,
       "help_text": "Please, do not change this value",
       "choices": [
           {
@@ -517,6 +519,8 @@
       "field_name": "pdm_testing_relevance",
       "label": "Relevance for testing",
       "preset": "multiple_checkbox",
+      "form_snippet": null,
+      "display_snippet": null,
       "choices": [
           {
               "value": "T2.2-ZPUIZ",
@@ -548,6 +552,8 @@
       "field_name": "pdm_modules_relevance",
       "label": "Relevance for modules",
       "preset": "multiple_checkbox",
+      "form_snippet": null,
+      "display_snippet": null,
       "choices": [
           {
               "value": "T1.6-MUSC",

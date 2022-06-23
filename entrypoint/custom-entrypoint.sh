@@ -56,6 +56,4 @@ conf_set ckan.oauth2.profile_api_fullname_field name
 conf_set ckan.oauth2.profile_api_mail_field email
 conf_set ckan.oauth2.authorization_header Authorization
 
-crudini --set "$conf" DEFAULT debug "true"
-
 exec "$@"

@@ -194,6 +194,10 @@
           {
               "value": "spatial_policy",
               "label": "Spatial policy"
+          },
+          {
+              "value": "oil_and_gas",
+              "label": "Oil and gas"
           }
       ]
     },

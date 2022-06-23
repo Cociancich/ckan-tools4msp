@@ -249,9 +249,9 @@
     {
       "field_name": "domain_area",
       "label": "Domain area",
-      "preset": "tag_string_autocomplete",
+      "preset": "multiple_checkbox",
       "form_placeholder": "eg. Mediterranean, Adriatic, Ionian, ",
-      "help_text": "Please select a value from this list: https://docs.google.com/spreadsheets/d/1ydnfHW-nyOwnlKE4MS1x2g_H_X20jFj1sjBpPgZgqGI/edit?usp=sharing"
+      "choices_helper": "scheming_domainareas_choices"
     },
     {
       "field_name": "owner",

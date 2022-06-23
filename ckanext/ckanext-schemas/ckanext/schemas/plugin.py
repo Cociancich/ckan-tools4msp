@@ -1,6 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckanext.schemas.views import scheming
+import ckanext.schemas.helpers as helpers
 
 import json
 
@@ -10,6 +11,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers)
 
     # IBlueprint
     def get_blueprint(self):
@@ -63,3 +65,10 @@ class SchemasPlugin(plugins.SingletonPlugin):
                 data = []
             pkg_dict["vocab_"+field] = data
         return pkg_dict
+
+    # ITemplateHelpers
+
+    def get_helpers(self):
+        return {
+            'scheming_domainareas_choices': helpers.scheming_domainareas_choices,
+        }

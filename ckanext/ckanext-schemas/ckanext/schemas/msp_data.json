@@ -200,6 +200,10 @@
           {
               "value": "oil_and_gas",
               "label": "Oil and gas"
+          },
+          {
+              "value": "misc",
+              "label": "Miscellaneous"
           }
       ]
     },

@@ -13,7 +13,7 @@
 
 1. [Login](http://localhost:5000/user/login)
 2. Set your user (`$user`) as administrator
-   1. `docker-compose exec ckan ckan -c /etc/ckan/production.ini sysadmin add $user`
+   1. `docker compose --profile prod exec ckan ckan -c /etc/ckan/production.ini sysadmin add $user`
 
 ## Reset
 

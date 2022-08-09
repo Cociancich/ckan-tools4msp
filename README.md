@@ -19,7 +19,7 @@
 
 This command will delete all the containers and all the volumes (`-v`).
 
-``` 
+```
 docker compose --profile prod down -v
 ```
 
@@ -30,7 +30,7 @@ Run development environment with
 ```
 # This will create the containers, ckan container will have a pdb session active
 docker compose --profile dev build
-docker compose --profile dev run ckan-dev
+docker compose --profile dev run --service-ports ckan-dev
 # Start the server
 (Pdb) c
 # On source changes

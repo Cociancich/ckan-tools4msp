@@ -68,6 +68,17 @@
       </div>
     </div>
   </div>
+
+  <div class="mt-5 bg-primary text-white">
+    <div class="container py-5">
+      <h2 class="text-center mb-2">
+        {{ _('Featured Groups') }}
+      </h2>
+      <div class="flex flex-wrap justify-center gap-20 items-start content-center py-10">
+        {% snippet 'home/snippets/featured_group.html' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block styles %}

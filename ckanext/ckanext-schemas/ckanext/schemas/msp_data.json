@@ -345,6 +345,11 @@
       }
     },
     {
+      "field_name": "derived",
+      "label": "Derived datasets",
+      "display_snippet": "multiple_datasets.html"
+    },
+    {
       "field_name": "child_of_string",
       "label": "Successor of",
       "preset": "tag_string_autocomplete",
@@ -357,6 +362,11 @@
         "data-module-source": "/scheming/api/util/dataset/autocomplete?incomplete=?",
         "class": ""
       }
+    },
+    {
+      "field_name": "children",
+      "label": "Predecessor of",
+      "display_snippet": "multiple_datasets.html"
     },
     {
       "field_name": "temporal_extent",

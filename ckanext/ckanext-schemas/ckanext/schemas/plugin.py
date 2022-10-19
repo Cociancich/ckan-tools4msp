@@ -2,6 +2,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckanext.schemas.views import scheming
 import ckanext.schemas.helpers as helpers
+import ckanext.schemas.logic.action.get
 
 import json
 
@@ -12,6 +13,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IActions)
 
     # IBlueprint
     def get_blueprint(self):
@@ -70,3 +72,13 @@ class SchemasPlugin(plugins.SingletonPlugin):
 
     def get_helpers(self):
         return { name:getattr(helpers, name) for name in dir(helpers) }
+
+    # IActions
+
+    def get_actions(self):
+        return {
+           'ckan_package_show':
+               ckanext.schemas.logic.action.get.ckan_package_show,
+           'package_show':
+               ckanext.schemas.logic.action.get.package_show,
+        }

@@ -1,0 +1,114 @@
+[
+    {
+        "value": "maritime_boundaries",
+        "label": "Maritime boundaries"
+    },
+    {
+        "value": "terrestrial_boundaries",
+        "label": "Terrestrial boundaries"
+    },
+    {
+        "value": "physical_characteristics",
+        "label": "Physical characteristics"
+    },
+    {
+        "value": "types_of_habitat",
+        "label": "Types of habitat"
+    },
+    {
+        "value": "biological_characteristics",
+        "label": "Biological characteristics"
+    },
+    {
+        "value": "aquaculture",
+        "label": "Aquaculture"
+    },
+    {
+        "value": "fishing",
+        "label": "Fishing"
+    },
+    {
+        "value": "renewable_energies",
+        "label": "Renewable energies"
+    },
+    {
+        "value": "installations_and_infrastructure",
+        "label": "Installations & infrastructure"
+    },
+    {
+        "value": "maritime_transport_and_traffic_flows",
+        "label": "Maritime transport and traffic flows"
+    },
+    {
+        "value": "ports",
+        "label": "Ports"
+    },
+    {
+        "value": "protected_areas",
+        "label": "Nature and species conservation sites & protected areas"
+    },
+    {
+        "value": "military",
+        "label": "Military"
+    },
+    {
+        "value": "extraction_areas",
+        "label": "Raw material extraction areas"
+    },
+    {
+        "value": "scientific_research",
+        "label": "Scientific research"
+    },
+    {
+        "value": "cables_and_pipelines",
+        "label": "Submarine cable & pipeline routes"
+    },
+    {
+        "value": "tourism",
+        "label": "Tourism & recreation"
+    },
+    {
+        "value": "cultural_heritage",
+        "label": "Underwater cultural heritage"
+    },
+    {
+        "value": "coastal_defence",
+        "label": "Coastal defence"
+    },
+    {
+        "value": "human_population",
+        "label": "Human population"
+    },
+    {
+        "value": "economic_indicators",
+        "label": "Economic indicators"
+    },
+    {
+        "value": "social_indicators",
+        "label": "Social indicators"
+    },
+    {
+        "value": "coastal_land_uses_activities",
+        "label": "Coastal land uses/activities"
+    },
+    {
+        "value": "source_of_pollution",
+        "label": "Source of pollution"
+    },
+    {
+        "value": "pressures_impacts",
+        "label": "Pressures and impacts"
+    },
+    {
+        "value": "spatial_policy",
+        "label": "Spatial policy"
+    },
+    {
+        "value": "oil_and_gas",
+        "label": "Oil and gas"
+    },
+    {
+        "value": "misc",
+        "label": "Miscellaneous"
+    }
+]

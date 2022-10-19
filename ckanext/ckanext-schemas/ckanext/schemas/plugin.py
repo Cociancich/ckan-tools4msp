@@ -69,6 +69,4 @@ class SchemasPlugin(plugins.SingletonPlugin):
     # ITemplateHelpers
 
     def get_helpers(self):
-        return {
-            'scheming_domainareas_choices': helpers.scheming_domainareas_choices,
-        }
+        return { name:getattr(helpers, name) for name in dir(helpers) }

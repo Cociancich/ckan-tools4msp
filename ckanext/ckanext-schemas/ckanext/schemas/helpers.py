@@ -18,7 +18,7 @@ with urllib.request.urlopen(domainareas_url) as f:
 def scheming_domainareas_choices(field):
     for domainarea in domainareas:
         yield {
-            'value': domainarea['label'].lower().replace(' ', '_'),
+            'value': domainarea['label'].lower().replace(' ', '_').replace('&', '_'),
             'label': domainarea['label'],
         }
 

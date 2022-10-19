@@ -48,3 +48,10 @@ cd ckanext/ckanext-branding
 npm install
 npm run dev
 ```
+
+# Common issues
+
+## Solr "out of memory"
+
+Problem: `library initialization failed - unable to allocate file descriptor table - out of memory#`
+Solution: https://superuser.com/a/1413390

@@ -44,7 +44,7 @@ docker compose --profile prod down
 
 For modifications to CSS with livereload
 ```
-cd cnext/cnext-branding
+cd ckanext/ckanext-branding
 npm install
 npm run dev
 ```

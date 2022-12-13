@@ -1,9 +1,8 @@
 FROM registry.gitlab.com/gisdev.io/ckan/ckan:dev-v2-9-gisdevio
 
 USER root
-ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
-    apt-get install -qq crudini
+    DEBIAN_FRONTEND=noninteractive apt-get install -qy crudini
 
 ARG CKANEXT_SCHEMING_VERSION=1307aedec8ae8b1c4c86d33ede654a3d9afe7fa3
 RUN ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-scheming.git@${CKANEXT_SCHEMING_VERSION}

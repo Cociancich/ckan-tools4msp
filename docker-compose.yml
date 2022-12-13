@@ -32,6 +32,7 @@ x-common-ckan:
     WERKZEUG_DEBUG_PIN: 5000
     OAUTH2_CLIENT_ID: SET_OAUTH2_CLIENT_ID
     OAUTH2_CLIENT_SECRET: SET_OAUTH2_CLIENT_SECRET
+    GUNICORN_CMD_ARGS: "--workers=4"
   volumes:
     - ckan_storage:/var/lib/ckan
 

@@ -31,6 +31,9 @@ x-common-ckan:
     WERKZEUG_DEBUG_PIN: 5000
     GUNICORN_CMD_ARGS: "--workers=4"
     DOMAINAREAS_URL: "https://api.tools4msp.eu/api/v2/domainareas/?format=json"
+    CKAN_SMTP_SERVER: "email.ismar.cnr.it"
+    CKAN_SMTP_STARTTLS: false
+    CKAN_SMTP_MAIL_FROM: "catalogue4msp@ismar.cnr.it"
   volumes:
     - ckan_storage:/var/lib/ckan
 

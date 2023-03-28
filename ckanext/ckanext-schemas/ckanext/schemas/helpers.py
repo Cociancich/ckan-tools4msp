@@ -1,8 +1,10 @@
+from ckan.common import config
+
 import json
 import os.path
 import urllib.request
 
-domainareas_url = "https://api.tools4msp.eu/api/v2/domainareas/?format=json"
+domainareas_url = config.get('ckan.domainareas_url')
 
 file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'presets')
 

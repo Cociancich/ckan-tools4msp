@@ -22,6 +22,8 @@ RUN ckan-pip3 install gunicorn flask_debugtoolbar
 
 COPY --chmod=+x entrypoint/custom-entrypoint.sh entrypoint/dev-entrypoint.sh /
 
+ENV CKAN_INI=/etc/ckan/production.ini
+
 USER ckan
 RUN mkdir -p /var/lib/ckan/webassets/.webassets-cache
 ENTRYPOINT ["/bin/bash", "/custom-entrypoint.sh"]

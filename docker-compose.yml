@@ -29,8 +29,6 @@ x-common-ckan:
     POSTGRES_PASSWORD: ckan
     DS_RO_PASS: datastore
     WERKZEUG_DEBUG_PIN: 5000
-    OAUTH2_CLIENT_ID: SET_OAUTH2_CLIENT_ID
-    OAUTH2_CLIENT_SECRET: SET_OAUTH2_CLIENT_SECRET
     GUNICORN_CMD_ARGS: "--workers=4"
     DOMAINAREAS_URL: "https://api.tools4msp.eu/api/v2/domainareas/?format=json"
   volumes:

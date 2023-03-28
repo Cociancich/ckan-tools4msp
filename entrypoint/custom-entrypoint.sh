@@ -44,17 +44,4 @@ conf_set ckan.domainareas_url "$DOMAINAREAS_URL"
 conf_set_list ckan.plugins scheming_datasets
 conf_set ckan.search.show_all_types true
 
-#ckanext-oauth2
-conf_set_list ckan.plugins oauth2
-conf_set ckan.oauth2.authorization_endpoint https://accounts.google.com/o/oauth2/auth
-conf_set ckan.oauth2.token_endpoint https://accounts.google.com/o/oauth2/token
-conf_set ckan.oauth2.profile_api_url https://www.googleapis.com/oauth2/v1/userinfo
-conf_set ckan.oauth2.client_id "$OAUTH2_CLIENT_ID"
-conf_set ckan.oauth2.client_secret "$OAUTH2_CLIENT_SECRET"
-conf_set ckan.oauth2.scope "https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email"
-conf_set ckan.oauth2.profile_api_user_field email
-conf_set ckan.oauth2.profile_api_fullname_field name
-conf_set ckan.oauth2.profile_api_mail_field email
-conf_set ckan.oauth2.authorization_header Authorization
-
 exec "$@"

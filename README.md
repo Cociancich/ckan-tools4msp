@@ -14,8 +14,8 @@ Type `docker-compose` instead of `docker compose` if you use the Python tool ins
 ### Add admin
 
 1. [Login](http://localhost:5000/user/login)
-1. Set your user (`$user`) as administrator
-   1. `docker compose --profile prod exec ckan ckan -c /etc/ckan/production.ini sysadmin add $user`
+1. Set your user (`$USER`) as administrator
+   1. `docker compose --profile prod exec ckan ckan -c /etc/ckan/production.ini sysadmin add $USER`
 
 ## Reset
 
@@ -33,9 +33,8 @@ Run development environment with
 # This will create the containers, ckan container will have a pdb session active
 docker compose --profile dev build
 docker compose --profile dev run --service-ports ckan-dev
-# Start the server
-(Pdb) c
 # On source changes
+[CTRL+C]
 (Pdb) restart
 (Pdb) c
 # Stop the server

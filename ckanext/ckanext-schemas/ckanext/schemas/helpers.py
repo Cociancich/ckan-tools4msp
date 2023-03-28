@@ -2,7 +2,7 @@ import json
 import os.path
 import urllib.request
 
-domainareas_url = "https://api.tools4msp.eu/api/domainareas/?format=json"
+domainareas_url = "https://api.tools4msp.eu/api/v2/domainareas/?format=json"
 
 file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'presets')
 

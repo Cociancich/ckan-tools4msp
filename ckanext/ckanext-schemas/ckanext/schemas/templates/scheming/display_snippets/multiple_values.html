@@ -1,0 +1,11 @@
+{%- set name = data['name'] -%}
+{%- set values = data[field.field_name] -%}
+{%- set values = values.split(",") if values is string else values -%}
+
+{% if values %}
+    <ul>
+    {%- for value in values -%}
+        <li>{{ value }}</li>
+    {%- endfor -%}
+    </ul>
+{% endif %}

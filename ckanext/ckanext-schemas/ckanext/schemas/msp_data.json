@@ -92,7 +92,7 @@
       "preset": "tag_string_autocomplete",
       "required": true,
       "help_text": "High-level dataset thematic classification to assist in the grouping and search of available datasets.",
-      "display_snippet": "multiple_datasets.html",
+      "display_snippet": "multiple_values.html",
       "form_attrs": {
         "data-module": "autocomplete",
         "data-module-tags": "",
@@ -149,7 +149,7 @@
       "label": "Domain area",
       "preset": "tag_string_autocomplete",
       "form_placeholder": "eg. Mediterranean, Adriatic, Ionian, ",
-      "display_snippet": "multiple_datasets.html",
+      "display_snippet": "multiple_values.html",
       "form_attrs": {
         "data-module": "autocomplete",
         "data-module-tags": "",

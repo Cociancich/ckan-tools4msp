@@ -44,4 +44,8 @@ conf_set ckan.domainareas_url "$DOMAINAREAS_URL"
 conf_set_list ckan.plugins scheming_datasets
 conf_set ckan.search.show_all_types true
 
+#ckanext-spatial
+conf_set_list ckan.plugins spatial_metadata spatial_query
+conf_set ckanext.spatial.search_backend solr-bbox
+
 exec "$@"

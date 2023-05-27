@@ -4,7 +4,7 @@ USER root
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy crudini
 
-ARG CKANEXT_SCHEMING_VERSION=1307aedec8ae8b1c4c86d33ede654a3d9afe7fa3
+ARG CKANEXT_SCHEMING_VERSION=release-3.0.0
 RUN ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-scheming.git@${CKANEXT_SCHEMING_VERSION}
 
 COPY ckanext/ckanext-branding /usr/lib/ckan/venv/src/ckanext/ckanext-branding

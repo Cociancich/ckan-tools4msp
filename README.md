@@ -17,6 +17,19 @@ Type `docker-compose` instead of `docker compose` if you use the Python tool ins
 1. Set your user (`$USER`) as administrator
    1. `docker compose --profile prod exec ckan ckan -c /etc/ckan/production.ini sysadmin add $USER`
 
+### Setup Datapusher
+
+```bash
+ckan="$(docker container ls -qf name=catalogue-tools4msp-ckan)"
+db="$(docker container ls -qf name=catalogue-tools4msp-db)"
+docker exec "$ckan" ckan -c /etc/ckan/production.ini datastore set-permissions |
+    docker exec -i "$db" psql -U ckan
+```
+
+Make sure that the variable `CKAN_SITE_URL` is set to the public domain and that is reacheable from the datapusher container.
+`http://ckan:5000` can be used when deploying locally, but make sure that `/etc/hosts` contains `ckan` as an alias for `localhost`.
+More info at [github.com/ckan/datapusher](https://github.com/ckan/datapusher).
+
 ## Reset
 
 This command will delete all the containers and all the volumes (`-v`).

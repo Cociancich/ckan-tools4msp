@@ -34,6 +34,9 @@ Harvesting operations can be monitored at [/harvest](/harvest).
 #ckanext-branding
 conf_set_list ckan.plugins branding
 
+#datapusher
+conf_set_list ckan.plugins datastore datapusher
+
 #ckanext-schemas
 conf_set_list ckan.plugins schemas
 conf_set scheming.dataset_schemas "ckanext.schemas:custom_schema.yaml ckanext.schemas:msp_data.json ckanext.schemas:msp_portal.json ckanext.schemas:msp_tool.json"

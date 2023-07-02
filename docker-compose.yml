@@ -24,7 +24,7 @@ x-common-ckan:
     CKAN_SOLR_URL: http://solr:8983/solr/ckan
     CKAN_REDIS_URL: redis://redis:6379/1
     CKAN_DATAPUSHER_URL: http://datapusher:8800
-    CKAN_SITE_URL: http://localhost:5000
+    CKAN_SITE_URL: http://ckan:5000
     CKAN_MAX_UPLOAD_SIZE_MB: 1000
     POSTGRES_PASSWORD: ckan
     DS_RO_PASS: datastore
@@ -51,6 +51,7 @@ services:
     << : *default-common-ckan
     profiles:
       - dev
+    hostname: ckan
     ports:
       - "5000:5000"
     command: 'python -m pdb -c continue /usr/lib/ckan/venv/bin/ckan run --host 0.0.0.0 --passthrough-errors'
@@ -62,6 +63,10 @@ services:
       - ckan_storage:/var/lib/ckan
       - ./ckanext/ckanext-branding:/usr/lib/ckan/venv/src/ckanext/ckanext-branding
       - ./ckanext/ckanext-schemas:/usr/lib/ckan/venv/src/ckanext/ckanext-schemas
+
+  datapusher:
+    container_name: datapusher
+    image: clementmouchet/datapusher
 
   db:
     image: registry.gitlab.com/gisdev.io/ckan/postgresql

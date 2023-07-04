@@ -22,7 +22,7 @@ Type `docker-compose` instead of `docker compose` if you use the Python tool ins
 ```bash
 ckan="$(docker container ls -qf name=catalogue-tools4msp-ckan)"
 db="$(docker container ls -qf name=catalogue-tools4msp-db)"
-docker exec "$ckan" ckan -c /etc/ckan/production.ini datastore set-permissions |
+docker exec "$ckan" ckan datastore set-permissions |
     docker exec -i "$db" psql -U ckan
 ```
 

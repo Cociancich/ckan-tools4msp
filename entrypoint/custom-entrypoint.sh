@@ -34,10 +34,6 @@ Harvesting operations can be monitored at [/harvest](/harvest).
 #ckanext-branding
 conf_set_list ckan.plugins branding
 
-#datapusher
-conf_set_list ckan.plugins datastore datapusher
-conf_set ckan.datapusher.callback_url_base "$CKAN_SITE_URL_INTERNAL"
-
 #ckanext-schemas
 conf_set_list ckan.plugins schemas
 conf_set scheming.dataset_schemas "ckanext.schemas:custom_schema.yaml ckanext.schemas:msp_data.json ckanext.schemas:msp_portal.json ckanext.schemas:msp_tool.json"
@@ -52,5 +48,11 @@ conf_set ckan.search.show_all_types true
 conf_set_list ckan.plugins spatial_metadata spatial_query
 conf_set ckanext.spatial.search_backend solr-bbox
 conf_set ckan.solr_url "$CKAN_SOLR_URL"
+
+#datapusher
+conf_set_list ckan.plugins datastore datapusher
+conf_set ckan.datapusher.callback_url_base "$CKAN_SITE_URL_INTERNAL"
+ckan datastore set-permissions | psql "$CKAN_SQLALCHEMY_URL"
+ckan datapusher submit -y
 
 exec "$@"

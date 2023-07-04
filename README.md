@@ -17,17 +17,6 @@ Type `docker-compose` instead of `docker compose` if you use the Python tool ins
 1. Set your user (`$USER`) as administrator
    1. `docker compose --profile prod exec ckan ckan -c /etc/ckan/production.ini sysadmin add $USER`
 
-### Setup Datapusher
-
-```bash
-ckan="$(docker container ls -qf name=catalogue-tools4msp-ckan)"
-db="$(docker container ls -qf name=catalogue-tools4msp-db)"
-docker exec "$ckan" ckan datastore set-permissions |
-    docker exec -i "$db" psql -U ckan
-```
-
-More info at [github.com/ckan/datapusher](https://github.com/ckan/datapusher).
-
 ## Reset
 
 This command will delete all the containers and all the volumes (`-v`).

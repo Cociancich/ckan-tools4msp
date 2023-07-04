@@ -36,6 +36,7 @@ conf_set_list ckan.plugins branding
 
 #datapusher
 conf_set_list ckan.plugins datastore datapusher
+conf_set ckan.datapusher.callback_url_base "$CKAN_SITE_URL_INTERNAL"
 
 #ckanext-schemas
 conf_set_list ckan.plugins schemas

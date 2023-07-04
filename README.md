@@ -26,8 +26,6 @@ docker exec "$ckan" ckan datastore set-permissions |
     docker exec -i "$db" psql -U ckan
 ```
 
-Make sure that the variable `CKAN_SITE_URL` is set to the public domain and that is reacheable from the datapusher container.
-`http://ckan:5000` can be used when deploying locally, but make sure that `/etc/hosts` contains `ckan` as an alias for `localhost`.
 More info at [github.com/ckan/datapusher](https://github.com/ckan/datapusher).
 
 ## Reset
@@ -69,6 +67,14 @@ npm run dev
 
 Problem: `library initialization failed - unable to allocate file descriptor table - out of memory#`
 Solution: https://superuser.com/a/1413390
+
+## Datapusher cannot open URL
+
+Example: `URLError: <urlopen error [Errno 99] Cannot assign requested address>`
+
+Datapusher tries to access the URL of the resource, which is a public URL.
+Make sure that the variable `CKAN_SITE_URL` is set to the public domain and that is reacheable from the datapusher container.
+`http://ckan:5000` can be used when deploying locally, but make sure that `/etc/hosts` contains `ckan` as an alias for `localhost`.
 
 ## Unexpected results in spatial queries
 

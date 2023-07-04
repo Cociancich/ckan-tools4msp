@@ -25,6 +25,7 @@ x-common-ckan:
     CKAN_REDIS_URL: redis://redis:6379/1
     CKAN_DATAPUSHER_URL: http://datapusher:8800
     CKAN_SITE_URL: http://ckan:5000
+    CKAN_SITE_URL_INTERNAL: http://ckan:5000
     CKAN_MAX_UPLOAD_SIZE_MB: 1000
     POSTGRES_PASSWORD: ckan
     DS_RO_PASS: datastore

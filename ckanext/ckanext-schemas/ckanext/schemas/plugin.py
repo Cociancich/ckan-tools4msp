@@ -4,8 +4,14 @@ from ckanext.schemas.views import scheming
 import ckanext.schemas.helpers as helpers
 import ckanext.schemas.logic.action.get
 
-import json
+from ckan.common import config
 
+import json
+import requests
+import shapely
+
+CKAN_SOLR_URL = config.get('ckan.solr_url', 'http://solr:8983/solr/ckan')
+CKAN_SORL_SCHEMA = CKAN_SOLR_URL + '/schema'
 
 class SchemasPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IBlueprint)
@@ -26,6 +32,17 @@ class SchemasPlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic',
             'schemas')
+
+        for field_name in "minx miny maxx maxy".split():
+            response = requests.post(CKAN_SORL_SCHEMA, json={
+                "add-field": {
+                    "name": field_name,
+                    "type": "float",
+                    "indexed": True,
+                    "stored": True,
+                }
+            })
+            response.raise_for_status()
 
     # IFacets
 
@@ -66,6 +83,21 @@ class SchemasPlugin(plugins.SingletonPlugin):
             else:
                 data = []
             pkg_dict["vocab_"+field] = data
+
+        geojson = pkg_dict.get("spatial_geojson")
+        try:
+            geometry = json.loads(geojson)
+        except json.decoder.JSONDecodeError:
+            geometry = None
+        if geometry:
+            shape = shapely.geometry.shape(geometry)
+            minx, miny, maxx, maxy = shape.bounds
+            pkg_dict["minx"] = minx
+            pkg_dict["maxx"] = maxx
+            pkg_dict["miny"] = miny
+            pkg_dict["maxy"] = maxy
+            pkg_dict["spatial_geom"] = shape.wkt
+
         return pkg_dict
 
     # ITemplateHelpers

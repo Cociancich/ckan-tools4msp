@@ -381,6 +381,11 @@
       "help_text": "Use this field to specify the END date of a time period."
     },
     {
+      "field_name": "spatial_geojson",
+      "label": "Spatial extent",
+      "help_text": "GeoJSON feature"
+    },
+    {
       "field_name": "data_accessibility",
       "label": "Data accessibility",
       "form_snippet": "markdown.html",

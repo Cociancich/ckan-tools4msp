@@ -69,3 +69,12 @@ npm run dev
 
 Problem: `library initialization failed - unable to allocate file descriptor table - out of memory#`
 Solution: https://superuser.com/a/1413390
+
+## Unexpected results in spatial queries
+
+Solr indexes might need to be recreated:
+
+```bash
+ckan="$(docker container ls -qf name=catalogue-tools4msp-ckan)"
+docker exec "$ckan" ckan search-index rebuild
+```

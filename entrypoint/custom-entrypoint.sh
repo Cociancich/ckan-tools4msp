@@ -50,5 +50,6 @@ conf_set ckan.search.show_all_types true
 #ckanext-spatial
 conf_set_list ckan.plugins spatial_metadata spatial_query
 conf_set ckanext.spatial.search_backend solr-bbox
+conf_set ckan.solr_url "$CKAN_SOLR_URL"
 
 exec "$@"

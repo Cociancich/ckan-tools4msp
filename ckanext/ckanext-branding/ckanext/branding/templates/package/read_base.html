@@ -1,0 +1,8 @@
+{% ckan_extends %}
+{% block secondary_content %}
+  {{ super() }}
+  {% set dataset_extent = c.pkg_dict.get('spatial_geojson') %}
+  {% if dataset_extent %}
+    {% snippet "spatial/snippets/dataset_map_sidebar.html", extent=dataset_extent %}
+  {% endif %}
+{% endblock %}

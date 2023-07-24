@@ -506,6 +506,1370 @@
       ]
     },
     {
+      "field_name": "environment-msfd-classes",
+      "label": "Environment - MSFD Classes",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "species-marine-birds",
+          "label": "Species-Marine birds"
+        },
+        {
+          "value": "species-mammals",
+          "label": "Species-Mammals"
+        },
+        {
+          "value": "species-cephalopods",
+          "label": "Species-Cephalopods"
+        },
+        {
+          "value": "species-reptiles",
+          "label": "Species-Reptiles"
+        },
+        {
+          "value": "species-fish",
+          "label": "Species-Fish"
+        },
+        {
+          "value": "habitats-water-column",
+          "label": "Habitats-Water column"
+        },
+        {
+          "value": "habitats-seabed",
+          "label": "Habitats-Seabed"
+        },
+        {
+          "value": "ecosystems-including-food-webs-biological-characteristics",
+          "label": "Ecosystems, including food webs -Biological characteristics"
+        },
+        {
+          "value": "ecosystems-including-food-webs-functions-and-processes",
+          "label": "Ecosystems, including food webs -Functions and processes "
+        },
+        {
+          "value": "pressure-biological-input-or-spread-of-non-indigenous-species",
+          "label": "Pressure: Biological-Input or spread of non-indigenous species"
+        },
+        {
+          "value": "pressure-biological-input-of-microbial-pathogens",
+          "label": "Pressure: Biological-Input of microbial pathogens"
+        },
+        {
+          "value": "pressure-biological-input-of-genetically-modified-species-and-translocation-of-native-species",
+          "label": "Pressure: Biological-Input of genetically modified species and translocation of native species"
+        },
+        {
+          "value": "pressure-biological-disturbance-of-species-due-to-human-presence",
+          "label": "Pressure: Biological-Disturbance of species due to human presence"
+        },
+        {
+          "value": "pressure-biological-extraction-of-or-mortality-injury-to-wild-species",
+          "label": "Pressure: Biological-Extraction of, or mortality/injury to, wild species"
+        },
+        {
+          "value": "pressure-physical-physical-disturbance-to-seabed",
+          "label": "Pressure: Physical-Physical disturbance to seabed"
+        },
+        {
+          "value": "pressure-physical-physical-loss",
+          "label": "Pressure: Physical-Physical loss"
+        },
+        {
+          "value": "pressure-physical-changes-to-hydrological-conditions",
+          "label": "Pressure: Physical-Changes to hydrological conditions"
+        },
+        {
+          "value": "pressure-substances-litter-and-energy-input-of-nutrients-diffuse-sources-point-sources-atmospheric-deposition",
+          "label": "Pressure: Substances, litter and energy-Input of nutrients - diffuse sources, point sources, atmospheric deposition"
+        },
+        {
+          "value": "pressure-substances-litter-and-energy-input-of-organic-matter-diffuse-sources-and-point-sources",
+          "label": "Pressure: Substances, litter and energy-Input of organic matter - diffuse sources and point sources"
+        },
+        {
+          "value": "pressure-substances-litter-and-energy-input-of-other-substances-diffuse-sources-point-sources-atmospheric-deposition-acute-events",
+          "label": "Pressure: Substances, litter and energy-Input of other substances - diffuse sources, point sources, atmospheric deposition, acute events"
+        },
+        {
+          "value": "pressure-substances-litter-and-energy-input-of-litter",
+          "label": "Pressure: Substances, litter and energy-Input of litter"
+        },
+        {
+          "value": "pressure-substances-litter-and-energy-input-of-anthropogenic-sound",
+          "label": "Pressure: Substances, litter and energy-Input of anthropogenic sound"
+        },
+        {
+          "value": "pressure-substances-litter-and-energy-input-of-other-forms-of-energy",
+          "label": "Pressure: Substances, litter and energy-Input of other forms of energy "
+        },
+        {
+          "value": "pressure-substances-litter-and-energy-input-of-water-point-sources",
+          "label": "Pressure: Substances, litter and energy-Input of water - point sources"
+        }
+      ]
+    },
+    {
+      "field_name": "environment-msfd-descriptors-criteria",
+      "label": "Environment - MSFD Descriptors/Criteria",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "d1-biodiversity-birds",
+          "label": "D1 Biodiversity - birds"
+        },
+        {
+          "value": "d1-biodiversity-mammals",
+          "label": "D1 Biodiversity - mammals"
+        },
+        {
+          "value": "d1-biodiversity-reptiles",
+          "label": "D1 Biodiversity - reptiles"
+        },
+        {
+          "value": "d1-biodiversity-fish",
+          "label": "D1 Biodiversity - fish"
+        },
+        {
+          "value": "d1-biodiversity-cephalopods",
+          "label": "D1 Biodiversity - cephalopods"
+        },
+        {
+          "value": "d1-biodiversity-pelagic-habitats",
+          "label": "D1 Biodiversity - pelagic habitats"
+        },
+        {
+          "value": "d2-non-indigenous-species",
+          "label": "D2 Non-indigenous species"
+        },
+        {
+          "value": "d3-commercial-fish-and-shellfish",
+          "label": "D3 Commercial fish and shellfish"
+        },
+        {
+          "value": "d4-food-webs-d1-biodiversity-ecosystems",
+          "label": "D4 Food webs/D1 Biodiversity - ecosystems"
+        },
+        {
+          "value": "d5-eutrophication",
+          "label": "D5 Eutrophication"
+        },
+        {
+          "value": "d6-sea-floor-integrity-d1-biodiversity-benthic-habitats",
+          "label": "D6 Sea-floor integrity/D1 Biodiversity - benthic habitats"
+        },
+        {
+          "value": "d7-hydrographical-changes",
+          "label": "D7 Hydrographical changes"
+        },
+        {
+          "value": "d8-contaminants",
+          "label": "D8 Contaminants"
+        },
+        {
+          "value": "d9-contaminants-in-seafood",
+          "label": "D9 Contaminants in seafood"
+        },
+        {
+          "value": "d10-marine-litter",
+          "label": "D10 Marine litter"
+        },
+        {
+          "value": "d11-energy-including-underwater-noise",
+          "label": "D11 Energy, including underwater noise"
+        },
+        {
+          "value": "d1c1-mortality-rate-from-incidental-by-catch",
+          "label": "D1C1 Mortality rate from incidental by-catch"
+        },
+        {
+          "value": "d1c2-population-abundance",
+          "label": "D1C2 Population abundance"
+        },
+        {
+          "value": "d1c3-population-demographic-characteristics",
+          "label": "D1C3 Population demographic characteristics"
+        },
+        {
+          "value": "d1c4-population-distributional-range-and-pattern",
+          "label": "D1C4 Population distributional range and pattern"
+        },
+        {
+          "value": "d1c5-habitat-for-the-species",
+          "label": "D1C5 Habitat for the species"
+        },
+        {
+          "value": "d1c6-pelagic-habitat-condition",
+          "label": "D1C6 Pelagic habitat condition"
+        },
+        {
+          "value": "d2c1-newly-introduced-nis",
+          "label": "D2C1 Newly-introduced NIS"
+        },
+        {
+          "value": "d2c2-established-nis",
+          "label": "D2C2 Established NIS"
+        },
+        {
+          "value": "d2c3-adverse-effects-of-nis",
+          "label": "D2C3 Adverse effects of NIS"
+        },
+        {
+          "value": "d3c1-fishing-mortality-rate-f",
+          "label": "D3C1 Fishing mortality rate (F)"
+        },
+        {
+          "value": "d3c2-spawning-stock-biomass-ssb",
+          "label": "D3C2 Spawning stock biomass (SSB)"
+        },
+        {
+          "value": "d3c3-population-age-size-distribution",
+          "label": "D3C3 Population age/size distribution"
+        },
+        {
+          "value": "d4c1-trophic-guild-species-diversity",
+          "label": "D4C1 Trophic guild species diversity"
+        },
+        {
+          "value": "d4c2-abundance-across-trophic-guilds",
+          "label": "D4C2 Abundance across trophic guilds"
+        },
+        {
+          "value": "d4c3-trophic-guild-size-distribution",
+          "label": "D4C3 Trophic guild size distribution"
+        },
+        {
+          "value": "d4c4-trophic-guild-productivity",
+          "label": "D4C4 Trophic guild productivity"
+        },
+        {
+          "value": "d5c1-nutrient-concentrations",
+          "label": "D5C1 Nutrient concentrations"
+        },
+        {
+          "value": "d5c2-chlorophyll-a-concentration",
+          "label": "D5C2 Chlorophyll-a concentration"
+        },
+        {
+          "value": "d5c3-harmful-algal-blooms",
+          "label": "D5C3 Harmful algal blooms"
+        },
+        {
+          "value": "d5c4-photic-limit",
+          "label": "D5C4 Photic limit"
+        },
+        {
+          "value": "d5c5-dissolved-oxygen-concentration",
+          "label": "D5C5 Dissolved oxygen concentration"
+        },
+        {
+          "value": "d5c6-opportunistic-macroalgae-of-benthic-habitats",
+          "label": "D5C6 Opportunistic macroalgae of benthic habitats"
+        },
+        {
+          "value": "d5c7-macrophyte-communities-of-benthic-habitats",
+          "label": "D5C7 Macrophyte communities of benthic habitats"
+        },
+        {
+          "value": "d5c8-macrofaunal-communities-of-benthic-habitats",
+          "label": "D5C8 Macrofaunal communities of benthic habitats"
+        },
+        {
+          "value": "d6c1-physical-loss-of-the-seabed",
+          "label": "D6C1 Physical loss of the seabed"
+        },
+        {
+          "value": "d6c2-physical-disturbance-to-the-seabed",
+          "label": "D6C2 Physical disturbance to the seabed"
+        },
+        {
+          "value": "d6c3-adverse-effects-from-physical-disturbance",
+          "label": "D6C3 Adverse effects from physical disturbance"
+        },
+        {
+          "value": "d6c4-benthic-habitat-extent",
+          "label": "D6C4 Benthic habitat extent"
+        },
+        {
+          "value": "d6c5-benthic-habitat-condition",
+          "label": "D6C5 Benthic habitat condition"
+        },
+        {
+          "value": "d7c1-permanent-alteration-of-hydrographical-conditions",
+          "label": "D7C1 Permanent alteration of hydrographical conditions"
+        },
+        {
+          "value": "d7c2-adverse-effects-from-permanent-alteration-of-hydrographical-conditions",
+          "label": "D7C2 Adverse effects from permanent alteration of hydrographical conditions"
+        },
+        {
+          "value": "d8c1-contaminant-in-environment",
+          "label": "D8C1 Contaminant in environment"
+        },
+        {
+          "value": "d8c2-adverse-effects-of-contaminants",
+          "label": "D8C2 Adverse effects of contaminants"
+        },
+        {
+          "value": "d8c3-significant-acute-pollution-events",
+          "label": "D8C3 Significant acute pollution events"
+        },
+        {
+          "value": "d8c4-adverse-effects-of-significant-acute-pollution-events",
+          "label": "D8C4 Adverse effects of significant acute pollution events"
+        },
+        {
+          "value": "d9c1-contaminants-in-seafood",
+          "label": "D9C1 Contaminants in seafood"
+        },
+        {
+          "value": "d10c1-litter-excluding-micro-litter",
+          "label": "D10C1 Litter (excluding micro-litter)"
+        },
+        {
+          "value": "d10c2-micro-litter",
+          "label": "D10C2 Micro-litter"
+        },
+        {
+          "value": "d10c3-litter-ingested",
+          "label": "D10C3 Litter ingested"
+        },
+        {
+          "value": "d10c4-adverse-effects-of-litter",
+          "label": "D10C4 Adverse effects of litter"
+        },
+        {
+          "value": "d11c1-anthropogenic-impulsive-sound",
+          "label": "D11C1 Anthropogenic impulsive sound"
+        },
+        {
+          "value": "d11c2-anthropogenic-continuous-low-frequency-sound",
+          "label": "D11C2 Anthropogenic continuous low-frequency sound"
+        }
+      ]
+    },
+    {
+      "field_name": "environment-non-msfd-classes",
+      "label": "Environment - Non MSFD Classes",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "species",
+          "label": "Species"
+        },
+        {
+          "value": "habitats",
+          "label": "Habitats"
+        },
+        {
+          "value": "pressures",
+          "label": "Pressures"
+        }
+      ]
+    },
+    {
+      "field_name": "oceanographic-variables",
+      "label": "Oceanographic - Variables",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "physics-sea-state",
+          "label": "Physics-Sea state"
+        },
+        {
+          "value": "physics-ocean-surface-stress",
+          "label": "Physics-Ocean surface stress"
+        },
+        {
+          "value": "physics-bathymetry",
+          "label": "Physics-Bathymetry"
+        },
+        {
+          "value": "physics-sea-ice",
+          "label": "Physics-Sea ice"
+        },
+        {
+          "value": "physics-sea-surface-height",
+          "label": "Physics-Sea surface height"
+        },
+        {
+          "value": "physics-sea-surface-temperature",
+          "label": "Physics-Sea surface temperature"
+        },
+        {
+          "value": "physics-subsurface-temperature",
+          "label": "Physics-Subsurface temperature"
+        },
+        {
+          "value": "physics-surface-currents",
+          "label": "Physics-Surface currents"
+        },
+        {
+          "value": "physics-subsurface-currents",
+          "label": "Physics-Subsurface currents"
+        },
+        {
+          "value": "physics-sea-surface-salinity",
+          "label": "Physics-Sea surface salinity"
+        },
+        {
+          "value": "physics-subsurface-salinity",
+          "label": "Physics-Subsurface salinity"
+        },
+        {
+          "value": "physics-ocean-surface-heat-flux",
+          "label": "Physics-Ocean surface heat flux"
+        },
+        {
+          "value": "physics-waves",
+          "label": "Physics-Waves"
+        },
+        {
+          "value": "biochemistry-oxygen",
+          "label": "Biochemistry-Oxygen"
+        },
+        {
+          "value": "biochemistry-nutrients",
+          "label": "Biochemistry-Nutrients"
+        },
+        {
+          "value": "biochemistry-inorganic-carbon",
+          "label": "Biochemistry-Inorganic carbon"
+        },
+        {
+          "value": "biochemistry-transient-tracers",
+          "label": "Biochemistry-Transient tracers"
+        },
+        {
+          "value": "biochemistry-particulate-matter",
+          "label": "Biochemistry-Particulate matter"
+        },
+        {
+          "value": "biochemistry-ammonium",
+          "label": "Biochemistry-Ammonium"
+        },
+        {
+          "value": "biochemistry-nitrate",
+          "label": "Biochemistry-Nitrate"
+        },
+        {
+          "value": "biochemistry-stable-carbon-isotopes",
+          "label": "Biochemistry-Stable carbon isotopes"
+        },
+        {
+          "value": "biochemistry-chlorophyll-a",
+          "label": "Biochemistry-Chlorophyll-a"
+        }
+      ]
+    },
+    {
+      "field_name": "conservation-types",
+      "label": "Conservation - Types",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "internationally-designated-protected-areas-marine-and-coastal",
+          "label": "Internationally designated  Protected Areas (marine and coastal)"
+        },
+        {
+          "value": "regionally-designated-protected-areas-marine-and-coastal",
+          "label": "Regionally designated Protected Areas (marine and coastal)"
+        },
+        {
+          "value": "nationally-designated-protected-areas-marine-and-coastal",
+          "label": "Nationally designated protected areas  (marine and coastal)"
+        },
+        {
+          "value": "potential-other-effective-area-based-conservation-measures-oecms",
+          "label": "Potential Other effective area-based conservation measures (OECMs)"
+        },
+        {
+          "value": "recognised-areas-of-protection-conservation-value",
+          "label": "Recognised areas of protection/conservation value"
+        }
+      ]
+    },
+    {
+      "field_name": "conservation-zonation",
+      "label": "Conservation - Zonation",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "yes-no",
+          "label": "yes/no"
+        }
+      ]
+    },
+    {
+      "field_name": "maritime-activities",
+      "label": "Maritime activities",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "aquaculture-finfish",
+          "label": "Aquaculture-Finfish"
+        },
+        {
+          "value": "aquaculture-shellfish",
+          "label": "Aquaculture-Shellfish"
+        },
+        {
+          "value": "mining-and-quarrying-oil-gas",
+          "label": "Mining  and quarrying-Oil & Gas"
+        },
+        {
+          "value": "mining-and-quarrying-dredging",
+          "label": "Mining  and quarrying-Dredging"
+        },
+        {
+          "value": "mining-and-quarrying-dumping",
+          "label": "Mining  and quarrying-Dumping"
+        },
+        {
+          "value": "fishing-professional-fishing",
+          "label": "Fishing-Professional fishing"
+        },
+        {
+          "value": "energy-production-renewable-energy",
+          "label": "Energy production-Renewable energy"
+        },
+        {
+          "value": "other-industries-desalination",
+          "label": "Other industries-Desalination"
+        },
+        {
+          "value": "cultural-entertainment-and-recreational-services-nautical-sports",
+          "label": "Cultural entertainment and recreational services-Nautical sports"
+        },
+        {
+          "value": "cultural-entertainment-and-recreational-services-beaches",
+          "label": "Cultural entertainment and recreational services-Beaches"
+        },
+        {
+          "value": "cultural-entertainment-and-recreational-services-coastal-tourism",
+          "label": "Cultural entertainment and recreational services-Coastal tourism"
+        },
+        {
+          "value": "cultural-entertainment-and-recreational-services-underwater-cultural-heritage",
+          "label": "Cultural entertainment and recreational services-Underwater cultural heritage"
+        },
+        {
+          "value": "transport-harbours",
+          "label": "Transport-Harbours"
+        },
+        {
+          "value": "transport-anchorage-area",
+          "label": "Transport-Anchorage area"
+        },
+        {
+          "value": "transport-maritime-traffic",
+          "label": "Transport-Maritime traffic"
+        },
+        {
+          "value": "transport-transport-trends",
+          "label": "Transport-Transport trends"
+        },
+        {
+          "value": "logistic-and-storage-services-offshore-supply",
+          "label": "Logistic and storage services-Offshore supply"
+        },
+        {
+          "value": "utilities-electricity-gas-and-thermal-power-distribution-services",
+          "label": "Utilities-Electricity gas and thermal power distribution services"
+        },
+        {
+          "value": "utilities-waste-treatment",
+          "label": "Utilities-Waste treatment"
+        },
+        {
+          "value": "utilities-water-and-sewage-infrastructure",
+          "label": "Utilities-Water and sewage infrastructure"
+        },
+        {
+          "value": "utilities-submarine-outfall",
+          "label": "Utilities-Submarine outfall"
+        },
+        {
+          "value": "utilities-submarine-cables",
+          "label": "Utilities-Submarine cables"
+        },
+        {
+          "value": "coastal-infrastructures-coastal-defence-works",
+          "label": "Coastal infrastructures-Coastal defence works"
+        },
+        {
+          "value": "protected-areas-marine-protected-area",
+          "label": "Protected areas-Marine protected area"
+        },
+        {
+          "value": "protected-areas-no-take-zones",
+          "label": "Protected areas-No take zones"
+        },
+        {
+          "value": "protected-areas-species-corridor",
+          "label": "Protected areas-Species Corridor"
+        },
+        {
+          "value": "protected-areas-ecological-protection",
+          "label": "Protected areas-Ecological protection"
+        },
+        {
+          "value": "protected-areas-coastal-protection",
+          "label": "Protected areas-Coastal protection"
+        },
+        {
+          "value": "protected-areas-navigation-protection",
+          "label": "Protected areas-Navigation protection"
+        },
+        {
+          "value": "protected-areas-heritage-protection",
+          "label": "Protected areas-Heritage protection"
+        },
+        {
+          "value": "military-areas",
+          "label": "Military areas"
+        }
+      ]
+    },
+    {
+      "field_name": "coastal-land-use-and-planning",
+      "label": "Coastal & Land use and planning",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "land-use-land-cover-soil-sealing-area",
+          "label": "Land use / Land cover-Soil sealing-area"
+        },
+        {
+          "value": "land-use-land-cover-soil-sealing-trend",
+          "label": "Land use / Land cover-Soil sealing-trend"
+        },
+        {
+          "value": "land-use-land-cover-land-cover-corine-land-cover",
+          "label": "Land use / Land cover-Land cover-Corine Land Cover"
+        },
+        {
+          "value": "land-use-land-cover-land-cover-high-resolution-layer",
+          "label": "Land use / Land cover-Land cover-High Resolution Layer"
+        },
+        {
+          "value": "land-use-land-cover-land-cover-coast-characteristics",
+          "label": "Land use / Land cover-Land cover-Coast characteristics"
+        },
+        {
+          "value": "land-use-land-cover-lc-lu-coastal-zone-hotspot-thematic-mapping",
+          "label": "Land use / Land cover-LC/LU-Coastal Zone hotspot thematic mapping"
+        },
+        {
+          "value": "land-use-land-cover-coastline",
+          "label": "Land use / Land cover-Coastline-"
+        },
+        {
+          "value": "planning-strategic-national-eu-regulated",
+          "label": "Planning-Strategic-National (EU regulated)"
+        },
+        {
+          "value": "planning-strategic-national-others",
+          "label": "Planning-Strategic-National (others)"
+        },
+        {
+          "value": "planning-strategic-subnational",
+          "label": "Planning-Strategic-Subnational"
+        },
+        {
+          "value": "planning-strategic-local",
+          "label": "Planning-Strategic-Local"
+        },
+        {
+          "value": "planning-coordination-sub-national",
+          "label": "Planning-Coordination-Sub-national"
+        },
+        {
+          "value": "planning-operational-sub-national",
+          "label": "Planning-Operational-Sub-National"
+        },
+        {
+          "value": "planning-operational-local",
+          "label": "Planning-Operational-Local"
+        },
+        {
+          "value": "coastline-geomorphology",
+          "label": "Coastline-geomorphology"
+        },
+        {
+          "value": "coastline-trends",
+          "label": "Coastline-trends"
+        }
+      ]
+    },
+    {
+      "field_name": "socio-economic-activities",
+      "label": "Socio-economic - Activities",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "fisheries-and-aquaculture-marine-fishing-a0311",
+          "label": "Fisheries and Aquaculture-Marine fishing-A0311"
+        },
+        {
+          "value": "fisheries-and-aquaculture-marine-aquaculture-a0321",
+          "label": "Fisheries and Aquaculture-Marine aquaculture-A0321"
+        },
+        {
+          "value": "fisheries-and-aquaculture-wholesale-of-other-food-including-fish-crustaceans-and-molluscs-g4638",
+          "label": "Fisheries and Aquaculture-Wholesale of other food, including fish, crustaceans and molluscs-G4638"
+        },
+        {
+          "value": "fisheries-and-aquaculture-processing-and-preserving-of-fish-crustaceans-and-molluscs-c1020",
+          "label": "Fisheries and Aquaculture-Processing and preserving of fish, crustaceans and molluscs-C1020"
+        },
+        {
+          "value": "extraction-of-oil-and-gas-extraction-of-crude-petroleum-b0610",
+          "label": "Extraction of oil and gas-Extraction of crude petroleum-B0610"
+        },
+        {
+          "value": "extraction-of-oil-and-gas-extraction-of-natural-gas-b0620",
+          "label": "Extraction of oil and gas-Extraction of natural gas-B0620"
+        },
+        {
+          "value": "extraction-of-oil-and-gas-support-activities-for-petroleum-and-natural-gas-extraction-b0910",
+          "label": "Extraction of oil and gas-Support activities for petroleum and natural gas extraction-B0910"
+        },
+        {
+          "value": "extraction-of-aggregates-quarrying-of-ornamental-and-building-stone-limestone-gypsum-chalk-and-slate-b0811",
+          "label": "Extraction of aggregates-Quarrying of ornamental and building stone, limestone, gypsum, chalk and slate-B0811"
+        },
+        {
+          "value": "extraction-of-aggregates-operation-of-gravel-and-sand-pits-mining-of-clays-and-kaolin-b0812",
+          "label": "Extraction of aggregates-Operation of gravel and sand pits; mining of clays and kaolin-B0812"
+        },
+        {
+          "value": "extraction-of-aggregates-other-mining-and-quarrying-b0899",
+          "label": "Extraction of aggregates-Other mining and quarrying-B0899"
+        },
+        {
+          "value": "seabed-mining-mining-of-iron-ores-b0710",
+          "label": "Seabed mining-Mining of iron ores-B0710"
+        },
+        {
+          "value": "seabed-mining-mining-of-uranium-and-thorium-ores-b0721",
+          "label": "Seabed mining-Mining of uranium and thorium ores-B0721"
+        },
+        {
+          "value": "seabed-mining-mining-of-other-non-ferrous-metal-ores-b0729",
+          "label": "Seabed mining-Mining of other non-ferrous metal ores-B0729"
+        },
+        {
+          "value": "seabed-mining-support-services-to-other-mining-and-quarrying-b0990",
+          "label": "Seabed mining-Support services to other mining and quarrying-B0990"
+        },
+        {
+          "value": "maritime-transport-sea-and-coastal-passenger-water-transport-h5010",
+          "label": "Maritime Transport-Sea and coastal passenger water transport-H5010"
+        },
+        {
+          "value": "maritime-transport-sea-and-coastal-freight-water-transport-h5020",
+          "label": "Maritime Transport-Sea and coastal freight water transport-H5020"
+        },
+        {
+          "value": "maritime-transport-other-transportation-support-activities-h5229",
+          "label": "Maritime Transport-Other transportation support activities-H5229"
+        },
+        {
+          "value": "maritime-transport-rental-and-leasing-services-of-water-transport-equipment-n7734",
+          "label": "Maritime Transport-Rental and leasing services of water transport equipment-N7734"
+        },
+        {
+          "value": "ports-warehousing-and-storage-services-h5210",
+          "label": "Ports-Warehousing and storage services-H5210"
+        },
+        {
+          "value": "ports-service-activities-incidental-to-water-transportation-h5222",
+          "label": "Ports-Service activities incidental to water transportation-H5222"
+        },
+        {
+          "value": "coastal-tourism-land-transport-h49",
+          "label": "Coastal Tourism-Land transport-H49"
+        },
+        {
+          "value": "coastal-tourism-water-transport-h50",
+          "label": "Coastal Tourism-Water transport-H50"
+        },
+        {
+          "value": "coastal-tourism-air-transport-h51",
+          "label": "Coastal Tourism-Air transport-H51"
+        },
+        {
+          "value": "coastal-tourism-accommodation-i55",
+          "label": "Coastal Tourism-Accommodation-I55"
+        },
+        {
+          "value": "coastal-tourism-food-and-beverage-service-activities-i56",
+          "label": "Coastal Tourism-Food and beverage service activities-I56"
+        },
+        {
+          "value": "coastal-tourism-renting-and-leasing-of-motor-vehicles-recreational-and-sports-gods-n77",
+          "label": "Coastal Tourism-Renting and leasing of motor vehicles, recreational and sports gods-N77"
+        },
+        {
+          "value": "coastal-tourism-travel-agency-tour-operator-reservation-service-and-related-activities-n79",
+          "label": "Coastal Tourism-Travel agency, tour operator reservation service and related activities-N79"
+        },
+        {
+          "value": "coastal-tourism-culture-and-entertainment-r90-92",
+          "label": "Coastal Tourism-Culture and entertainment-R90-92"
+        },
+        {
+          "value": "energy-production-of-electricity-d3511",
+          "label": "Energy-Production of electricity-D3511"
+        },
+        {
+          "value": "military-defence-activities-o8422",
+          "label": "Military-Defence activities-O8422"
+        },
+        {
+          "value": "construction-construction-of-water-project-f4291",
+          "label": "Construction-Construction of water project-F4291"
+        }
+      ]
+    },
+    {
+      "field_name": "socio-economic-values",
+      "label": "Socio-economic - Values",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "economic",
+          "label": "Economic"
+        },
+        {
+          "value": "social",
+          "label": "Social"
+        },
+        {
+          "value": "provisioning-biotic-1-1-1-2-fibres-and-other-materials-from-cultivated-plants-fungi-algae-and-bacteria-for-direct-use-or-processing-excluding-genetic-materials",
+          "label": "Provisioning (Biotic)-1.1.1.2 Fibres and other materials from cultivated plants, fungi, algae and bacteria for direct use or processing (excluding genetic materials)"
+        },
+        {
+          "value": "provisioning-biotic-1-1-1-3-cultivated-plants-including-fungi-algae-grown-as-a-source-of-energy",
+          "label": "Provisioning (Biotic)-1.1.1.3 Cultivated plants (including fungi, algae) grown as a source of energy"
+        },
+        {
+          "value": "provisioning-biotic-1-1-2-1-plants-cultivated-by-in-situ-aquaculture-grown-for-nutritional-purposes",
+          "label": "Provisioning (Biotic)-1.1.2.1 Plants cultivated by in- situ aquaculture grown for nutritional purposes"
+        },
+        {
+          "value": "provisioning-biotic-1-1-2-2-fibres-and-other-materials-from-in-situ-aquaculture-for-direct-use-or-processing-excluding-genetic-materials",
+          "label": "Provisioning (Biotic)-1.1.2.2 Fibres and other materials from in-situ aquaculture for direct use or processing (excluding genetic materials)"
+        },
+        {
+          "value": "provisioning-biotic-1-1-2-3-plants-cultivated-by-in-situ-aquaculture-grown-as-an-energy-source",
+          "label": "Provisioning (Biotic)-1.1.2.3 Plants cultivated by in- situ aquaculture grown as an energy source"
+        },
+        {
+          "value": "provisioning-biotic-1-1-3-1-animals-reared-for-nutritional-purposes",
+          "label": "Provisioning (Biotic)-1.1.3.1 Animals reared for nutritional purposes"
+        },
+        {
+          "value": "provisioning-biotic-1-1-3-2-fibres-and-other-materials-from-reared-animals-for-direct-use-or-processing-excluding-genetic-materials",
+          "label": "Provisioning (Biotic)-1.1.3.2 Fibres and other materials from reared animals for direct use or processing (excluding genetic materials)"
+        },
+        {
+          "value": "provisioning-biotic-1-1-3-3-animals-reared-to-provide-energy-including-mechanical",
+          "label": "Provisioning (Biotic)-1.1.3.3 Animals reared to provide energy (including mechanical)"
+        },
+        {
+          "value": "provisioning-biotic-1-1-4-1-animals-reared-by-in-situ-aquaculture-for-nutritional-purposes",
+          "label": "Provisioning (Biotic)-1.1.4.1 Animals reared by in-situ aquaculture for nutritional purposes"
+        },
+        {
+          "value": "provisioning-biotic-1-1-4-2-fibres-and-other-materials-from-animals-grown-by-in-situ-aquaculture-for-direct-use-or-processing-excluding-genetic-materials",
+          "label": "Provisioning (Biotic)-1.1.4.2 Fibres and other materials from animals grown by in-situ aquaculture for direct use or processing (excluding genetic materials)"
+        },
+        {
+          "value": "provisioning-biotic-1-1-4-3-animals-reared-by-in-situ-aquaculture-as-an-energy-source",
+          "label": "Provisioning (Biotic)-1.1.4.3 Animals reared by in-situ aquaculture as an energy source"
+        },
+        {
+          "value": "provisioning-biotic-1-1-5-1-wild-plants-terrestrial-and-aquatic-including-fungi-algae-used-for-nutrition",
+          "label": "Provisioning (Biotic)-1.1.5.1 Wild plants (terrestrial and aquatic, including fungi, algae) used for nutrition"
+        },
+        {
+          "value": "provisioning-biotic-1-1-5-2-fibres-and-other-materials-from-wild-plants-for-direct-use-or-processing-excluding-genetic-materials",
+          "label": "Provisioning (Biotic)-1.1.5.2 Fibres and other materials from wild plants for direct use or processing (excluding genetic materials)"
+        },
+        {
+          "value": "provisioning-biotic-1-1-5-3-wild-plants-terrestrial-and-aquatic-including-fungi-algae-used-as-a-source-of-energy",
+          "label": "Provisioning (Biotic)-1.1.5.3 Wild plants (terrestrial and aquatic, including fungi, algae) used as a source of energy"
+        },
+        {
+          "value": "provisioning-biotic-1-1-6-1-wild-animals-terrestrial-and-aquatic-used-for-nutritional-purposes",
+          "label": "Provisioning (Biotic)-1.1.6.1 Wild animals (terrestrial and aquatic) used for nutritional purposes"
+        },
+        {
+          "value": "provisioning-biotic-1-1-6-2-fibres-and-other-materials-from-wild-animals-for-direct-use-or-processing-excluding-genetic-materials",
+          "label": "Provisioning (Biotic)-1.1.6.2 Fibres and other materials from wild animals for direct use or processing (excluding genetic materials)"
+        },
+        {
+          "value": "provisioning-biotic-1-1-6-3-wild-animals-terrestrial-and-aquatic-used-as-a-source-of-energy",
+          "label": "Provisioning (Biotic)-1.1.6.3 Wild animals (terrestrial and aquatic) used as a source of energy"
+        },
+        {
+          "value": "provisioning-biotic-1-2-1-1-seeds-spores-and-other-plant-materials-collected-for-maintaining-or-establishing-a-population",
+          "label": "Provisioning (Biotic)-1.2.1.1 Seeds, spores and other plant materials collected for maintaining or establishing a population"
+        },
+        {
+          "value": "provisioning-biotic-1-2-1-2-higher-and-lower-plants-whole-organisms-used-to-breed-new-strains-or-varieties",
+          "label": "Provisioning (Biotic)-1.2.1.2 Higher and lower plants (whole organisms) used to breed new strains or varieties"
+        },
+        {
+          "value": "provisioning-biotic-1-2-1-3-individual-genes-extracted-from-higher-and-lower-plants-for-the-design-and-construction-of-new-biological-entities",
+          "label": "Provisioning (Biotic)-1.2.1.3 Individual genes extracted from higher and lower plants for the design and construction of new biological entities"
+        },
+        {
+          "value": "provisioning-biotic-1-2-2-1-animal-material-collected-for-the-purposes-of-maintaining-or-establishing-a-population",
+          "label": "Provisioning (Biotic)-1.2.2.1 Animal material collected for the purposes of maintaining or establishing a population"
+        },
+        {
+          "value": "provisioning-biotic-1-2-2-2-wild-animals-whole-organisms-used-to-breed-new-strains-or-varieties",
+          "label": "Provisioning (Biotic)-1.2.2.2 Wild animals (whole organisms) used to breed new strains or varieties"
+        },
+        {
+          "value": "provisioning-biotic-1-2-2-3-individual-genes-extracted-from-organisms-for-the-design-and-construction-of-new-biological-entities",
+          "label": "Provisioning (Biotic)-1.2.2.3 Individual genes extracted from organisms for the design and construction of new biological entities"
+        },
+        {
+          "value": "provisioning-biotic-1-3-x-x-other",
+          "label": "Provisioning (Biotic)-1.3.X.X Other"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-1-1-1-bio-remediation-by-micro-organisms-algae-plants-and-animals",
+          "label": "Regulation & Maintenance (Biotic)-2.1.1.1 Bio-remediation by micro-organisms, algae, plants, and animals"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-1-1-2-filtration-sequestration-storage-accumulation-by-micro-organisms-algae-plants-and-animals",
+          "label": "Regulation & Maintenance (Biotic)-2.1.1.2 Filtration/sequestration/storage/accumulation by micro-organisms, algae, plants, and animals"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-1-2-1-smell-reduction",
+          "label": "Regulation & Maintenance (Biotic)-2.1.2.1 Smell reduction"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-1-2-2-noise-attenuation",
+          "label": "Regulation & Maintenance (Biotic)-2.1.2.2 Noise attenuation"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-1-2-3-visual-screening",
+          "label": "Regulation & Maintenance (Biotic)-2.1.2.3 Visual screening"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-1-1-control-of-erosion-rates",
+          "label": "Regulation & Maintenance (Biotic)-2.2.1.1 Control of erosion rates"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-1-2-buffering-and-attenuation-of-mass-movement",
+          "label": "Regulation & Maintenance (Biotic)-2.2.1.2 Buffering and attenuation of mass movement"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-1-3-hydrological-cycle-and-water-flow-regulation-including-flood-control-and-coastal-protection",
+          "label": "Regulation & Maintenance (Biotic)-2.2.1.3 Hydrological cycle and water flow regulation (Including flood control, and coastal protection)"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-1-4-wind-protection",
+          "label": "Regulation & Maintenance (Biotic)-2.2.1.4 Wind protection"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-1-5-fire-protection",
+          "label": "Regulation & Maintenance (Biotic)-2.2.1.5 Fire protection"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-2-1-pollination-or-gamete-dispersal-in-a-marine-context",
+          "label": "Regulation & Maintenance (Biotic)-2.2.2.1 Pollination (or 'gamete' dispersal in a marine context)"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-2-2-seed-dispersal",
+          "label": "Regulation & Maintenance (Biotic)-2.2.2.2 Seed dispersal"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-2-3-maintaining-nursery-populations-and-habitats-including-gene-pool-protection",
+          "label": "Regulation & Maintenance (Biotic)-2.2.2.3 Maintaining nursery populations and habitats (Including gene pool protection)"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-3-1-pest-control-including-invasive-species",
+          "label": "Regulation & Maintenance (Biotic)-2.2.3.1 Pest control (including invasive species)"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-3-2-disease-control",
+          "label": "Regulation & Maintenance (Biotic)-2.2.3.2 Disease control"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-4-1-weathering-processes-and-their-effect-on-soil-quality",
+          "label": "Regulation & Maintenance (Biotic)-2.2.4.1 Weathering processes and their effect on soil quality"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-4-2-decomposition-and-fixing-processes-and-their-effect-on-soil-quality",
+          "label": "Regulation & Maintenance (Biotic)-2.2.4.2 Decomposition and fixing processes and their effect on soil quality"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-5-1-regulation-of-the-chemical-condition-of-freshwaters-by-living-processes",
+          "label": "Regulation & Maintenance (Biotic)-2.2.5.1 Regulation of the chemical condition of freshwaters by living processes"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-5-2-regulation-of-the-chemical-condition-of-salt-waters-by-living-processes",
+          "label": "Regulation & Maintenance (Biotic)-2.2.5.2 Regulation of the chemical condition of salt waters by living processes"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-6-1-regulation-of-chemical-composition-of-atmosphere-and-oceans",
+          "label": "Regulation & Maintenance (Biotic)-2.2.6.1 Regulation of chemical composition of atmosphere and oceans"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-2-6-2-regulation-of-temperature-and-humidity-including-ventilation-and-transpiration",
+          "label": "Regulation & Maintenance (Biotic)-2.2.6.2 Regulation of temperature and humidity, including ventilation and transpiration"
+        },
+        {
+          "value": "regulation-maintenance-biotic-2-3-x-x-other",
+          "label": "Regulation & Maintenance (Biotic)-2.3.X.X Other"
+        },
+        {
+          "value": "cultural-biotic-3-1-1-1-characteristics-of-living-systems-that-that-enable-activities-promoting-health-recuperation-or-enjoyment-through-active-or-immersive-interactions",
+          "label": "Cultural (Biotic)-3.1.1.1 Characteristics of living systems that that enable activities promoting health, recuperation or enjoyment through active or immersive interactions"
+        },
+        {
+          "value": "cultural-biotic-3-1-1-2-characteristics-of-living-systems-that-enable-activities-promoting-health-recuperation-or-enjoyment-through-passive-or-observational-interactions",
+          "label": "Cultural (Biotic)-3.1.1.2 Characteristics of living systems that enable activities promoting health, recuperation or enjoyment through passive or observational interactions"
+        },
+        {
+          "value": "cultural-biotic-3-1-2-1-characteristics-of-living-systems-that-enable-scientific-investigation-or-the-creation-of-traditional-ecological-knowledge",
+          "label": "Cultural (Biotic)-3.1.2.1 Characteristics of living systems that enable scientific investigation or the creation of traditional ecological knowledge"
+        },
+        {
+          "value": "cultural-biotic-3-1-2-2-characteristics-of-living-systems-that-enable-education-and-training",
+          "label": "Cultural (Biotic)-3.1.2.2 Characteristics of living systems that enable education and training"
+        },
+        {
+          "value": "cultural-biotic-3-1-2-3-characteristics-of-living-systems-that-are-resonant-in-terms-of-culture-or-heritage",
+          "label": "Cultural (Biotic)-3.1.2.3 Characteristics of living systems that are resonant in terms of culture or heritage"
+        },
+        {
+          "value": "cultural-biotic-3-1-2-4-characteristics-of-living-systems-that-enable-aesthetic-experiences",
+          "label": "Cultural (Biotic)-3.1.2.4 Characteristics of living systems that enable aesthetic experiences"
+        },
+        {
+          "value": "cultural-biotic-3-2-1-1-elements-of-living-systems-that-have-symbolic-meaning",
+          "label": "Cultural (Biotic)-3.2.1.1 Elements of living systems that have symbolic meaning"
+        },
+        {
+          "value": "cultural-biotic-3-2-1-2-elements-of-living-systems-that-have-sacred-or-religious-meaning",
+          "label": "Cultural (Biotic)-3.2.1.2 Elements of living systems that have sacred or religious meaning"
+        },
+        {
+          "value": "cultural-biotic-3-2-1-3-elements-of-living-systems-used-for-entertainment-or-representation",
+          "label": "Cultural (Biotic)-3.2.1.3 Elements of living systems used for entertainment or representation"
+        },
+        {
+          "value": "cultural-biotic-3-2-2-1-characteristics-or-features-of-living-systems-that-have-an-existence-value",
+          "label": "Cultural (Biotic)-3.2.2.1 Characteristics or features of living systems that have an existence value"
+        },
+        {
+          "value": "cultural-biotic-3-2-2-2-characteristics-or-features-of-living-systems-that-have-an-option-or-bequest-value",
+          "label": "Cultural (Biotic)-3.2.2.2 Characteristics or features of living systems that have an option or bequest value"
+        },
+        {
+          "value": "cultural-biotic-3-3-x-x-other",
+          "label": "Cultural (Biotic)-3.3.X.X Other"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-1-1-surface-water-for-drinking",
+          "label": "Provisioning (Abiotic)-4.2.1.1 Surface water for drinking"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-1-2-surface-water-used-as-a-material-non-drinking-purposes",
+          "label": "Provisioning (Abiotic)-4.2.1.2 Surface water used as a material (non-drinking purposes)"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-1-3-freshwater-surface-water-used-as-an-energy-source",
+          "label": "Provisioning (Abiotic)-4.2.1.3 Freshwater surface water used as an energy source"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-1-4-coastal-and-marine-water-used-as-energy-source",
+          "label": "Provisioning (Abiotic)-4.2.1.4 Coastal and marine water used as energy source"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-2-1-ground-and-subsurface-water-for-drinking",
+          "label": "Provisioning (Abiotic)-4.2.2.1 Ground (and subsurface) water for drinking"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-2-2-ground-water-and-subsurface-used-as-a-material-non-drinking-purposes",
+          "label": "Provisioning (Abiotic)-4.2.2.2 Ground water (and subsurface) used as a material (non-drinking purposes)"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-2-3-ground-water-and-subsurface-used-as-an-energy-source",
+          "label": "Provisioning (Abiotic)-4.2.2.3 Ground water (and subsurface) used as an energy source"
+        },
+        {
+          "value": "provisioning-abiotic-4-2-x-x-other",
+          "label": "Provisioning (Abiotic)-4.2.X.X Other"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-1-1-mineral-substances-used-for-nutritional-purposes",
+          "label": "Provisioning (Abiotic)-4.3.1.1 Mineral substances used for nutritional purposes"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-1-2-mineral-substances-used-for-material-purposes",
+          "label": "Provisioning (Abiotic)-4.3.1.2 Mineral substances used for material purposes"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-1-3-mineral-substances-used-for-as-an-energy-source",
+          "label": "Provisioning (Abiotic)-4.3.1.3 Mineral substances used for as an energy source"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-2-1-non-mineral-substances-or-ecosystem-properties-used-for-nutritional-purposes",
+          "label": "Provisioning (Abiotic)-4.3.2.1 Non-mineral substances or ecosystem properties used for nutritional purposes"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-2-2-non-mineral-substances-used-for-materials",
+          "label": "Provisioning (Abiotic)-4.3.2.2 Non-mineral substances used for materials"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-2-3-wind-energy",
+          "label": "Provisioning (Abiotic)-4.3.2.3 Wind energy"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-2-4-solar-energy",
+          "label": "Provisioning (Abiotic)-4.3.2.4 Solar energy"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-2-5-geothermal",
+          "label": "Provisioning (Abiotic)-4.3.2.5 Geothermal"
+        },
+        {
+          "value": "provisioning-abiotic-4-3-2-6-other",
+          "label": "Provisioning (Abiotic)-4.3.2.6 Other"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-1-1-1-dilution-by-freshwater-and-marine-ecosystems",
+          "label": "Regulation & Maintenance (Abiotic)-5.1.1.1 Dilution by freshwater and marine ecosystems"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-1-1-2-dilution-by-atmosphere",
+          "label": "Regulation & Maintenance (Abiotic)-5.1.1.2 Dilution by atmosphere"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-1-1-3-mediation-by-other-chemical-or-physical-means-e-g-via-filtration-sequestration-storage-or-accumulation",
+          "label": "Regulation & Maintenance (Abiotic)-5.1.1.3 Mediation by other chemical or physical means (e.g. via Filtration, sequestration, storage or accumulation)"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-1-2-1-mediation-of-nuisances-by-abiotic-structures-or-processes",
+          "label": "Regulation & Maintenance (Abiotic)-5.1.2.1 Mediation of nuisances by abiotic structures or processes"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-2-1-1-mass-flows",
+          "label": "Regulation & Maintenance (Abiotic)-5.2.1.1 Mass flows"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-2-1-2-liquid-flows",
+          "label": "Regulation & Maintenance (Abiotic)-5.2.1.2 Liquid flows"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-2-1-3-gaseous-flows",
+          "label": "Regulation & Maintenance (Abiotic)-5.2.1.3 Gaseous flows"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-2-2-1-maintenance-and-regulation-by-inorganic-natural-chemical-and-physical-processes",
+          "label": "Regulation & Maintenance (Abiotic)-5.2.2.1 Maintenance and regulation by inorganic natural chemical and physical processes"
+        },
+        {
+          "value": "regulation-maintenance-abiotic-5-3-x-x-other",
+          "label": "Regulation & Maintenance (Abiotic)-5.3.X.X Other"
+        },
+        {
+          "value": "cultural-abiotic-6-1-1-1-natural-abiotic-characteristics-of-nature-that-enable-active-or-passive-physical-and-experiential-interactions",
+          "label": "Cultural (Abiotic)-6.1.1.1 Natural, abiotic characteristics of nature that enable active or passive physical and experiential interactions"
+        },
+        {
+          "value": "cultural-abiotic-6-1-2-1-natural-abiotic-characteristics-of-nature-that-enable-intellectual-interactions",
+          "label": "Cultural (Abiotic)-6.1.2.1 Natural, abiotic characteristics of nature that enable intellectual interactions"
+        },
+        {
+          "value": "cultural-abiotic-6-2-1-1-natural-abiotic-characteristics-of-nature-that-enable-spiritual-symbolic-and-other-interactions",
+          "label": "Cultural (Abiotic)-6.2.1.1 Natural, abiotic characteristics of nature that enable spiritual, symbolic and other interactions"
+        },
+        {
+          "value": "cultural-abiotic-6-2-2-1-natural-abiotic-characteristics-or-features-of-nature-that-have-either-an-existence-option-or-bequest-value",
+          "label": "Cultural (Abiotic)-6.2.2.1 Natural, abiotic characteristics or features of nature that have either an existence, option or bequest value"
+        },
+        {
+          "value": "cultural-abiotic-6-3-x-x-other",
+          "label": "Cultural (Abiotic)-6.3.X.X Other"
+        }
+      ]
+    },
+    {
+      "field_name": "theme",
+      "label": "Theme",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "legal-status-maritime-zones",
+          "label": "Legal status / Maritime zones"
+        },
+        {
+          "value": "legal-status-maritime-zones",
+          "label": "Legal status / Maritime zones"
+        },
+        {
+          "value": "fisheries",
+          "label": "Fisheries"
+        },
+        {
+          "value": "aquaculture",
+          "label": "Aquaculture"
+        },
+        {
+          "value": "oil-gas",
+          "label": "Oil & Gas"
+        },
+        {
+          "value": "offshore-renewable-energy",
+          "label": "Offshore Renewable Energy"
+        },
+        {
+          "value": "maritime-transport-and-ports",
+          "label": "Maritime Transport and Ports"
+        },
+        {
+          "value": "military-uses",
+          "label": "Military uses"
+        },
+        {
+          "value": "dredging-and-dumping-of-dredged-materials",
+          "label": "Dredging and dumping of dredged materials"
+        },
+        {
+          "value": "coastal-defence",
+          "label": "Coastal defence"
+        },
+        {
+          "value": "desalination",
+          "label": "Desalination"
+        },
+        {
+          "value": "coastal-tourism",
+          "label": "Coastal tourism"
+        },
+        {
+          "value": "nautical-sports-leisure-boating-and-marinas",
+          "label": "Nautical sports, leisure boating and marinas"
+        },
+        {
+          "value": "underwater-cultural-heritage",
+          "label": "Underwater cultural heritage"
+        },
+        {
+          "value": "safety-and-surveillance",
+          "label": "Safety and Surveillance"
+        },
+        {
+          "value": "environment-e-g-pollution-and-biodiversity",
+          "label": "Environment (e.g. pollution and biodiversity)"
+        },
+        {
+          "value": "conservation-i-e-protected-areas",
+          "label": "Conservation (i.e. Protected areas)"
+        }
+      ]
+    },
+    {
+      "field_name": "function",
+      "label": "Function",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "strategic-international",
+          "label": "Strategic-International"
+        },
+        {
+          "value": "strategic-eu",
+          "label": "Strategic-EU"
+        },
+        {
+          "value": "strategic-national",
+          "label": "Strategic-National"
+        },
+        {
+          "value": "strategic-regional",
+          "label": "Strategic-Regional"
+        },
+        {
+          "value": "legislation-international",
+          "label": "Legislation-International"
+        },
+        {
+          "value": "legislation-eu",
+          "label": "Legislation-EU"
+        },
+        {
+          "value": "legislation-national",
+          "label": "Legislation-National"
+        },
+        {
+          "value": "legislation-regional",
+          "label": "Legislation-Regional"
+        },
+        {
+          "value": "planning-international",
+          "label": "Planning -International"
+        },
+        {
+          "value": "planning-eu",
+          "label": "Planning -EU"
+        },
+        {
+          "value": "planning-national",
+          "label": "Planning -National"
+        },
+        {
+          "value": "planning-regional",
+          "label": "Planning -Regional"
+        },
+        {
+          "value": "administrative-national",
+          "label": "Administrative-National"
+        },
+        {
+          "value": "administrative-regional",
+          "label": "Administrative-Regional"
+        },
+        {
+          "value": "enforcement-motoring",
+          "label": "Enforcement - Motoring-"
+        },
+        {
+          "value": "enforcement-motoring",
+          "label": "Enforcement - Motoring-"
+        },
+        {
+          "value": "enforcement-control",
+          "label": "Enforcement - Control-"
+        },
+        {
+          "value": "enforcement-control",
+          "label": "Enforcement - Control-"
+        },
+        {
+          "value": "judicial-application-international",
+          "label": "Judicial application-International"
+        },
+        {
+          "value": "judicial-application-eu",
+          "label": "Judicial application-EU"
+        },
+        {
+          "value": "judicial-application-national",
+          "label": "Judicial application-National"
+        }
+      ]
+    },
+    {
       "field_name": "metadata_completeness",
       "label": "Metadata completeness",
       "preset": "select",

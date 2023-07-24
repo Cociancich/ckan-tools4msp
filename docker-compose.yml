@@ -16,6 +16,8 @@ x-common-ckan:
       condition: service_healthy
     redis:
       condition: service_healthy
+    datapusher:
+      condition: service_healthy
   environment:
     &default-common-env-ckan
     CKAN_SQLALCHEMY_URL: postgresql://ckan:ckan@db/ckan
@@ -68,6 +70,8 @@ services:
   datapusher:
     container_name: datapusher
     image: clementmouchet/datapusher
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8800"]
 
   db:
     image: registry.gitlab.com/gisdev.io/ckan/postgresql

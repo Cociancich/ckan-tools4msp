@@ -1838,6 +1838,10 @@
       ]
     },
     {
+      "field_name": "who-is-in-charge",
+      "label": "Who is in charge?"
+    },
+    {
       "field_name": "metadata_completeness",
       "label": "Metadata completeness",
       "preset": "select",

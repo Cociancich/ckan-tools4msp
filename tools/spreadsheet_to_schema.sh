@@ -13,23 +13,28 @@ set -euo pipefail
 echo "# Conversion report"
 echo "## Entries processed"
 
-OGR_XLSX_HEADERS=FORCE duckdb << EOF | jq -s '{dataset_fields: .}' > "$SCHEMA"
+OGR_XLSX_HEADERS=FORCE duckdb << EOF | jq -s '{dataset_fields: del(.[][] | nulls)}' > "$SCHEMA"
 install spatial;
 load spatial;
 load json;
 copy (
 select regexp_replace(lcase(field_name), '[^a-z0-9]+', '-', 'g') as field_name,
        field_name as label,
-       'multiple_checkbox' as preset,
+       case when field_type = 'multiple_checkbox'
+            then 'multiple_checkbox'
+       end as preset,
+       case when field_type = 'multiple_checkbox' then
        json_group_array(
          json_object(
            'value', trim(regexp_replace(lcase(label), '[^a-z0-9]+', '-', 'g'), '-'),
            'label', label
          )
-       ) as choices
+       )
+       else null
+       end as choices
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
- where field_type = 'multiple_checkbox'
- group by field_name
+ where field_type in ('multiple_checkbox', 'text')
+ group by field_name, field_type
 ) to '/dev/stdout' (format json);
 EOF
 
@@ -43,7 +48,7 @@ load json;
 .mode ascii
 select count(*)
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
- where field_type = 'multiple_checkbox'
+ where field_type in ('multiple_checkbox', 'text')
 EOF
 echo
 
@@ -57,5 +62,5 @@ load json;
 .mode markdown
 select *
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
- where field_type <> 'multiple_checkbox'
+ where field_type not in ('multiple_checkbox', 'text')
 EOF

@@ -17,8 +17,9 @@ OGR_XLSX_HEADERS=FORCE duckdb << EOF | jq -s '{dataset_fields: del(.[][] | nulls
 install spatial;
 load spatial;
 load json;
+create macro labelize(str) as trim(regexp_replace(lcase(str), '[^a-z0-9]+', '-', 'g'), '-');
 copy (
-select regexp_replace(lcase(field_name), '[^a-z0-9]+', '-', 'g') as field_name,
+select labelize(field_name) as field_name,
        field_name as label,
        case when field_type = 'multiple_checkbox'
             then 'multiple_checkbox'
@@ -26,7 +27,7 @@ select regexp_replace(lcase(field_name), '[^a-z0-9]+', '-', 'g') as field_name,
        case when field_type = 'multiple_checkbox' then
        json_group_array(
          json_object(
-           'value', trim(regexp_replace(lcase(label), '[^a-z0-9]+', '-', 'g'), '-'),
+           'value', labelize(label),
            'label', label
          )
        )

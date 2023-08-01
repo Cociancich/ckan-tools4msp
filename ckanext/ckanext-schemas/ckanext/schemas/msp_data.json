@@ -606,7 +606,8 @@
           "value": "pressure-substances-litter-and-energy-input-of-water-point-sources",
           "label": "Pressure: Substances, litter and energy-Input of water - point sources"
         }
-      ]
+      ],
+      "help_text": "Help text MSFD Classes da definire"
     },
     {
       "field_name": "environment-msfd-descriptors-criteria",
@@ -1108,7 +1109,8 @@
           "value": "military-areas",
           "label": "Military areas"
         }
-      ]
+      ],
+      "help_text": "Help text Maritime activities da definire"
     },
     {
       "field_name": "coastal-land-use-and-planning",
@@ -1688,7 +1690,8 @@
           "value": "cultural-abiotic-6-3-x-x-other",
           "label": "Cultural (Abiotic)-6.3.X.X Other"
         }
-      ]
+      ],
+      "help_text": "According the Common International Classification of Ecosystem Services (CICES) for Integrated Environmental and Economic Accounting - V5.1  https://cices.eu/resources/"
     },
     {
       "field_name": "legal-governance-planning-theme",

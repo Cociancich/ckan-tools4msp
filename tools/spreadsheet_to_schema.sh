@@ -32,7 +32,8 @@ select labelize(field_name) as field_name,
          )
        )
        else null
-       end as choices
+       end as choices,
+       any_value(help_text) as help_text
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
  where field_type in ('multiple_checkbox', 'radio', 'text')
  group by field_name, field_type

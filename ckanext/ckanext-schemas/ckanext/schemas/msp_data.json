@@ -989,6 +989,21 @@
       ]
     },
     {
+      "field_name": "conservation-zonation",
+      "label": "Conservation - Zonation",
+      "preset": "radio",
+      "choices": [
+        {
+          "value": "yes",
+          "label": "yes"
+        },
+        {
+          "value": "no",
+          "label": "no"
+        }
+      ]
+    },
+    {
       "field_name": "maritime-activities",
       "label": "Maritime activities",
       "preset": "multiple_checkbox",

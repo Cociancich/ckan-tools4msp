@@ -989,17 +989,6 @@
       ]
     },
     {
-      "field_name": "conservation-zonation",
-      "label": "Conservation - Zonation",
-      "preset": "multiple_checkbox",
-      "choices": [
-        {
-          "value": "yes-no",
-          "label": "yes/no"
-        }
-      ]
-    },
-    {
       "field_name": "maritime-activities",
       "label": "Maritime activities",
       "preset": "multiple_checkbox",
@@ -1097,32 +1086,8 @@
           "label": "Coastal infrastructures-Coastal defence works"
         },
         {
-          "value": "protected-areas-marine-protected-area",
-          "label": "Protected areas-Marine protected area"
-        },
-        {
-          "value": "protected-areas-no-take-zones",
-          "label": "Protected areas-No take zones"
-        },
-        {
-          "value": "protected-areas-species-corridor",
-          "label": "Protected areas-Species Corridor"
-        },
-        {
-          "value": "protected-areas-ecological-protection",
-          "label": "Protected areas-Ecological protection"
-        },
-        {
-          "value": "protected-areas-coastal-protection",
-          "label": "Protected areas-Coastal protection"
-        },
-        {
-          "value": "protected-areas-navigation-protection",
-          "label": "Protected areas-Navigation protection"
-        },
-        {
-          "value": "protected-areas-heritage-protection",
-          "label": "Protected areas-Heritage protection"
+          "value": "protected-areas",
+          "label": "Protected areas"
         },
         {
           "value": "military-areas",
@@ -1344,7 +1309,14 @@
         {
           "value": "social",
           "label": "Social"
-        },
+        }
+      ]
+    },
+    {
+      "field_name": "ecosystem-services",
+      "label": "Ecosystem Services",
+      "preset": "multiple_checkbox",
+      "choices": [
         {
           "value": "provisioning-biotic-1-1-1-2-fibres-and-other-materials-from-cultivated-plants-fungi-algae-and-bacteria-for-direct-use-or-processing-excluding-genetic-materials",
           "label": "Provisioning (Biotic)-1.1.1.2 Fibres and other materials from cultivated plants, fungi, algae and bacteria for direct use or processing (excluding genetic materials)"
@@ -1704,14 +1676,10 @@
       ]
     },
     {
-      "field_name": "theme",
-      "label": "Theme",
+      "field_name": "legal-governance-planning-theme",
+      "label": "Legal, Governance & Planning - Theme",
       "preset": "multiple_checkbox",
       "choices": [
-        {
-          "value": "legal-status-maritime-zones",
-          "label": "Legal status / Maritime zones"
-        },
         {
           "value": "legal-status-maritime-zones",
           "label": "Legal status / Maritime zones"
@@ -1779,8 +1747,8 @@
       ]
     },
     {
-      "field_name": "function",
-      "label": "Function",
+      "field_name": "legal-governance-planning-function",
+      "label": "Legal, Governance & Planning - Function",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1841,19 +1809,19 @@
         },
         {
           "value": "enforcement-motoring",
-          "label": "Enforcement - Motoring-"
+          "label": "Enforcement - Motoring"
         },
         {
           "value": "enforcement-motoring",
-          "label": "Enforcement - Motoring-"
+          "label": "Enforcement - Motoring"
         },
         {
           "value": "enforcement-control",
-          "label": "Enforcement - Control-"
+          "label": "Enforcement - Control"
         },
         {
           "value": "enforcement-control",
-          "label": "Enforcement - Control-"
+          "label": "Enforcement - Control"
         },
         {
           "value": "judicial-application-international",

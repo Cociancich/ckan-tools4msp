@@ -50,6 +50,23 @@ npm install
 npm run dev
 ```
 
+# Tools
+
+## spreadsheet_to_schema.sh
+
+The script generates a partial CKAN JSON schema from a data cluster spreadsheet, that can be merged into one an existing schema. It also produces a brief report in Markdown in the terminal (standard output).
+
+1. Be sure to have [duckdb](https://duckdb.org/) and [jq](https://jqlang.github.io/jq/) installed
+2. Edit `spreadsheet_to_schema.sh` parameters `SPREADSHEET` and `WORKSHEET` to match your data cluster filename path and worksheet name
+3. Run `spreadsheet_to_schema.sh`
+4. Integrate the changes back into `ckanext/ckanext-schemas/ckanext/schemas/msp_data.json`
+
+[meld](https://meldmerge.org/) is the suggested graphical tool to check the differences between the complete schema file and the partial one, generated from the data cluster file. It can be executed like this:
+
+```bash
+meld ckanext/ckanext-schemas/ckanext/schemas/msp_data.json struttura.json
+```
+
 # Common issues
 
 ## Solr "out of memory"

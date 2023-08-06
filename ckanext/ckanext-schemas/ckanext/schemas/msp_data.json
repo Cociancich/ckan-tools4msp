@@ -1693,8 +1693,9 @@
           "label": "Cultural (Abiotic)-6.3.X.X Other"
         }
       ],
-      "help_text": "According the Common International Classification of Ecosystem Services (CICES) for Integrated Environmental and Economic Accounting - V5.1  https://cices.eu/resources/",
-      "help_position": "top"
+      "help_text": "According the Common International Classification of Ecosystem Services (CICES) for Integrated Environmental and Economic Accounting - V5.1 <a href=\"https://cices.eu/resources/\">cices.eu/resources/</a>",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
       "field_name": "legal-governance-planning-theme",

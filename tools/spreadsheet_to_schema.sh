@@ -9,6 +9,7 @@ WORKSHEET="Struttura_catalogue"
 SCHEMA="struttura.json"
 
 HELP_POSITION="top"
+HELP_ALLOW_HTML="true"
 
 set -euo pipefail
 
@@ -39,7 +40,11 @@ select labelize(field_name) as field_name,
        case when any_value(help_text) is not null then
          '$HELP_POSITION'
        else null
-       end as help_position
+       end as help_position,
+       case when any_value(help_text) is not null then
+         $HELP_ALLOW_HTML == 'true'
+       else null
+       end as help_allow_html
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
  where field_type in ('multiple_checkbox', 'radio', 'text')
  group by field_name, field_type

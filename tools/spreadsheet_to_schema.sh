@@ -8,6 +8,8 @@ SPREADSHEET="Data cluster matrices_20230801.xlsx"
 WORKSHEET="Struttura_catalogue"
 SCHEMA="struttura.json"
 
+HELP_POSITION="top"
+
 set -euo pipefail
 
 echo "# Conversion report"
@@ -33,7 +35,11 @@ select labelize(field_name) as field_name,
        )
        else null
        end as choices,
-       any_value(help_text) as help_text
+       any_value(help_text) as help_text,
+       case when any_value(help_text) is not null then
+         '$HELP_POSITION'
+       else null
+       end as help_position
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
  where field_type in ('multiple_checkbox', 'radio', 'text')
  group by field_name, field_type

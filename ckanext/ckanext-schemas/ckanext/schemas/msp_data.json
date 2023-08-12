@@ -91,6 +91,16 @@
       "help_text": "Describe in a few sentences the content and the purpose of the resource."
     },
     {
+      "field_name": "original-title",
+      "label": "Original title",
+      "help_text": "Resource title in its native language (unless this is English), if already available"
+    },
+    {
+      "field_name": "original-abstract",
+      "label": "Original abstract",
+      "help_text": "Abstract in its native language (unless this is English), if already available"
+    },
+    {
       "field_name": "category",
       "label": "Topic category",
       "preset": "tag_string_autocomplete",

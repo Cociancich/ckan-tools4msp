@@ -4,7 +4,7 @@
 # - https://duckdb.org/
 # - https://jqlang.github.io/jq/
 
-SPREADSHEET="Data cluster matrices_20230801.xlsx"
+SPREADSHEET="Data cluster matrices_20230810.xlsx"
 WORKSHEET="Struttura_catalogue"
 SCHEMA="struttura.json"
 

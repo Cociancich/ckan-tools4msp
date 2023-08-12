@@ -4,6 +4,10 @@
   "about_url": "http://example.com/the-camel-photos-schema",
   "dataset_fields": [
     {
+      "start_form_page": {
+        "title": "Main metadata",
+        "description": "Main metadata"
+      },
       "field_name": "owner_org",
       "label": "Organization",
       "preset": "dataset_organization",
@@ -506,6 +510,31 @@
       ]
     },
     {
+      "field_name": "metadata_completeness",
+      "label": "Metadata completeness",
+      "preset": "select",
+      "choices": [
+          {
+              "value": "draft",
+              "label": "Draft"
+          },
+          {
+              "value": "complete",
+              "label": "Complete"
+          }
+      ]
+    },
+    {
+      "field_name": "autonotes",
+      "label": "Notes",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "eg. Notes"
+    },
+    {
+      "start_form_page": {
+        "title": "MSP Cluster",
+        "description": "MSP Cluster section"
+      },
       "field_name": "environment-msfd-classes",
       "label": "Environment - MSFD Classes",
       "preset": "multiple_checkbox",
@@ -1973,27 +2002,6 @@
           "label": "Local - future - Low"
         }
       ]
-    },
-    {
-      "field_name": "metadata_completeness",
-      "label": "Metadata completeness",
-      "preset": "select",
-      "choices": [
-          {
-              "value": "draft",
-              "label": "Draft"
-          },
-          {
-              "value": "complete",
-              "label": "Complete"
-          }
-      ]
-    },
-    {
-      "field_name": "autonotes",
-      "label": "Notes",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Notes"
     }
   ],
   "resource_fields": [

@@ -1907,8 +1907,9 @@
       ]
     },
     {
-      "field_name": "legal-governance-planning-function",
-      "label": "Legal, Governance & Planning - Function"
+      "field_name": "who-is-in-charge",
+      "label": "Who is in charge?",
+      "cluster": "legal-governance-planning"
     },
     {
       "field_name": "relevance-spatial-and-temporal",

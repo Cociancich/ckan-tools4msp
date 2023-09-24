@@ -4,8 +4,8 @@ USER root
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy crudini
 
-ARG CKANEXT_SCHEMING_VERSION=release-3.0.0
-RUN ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-scheming.git@${CKANEXT_SCHEMING_VERSION}
+ARG CKANEXT_SCHEMING_VERSION=handle-empty-multiple_checkbox # release-3.0.0
+RUN ckan-pip3 --no-cache install git+https://github.com/frafra/ckanext-scheming.git@${CKANEXT_SCHEMING_VERSION}
 
 ARG CKANEXT_SPATIAL_VERSION=v2.0.0
 RUN wget -q https://raw.githubusercontent.com/ckan/ckanext-spatial/${CKANEXT_SPATIAL_VERSION}/requirements.txt -O requirements-ckanext-spatial.txt && \

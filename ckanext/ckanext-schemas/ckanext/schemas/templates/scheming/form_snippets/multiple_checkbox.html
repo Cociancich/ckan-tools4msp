@@ -30,6 +30,12 @@ fieldset.checkboxes label input {
   {%- if field.get('help_position') == 'top' -%}
     {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
   {%- endif -%}
+    {# https://github.com/ckan/ckanext-scheming/issues/387 #}
+    <input
+        type="hidden"
+        name="{{ field.field_name }}"
+        value=""
+    />
     <fieldset class="checkboxes">
         {%- for val, label in choices -%}
             <label for="field-{{ field.field_name }}-{{ val }}">

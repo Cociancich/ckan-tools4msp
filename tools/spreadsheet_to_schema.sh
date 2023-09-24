@@ -22,7 +22,14 @@ load spatial;
 load json;
 create macro labelize(str) as trim(regexp_replace(lcase(str), '[^a-z0-9]+', '-', 'g'), '-');
 copy (
-select labelize(field_name) as field_name,
+select case when any_value(start_form_page_title) is not null then
+       json_object(
+          'title', any_value(start_form_page_title),
+          'description', any_value(start_form_page_description)
+       )
+       else null
+       end as start_form_page,
+       labelize(field_name) as field_name,
        field_name as label,
        case when any_value(cluster) is not null then
          labelize(any_value(cluster))

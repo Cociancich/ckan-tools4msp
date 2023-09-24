@@ -542,8 +542,8 @@
     },
     {
       "start_form_page": {
-        "title": "MSP Cluster",
-        "description": "MSP Cluster section"
+        "title": "MSP - Environment",
+        "description": "MSP section - Environment"
       },
       "field_name": "environment-msfd-classes",
       "label": "Environment - MSFD Classes",
@@ -937,6 +937,10 @@
       "help_allow_html": true
     },
     {
+      "start_form_page": {
+        "title": "MSP - Oceanographic and CC",
+        "description": "MSP section - Oceanographic and CC"
+      },
       "field_name": "oceanographic-variables",
       "label": "Oceanographic - Variables",
       "cluster": "oceanographic-and-cc",
@@ -1033,6 +1037,10 @@
       ]
     },
     {
+      "start_form_page": {
+        "title": "MSP - Conservation",
+        "description": "MSP section - Conservation"
+      },
       "field_name": "conservation-types",
       "label": "Conservation - Types",
       "cluster": "conservation",
@@ -1080,6 +1088,10 @@
       "help_allow_html": true
     },
     {
+      "start_form_page": {
+        "title": "MSP - Maritime activities",
+        "description": "MSP section - Maritime activities"
+      },
       "field_name": "maritime-activities",
       "label": "Maritime activities",
       "cluster": "maritime-activities",
@@ -1192,6 +1204,10 @@
       ]
     },
     {
+      "start_form_page": {
+        "title": "MSP - Coastal & Land use and planning",
+        "description": "MSP section - Coastal & Land use and planning"
+      },
       "field_name": "coastal-land-use-and-planning",
       "label": "Coastal & Land use and planning",
       "cluster": "coastal-land-use-and-planning",
@@ -1264,6 +1280,10 @@
       ]
     },
     {
+      "start_form_page": {
+        "title": "MSP - Socio-economic",
+        "description": "MSP section - Socio-economic"
+      },
       "field_name": "socio-economic-activities",
       "label": "Socio-economic - Activities",
       "cluster": "socio-economic",
@@ -1412,6 +1432,10 @@
       ]
     },
     {
+      "start_form_page": {
+        "title": "MSP - Ecosystem Services",
+        "description": "MSP section - Ecosystem Services"
+      },
       "field_name": "ecosystem-services",
       "label": "Ecosystem Services",
       "cluster": "ecosystem-services",
@@ -1779,6 +1803,10 @@
       "help_allow_html": true
     },
     {
+      "start_form_page": {
+        "title": "MSP - Legal, Governance & Planning",
+        "description": "MSP section - Legal, Governance & Planning"
+      },
       "field_name": "legal-governance-planning-theme",
       "label": "Legal, Governance & Planning - Theme",
       "cluster": "legal-governance-planning",
@@ -1948,6 +1976,10 @@
       "cluster": "legal-governance-planning"
     },
     {
+      "start_form_page": {
+        "title": "MSP - Relevance",
+        "description": "MSP section - Relevance"
+      },
       "field_name": "relevance-spatial-and-temporal",
       "label": "Relevance (spatial and temporal)",
       "cluster": "relevance",

@@ -4,7 +4,7 @@
 # - https://duckdb.org/
 # - https://jqlang.github.io/jq/
 
-SPREADSHEET="Data cluster matrices_20230810.xlsx"
+SPREADSHEET="Data cluster matrices_20230904.xlsx"
 WORKSHEET="Struttura_catalogue"
 SCHEMA="struttura.json"
 
@@ -24,6 +24,10 @@ create macro labelize(str) as trim(regexp_replace(lcase(str), '[^a-z0-9]+', '-',
 copy (
 select labelize(field_name) as field_name,
        field_name as label,
+       case when any_value(cluster) is not null then
+         labelize(any_value(cluster))
+       else null
+       end as cluster,
        case when field_type in ('multiple_checkbox', 'radio')
             then field_type
        end as preset,

@@ -547,6 +547,7 @@
       },
       "field_name": "environment-msfd-classes",
       "label": "Environment - MSFD Classes",
+      "cluster": "environment",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -619,39 +620,41 @@
         },
         {
           "value": "pressure-substances-litter-and-energy-input-of-nutrients-diffuse-sources-point-sources-atmospheric-deposition",
-          "label": "Pressure: Substances, litter and energy-Input of nutrients - diffuse sources, point sources, atmospheric deposition"
+          "label": "Pressure: Substances, litter and energy - Input of nutrients - diffuse sources, point sources, atmospheric deposition"
         },
         {
           "value": "pressure-substances-litter-and-energy-input-of-organic-matter-diffuse-sources-and-point-sources",
-          "label": "Pressure: Substances, litter and energy-Input of organic matter - diffuse sources and point sources"
+          "label": "Pressure: Substances, litter and energy - Input of organic matter - diffuse sources and point sources"
         },
         {
           "value": "pressure-substances-litter-and-energy-input-of-other-substances-diffuse-sources-point-sources-atmospheric-deposition-acute-events",
-          "label": "Pressure: Substances, litter and energy-Input of other substances - diffuse sources, point sources, atmospheric deposition, acute events"
+          "label": "Pressure: Substances, litter and energy - Input of other substances - diffuse sources, point sources, atmospheric deposition, acute events"
         },
         {
           "value": "pressure-substances-litter-and-energy-input-of-litter",
-          "label": "Pressure: Substances, litter and energy-Input of litter"
+          "label": "Pressure: Substances, litter and energy - Input of litter"
         },
         {
           "value": "pressure-substances-litter-and-energy-input-of-anthropogenic-sound",
-          "label": "Pressure: Substances, litter and energy-Input of anthropogenic sound"
+          "label": "Pressure: Substances, litter and energy - Input of anthropogenic sound"
         },
         {
           "value": "pressure-substances-litter-and-energy-input-of-other-forms-of-energy",
-          "label": "Pressure: Substances, litter and energy-Input of other forms of energy "
+          "label": "Pressure: Substances, litter and energy - Input of other forms of energy "
         },
         {
           "value": "pressure-substances-litter-and-energy-input-of-water-point-sources",
-          "label": "Pressure: Substances, litter and energy-Input of water - point sources"
+          "label": "Pressure: Substances, litter and energy - Input of water - point sources"
         }
       ],
-      "help_text": "Help text MSFD Classes da definire",
-      "help_position": "top"
+      "help_text": "Ecosystem elements, anthropogenic pressures based on the classification indicated in Annex III of the MSFD (as ammended by Directive EU 2017/845)",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
       "field_name": "environment-msfd-descriptors-criteria",
       "label": "Environment - MSFD Descriptors/Criteria",
+      "cluster": "environment",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -888,11 +891,13 @@
         }
       ],
       "help_text": "Select the associated MSFD descriptor(s) and when possible the associated MSFD criteria(s) as defined by Commission Decision (EU) 2017/848",
-      "help_position": "top"
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
       "field_name": "environment-non-msfd-classes",
       "label": "Environment - Non MSFD Classes",
+      "cluster": "environment",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -909,11 +914,32 @@
         }
       ],
       "help_text": "Select these options if the data does not meet the MSFD descriptors or criteria (e.g. emerged coastal habitats, non-seabirds, etc.)",
-      "help_position": "top"
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "environment-wfd",
+      "label": "Environment - WFD",
+      "cluster": "environment",
+      "preset": "multiple_checkbox",
+      "choices": [
+        {
+          "value": "ecological-status",
+          "label": "Ecological status"
+        },
+        {
+          "value": "chemical-status",
+          "label": "Chemical status"
+        }
+      ],
+      "help_text": "Select these options for data generated in relation to monitoring under the Water Framework Directive",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
       "field_name": "oceanographic-variables",
       "label": "Oceanographic - Variables",
+      "cluster": "oceanographic-and-cc",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1009,6 +1035,7 @@
     {
       "field_name": "conservation-types",
       "label": "Conservation - Types",
+      "cluster": "conservation",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1036,21 +1063,26 @@
     {
       "field_name": "conservation-zonation",
       "label": "Conservation - Zonation",
+      "cluster": "conservation",
       "preset": "radio",
       "choices": [
         {
           "value": "yes",
-          "label": "yes"
+          "label": "Yes"
         },
         {
           "value": "no",
-          "label": "no"
+          "label": "No"
         }
-      ]
+      ],
+      "help_text": "Specify whether the dataset encompasses zoning information related to protected areas",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
       "field_name": "maritime-activities",
       "label": "Maritime activities",
+      "cluster": "maritime-activities",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1157,13 +1189,12 @@
           "value": "military-areas",
           "label": "Military areas"
         }
-      ],
-      "help_text": "Help text Maritime activities da definire",
-      "help_position": "top"
+      ]
     },
     {
       "field_name": "coastal-land-use-and-planning",
       "label": "Coastal & Land use and planning",
+      "cluster": "coastal-land-use-and-planning",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1235,6 +1266,7 @@
     {
       "field_name": "socio-economic-activities",
       "label": "Socio-economic - Activities",
+      "cluster": "socio-economic",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1366,6 +1398,7 @@
     {
       "field_name": "socio-economic-values",
       "label": "Socio-economic - Values",
+      "cluster": "socio-economic",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1381,6 +1414,7 @@
     {
       "field_name": "ecosystem-services",
       "label": "Ecosystem Services",
+      "cluster": "ecosystem-services",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1740,13 +1774,14 @@
           "label": "Cultural (Abiotic) - 6.3.X.X Other"
         }
       ],
-      "help_text": "According the Common International Classification of Ecosystem Services (CICES) for Integrated Environmental and Economic Accounting - V5.1 <a href=\"https://cices.eu/resources/\">cices.eu/resources/</a>",
+      "help_text": "According the Common International Classification of Ecosystem Services (CICES) for Integrated Environmental and Economic Accounting - V5.1  <a href=\"https://cices.eu/resources/\" target=\"_blank\">cices.eu/resources/</a>",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "legal-governance-planning-theme",
       "label": "Legal, Governance & Planning - Theme",
+      "cluster": "legal-governance-planning",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1818,6 +1853,7 @@
     {
       "field_name": "legal-governance-planning-function",
       "label": "Legal, Governance & Planning - Function",
+      "cluster": "legal-governance-planning",
       "preset": "multiple_checkbox",
       "choices": [
         {
@@ -1907,13 +1943,14 @@
       ]
     },
     {
-      "field_name": "who-is-in-charge",
-      "label": "Who is in charge?",
+      "field_name": "legal-governance-planning-who-is-in-charge",
+      "label": "Legal, Governance & Planning - Who is in charge?",
       "cluster": "legal-governance-planning"
     },
     {
       "field_name": "relevance-spatial-and-temporal",
       "label": "Relevance (spatial and temporal)",
+      "cluster": "relevance",
       "preset": "multiple_checkbox",
       "choices": [
         {

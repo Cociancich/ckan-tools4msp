@@ -3,15 +3,28 @@ import ckan.plugins.toolkit as toolkit
 from ckanext.schemas.views import scheming
 import ckanext.schemas.helpers as helpers
 import ckanext.schemas.logic.action.get
+from ckanext.scheming.plugins import _load_schemas as load_schemas
 
 from ckan.common import config
 
+from collections import defaultdict
 import json
 import requests
 import shapely
 
 CKAN_SOLR_URL = config.get('ckan.solr_url', 'http://solr:8983/solr/ckan')
 CKAN_SORL_SCHEMA = CKAN_SOLR_URL + '/schema'
+
+SCHEMA = load_schemas(
+    config.get('scheming.dataset_schemas').split(),
+    "dataset_type"
+)["msp-data"]
+
+CLUSTERS = defaultdict(list)
+for field in SCHEMA["dataset_fields"]:
+    if "cluster" in field:
+        cluster = field["cluster"]
+        CLUSTERS[cluster].append(field)
 
 class SchemasPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IBlueprint)
@@ -55,6 +68,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
         facets_dict['owner'] = toolkit._('Owner')
         facets_dict['vocab_web_services'] = toolkit._('Web services')
         facets_dict['vocab_domain_area'] = toolkit._('Domain area')
+        facets_dict['vocab_clusters'] = toolkit._('Clusters')
         return facets_dict
 
     def group_facets(self, facets_dict, group_type, package_type):
@@ -97,6 +111,20 @@ class SchemasPlugin(plugins.SingletonPlugin):
             pkg_dict["miny"] = miny
             pkg_dict["maxy"] = maxy
             pkg_dict["spatial_geom"] = shape.wkt
+
+        pkg_dict["vocab_clusters"] = []
+        for cluster, fields in CLUSTERS.items():
+            for field in fields:
+                data = pkg_dict.get(field["field_name"])
+                if field.get("preset") == "multiple_checkbox":
+                    relevant = len(json.loads(data)) > 0
+                elif field.get("preset") == "radio":
+                    relevant = data == "yes"
+                else:
+                    relevant = data
+                if relevant:
+                    pkg_dict["vocab_clusters"].append(cluster)
+                    break
 
         return pkg_dict
 

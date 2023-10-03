@@ -4,7 +4,7 @@ Type `docker-compose` instead of `docker compose` if you use the Python tool ins
 
 ## Setup
 
-1. `docker compose up --build --force-recreate -d`
+1. `docker compose --profile prod up --build --force-recreate -d`
 
 ### CKAN Setup
 

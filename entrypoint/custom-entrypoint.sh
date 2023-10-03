@@ -15,6 +15,7 @@ function conf_set_list() {
 }
 
 #ckan
+crudini --set "$conf" DEFAULT debug "false"
 conf_set ckan.site_title "Tools4MSP"
 conf_set ckan.site_description "This is the portal of the catalogue-tools4msp project."
 conf_set ckan.site_logo "/logo.png"

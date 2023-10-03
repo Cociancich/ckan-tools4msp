@@ -4,7 +4,6 @@ set -e
 /custom-entrypoint.sh
 
 conf="/etc/ckan/production.ini"
-function conf_set() { crudini --set "$conf" app:main "$@"; }
 
 crudini --set "$conf" DEFAULT debug "true"
 

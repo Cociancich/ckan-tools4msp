@@ -56,6 +56,6 @@ conf_set ckan.solr_url "$CKAN_SOLR_URL"
 conf_set_list ckan.plugins datastore datapusher
 conf_set ckan.datapusher.callback_url_base "$CKAN_SITE_URL_INTERNAL"
 ckan datastore set-permissions | psql "$CKAN_SQLALCHEMY_URL"
-ckan datapusher submit -y
+(sleep 1m && ckan datapusher submit -y) &
 
 exec "$@"

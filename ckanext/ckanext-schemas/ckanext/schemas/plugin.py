@@ -69,6 +69,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
         facets_dict['vocab_web_services'] = toolkit._('Web services')
         facets_dict['vocab_domain_area'] = toolkit._('Domain area')
         facets_dict['vocab_clusters'] = toolkit._('Clusters')
+        facets_dict['metadata_completeness'] = toolkit._('Metadata completeness')
         return facets_dict
 
     def group_facets(self, facets_dict, group_type, package_type):

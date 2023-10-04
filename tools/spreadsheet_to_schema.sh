@@ -4,7 +4,7 @@
 # - https://duckdb.org/
 # - https://jqlang.github.io/jq/
 
-SPREADSHEET="Data cluster matrices_20230904.xlsx"
+SPREADSHEET="Data cluster matrices_20231004.xlsx"
 WORKSHEET="Struttura_catalogue"
 SCHEMA="struttura.json"
 
@@ -30,7 +30,7 @@ select case when any_value(start_form_page_title) is not null then
        else null
        end as start_form_page,
        labelize(field_name) as field_name,
-       field_name as label,
+       any_value(label) as label,
        case when any_value(cluster) is not null then
          labelize(any_value(cluster))
        else null

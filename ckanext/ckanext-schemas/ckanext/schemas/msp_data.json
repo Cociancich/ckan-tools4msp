@@ -543,10 +543,10 @@
     {
       "start_form_page": {
         "title": "MSP - Environment",
-        "description": "MSP section - Environment"
+        "description": "Species, habitats, ecosystems, pressures"
       },
       "field_name": "environment-msfd-classes",
-      "label": "Environment - MSFD Classes",
+      "label": "MSFD Classes",
       "cluster": "environment",
       "preset": "multiple_checkbox",
       "choices": [
@@ -653,7 +653,7 @@
     },
     {
       "field_name": "environment-msfd-descriptors-criteria",
-      "label": "D1 Biodiversity - birds",
+      "label": "MSFD Descriptors/Criteria",
       "cluster": "environment",
       "preset": "multiple_checkbox",
       "choices": [
@@ -896,7 +896,7 @@
     },
     {
       "field_name": "environment-non-msfd-classes",
-      "label": "Species",
+      "label": "Non MSFD Classes",
       "cluster": "environment",
       "preset": "multiple_checkbox",
       "choices": [
@@ -923,7 +923,7 @@
     },
     {
       "field_name": "environment-wfd",
-      "label": "Ecological status",
+      "label": "WFD",
       "cluster": "environment",
       "preset": "multiple_checkbox",
       "choices": [
@@ -946,7 +946,7 @@
         "description": "Physics, biochemistry, EOV, ECV"
       },
       "field_name": "oceanographic-variables",
-      "label": "Physics - Sea state",
+      "label": "Variables",
       "cluster": "oceanographic-and-cc",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1046,7 +1046,7 @@
         "description": "Protected areas, OECM, IBA, EBSA, CCH, IMMA, ..."
       },
       "field_name": "conservation-types",
-      "label": "Internationally designated  Protected Areas (marine and coastal)",
+      "label": "Types",
       "cluster": "conservation",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1077,7 +1077,7 @@
     },
     {
       "field_name": "conservation-zonation",
-      "label": "Yes",
+      "label": "Zonation",
       "cluster": "conservation",
       "preset": "radio",
       "choices": [
@@ -1100,7 +1100,7 @@
         "description": "Aquaculture, fishing, transport, energy, ..."
       },
       "field_name": "maritime-activities",
-      "label": "Aquaculture - Finfish",
+      "label": "Activity types",
       "cluster": "maritime-activities",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1216,7 +1216,7 @@
         "description": "Land use, land cover, planning (strategic, coordination, operational)"
       },
       "field_name": "coastal-land-use-and-planning",
-      "label": "Land use / Land cover - Soil sealing-area",
+      "label": "Types",
       "cluster": "coastal-land-use-and-planning",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1292,7 +1292,7 @@
         "description": "Living and non-living resources, shipping, tourism, energy, ..."
       },
       "field_name": "socio-economic-activities",
-      "label": "Fisheries and Aquaculture - Marine fishing - A0311",
+      "label": "Activity types",
       "cluster": "socio-economic",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1424,7 +1424,7 @@
     },
     {
       "field_name": "socio-economic-values",
-      "label": "Economic",
+      "label": "Value types",
       "cluster": "socio-economic",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1440,7 +1440,7 @@
     },
     {
       "field_name": "socio-economic-demography",
-      "label": "Population growth",
+      "label": "Categories",
       "cluster": "socio-economic",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1476,7 +1476,7 @@
         "description": "Provisioning, regulation & maintenance, cultural"
       },
       "field_name": "ecosystem-services",
-      "label": "Provisioning (Biotic) - 1.1.1.2 Fibres and other materials from cultivated plants, fungi, algae and bacteria for direct use or processing (excluding genetic materials)",
+      "label": "CICES classes",
       "cluster": "ecosystem-services",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1847,7 +1847,7 @@
         "description": "Strategic, legislation, planning, administrative, enforcement"
       },
       "field_name": "legal-governance-planning-theme",
-      "label": "Legal status / Maritime zones",
+      "label": "Themes",
       "cluster": "legal-governance-planning",
       "preset": "multiple_checkbox",
       "choices": [
@@ -1919,7 +1919,7 @@
     },
     {
       "field_name": "legal-governance-planning-function",
-      "label": "Strategic - International",
+      "label": "Functions",
       "cluster": "legal-governance-planning",
       "preset": "multiple_checkbox",
       "choices": [
@@ -2020,7 +2020,7 @@
         "description": "Relevance of the dataset / resource in supporting the MSP process at different spatial scales and temporal frames"
       },
       "field_name": "relevance-spatial-and-temporal",
-      "label": "International - present - High",
+      "label": "Relevance (spatial and temporal)",
       "cluster": "relevance",
       "preset": "multiple_checkbox",
       "choices": [

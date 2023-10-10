@@ -12,7 +12,7 @@
       "label": "Organization",
       "preset": "dataset_organization",
       "required": false,
-      "help_text": "Leave this field as it is"
+      "help_text": "Select the organization for which you manage this dataset."
     },
     {
       "field_name": "title",
@@ -20,7 +20,7 @@
       "preset": "title",
       "form_placeholder": "eg. Maritime transport, Coralligenous communities, Offshore sand deposits",
       "required": true,
-      "help_text": "Use a title that clearly identifies the geospatial resource. If the resource is already published elsewhere, please use the original title (translated in English)."
+      "help_text": "The following scheme should be used (optional elements, indicated in square brackets): \"Original Title of the resource (in English) - [Location] - [Acronym] - [Year] [Resource owner/provider, in brackets]\". Be concise, using optional elements when they help to better identify a specific resource among similar ones. Example: \"Fisheries sectors - Southern Adriatic Sea - GSA - 2015 (FAO)\"."
     },
       {
       "field_name": "name",
@@ -120,14 +120,15 @@
       "label": "Sub category",
       "form_snippet": "markdown.html",
       "form_placeholder": "eg. Sub cateogry",
-      "help_text": "Please select a value from the following list in accordance with the selected Topic category:  https://docs.google.com/spreadsheets/d/1MiIwjzaIvCBOes1zLy2kiWTy1l4g4jKGetiomdqFSaY/edit?usp=sharing"
+	"help_text": "More detailed dataset thematic classification. Please use a value from the field \"Title\" used in the tables of the  <a href=\"https://cnrsc.sharepoint.com/:x:/r/sites/Spoke2-BuildinguptheStrategicResearchandInnovationAgendaSRIA-A4-MSP4BIODIVERSITY/Documenti%20condivisi/A4%20-%20MSP4BIODIVERSITY/T4.1%20-%20Knowledge%20Catalogue/Data%20cluster%20matrices.xlsx?d=w30733fe8b3104e45aa92e6fc180cc08b&csf=1&web=1&e=DyjVZk\" target=\"_blank\">MSP cluster scheme</a>",
+      "help_allow_html": true
     },
     {
       "field_name": "language",
       "label": "Resource language",
       "preset": "select",
       "required": true,
-      "help_text": "Language of the datasets attributes.",
+      "help_text": "Language of the dataset as found, for example, in attribute tables for geospatial datasets or in text for documents.",
       "choices": [
           {"label": "English", "value": "eng"},
           {"label": "Bulgarian", "value": "bul"},
@@ -164,6 +165,7 @@
       "preset": "tag_string_autocomplete",
       "form_placeholder": "eg. Mediterranean, Adriatic, Ionian, ",
       "display_snippet": "multiple_values.html",
+      "help_text": "Geographical area covered or representative of the dataset. (Please start typing to search).",	
       "form_attrs": {
         "data-module": "autocomplete",
         "data-module-tags": "",
@@ -177,14 +179,14 @@
       "label": "Owner",
       "preset": "tag_string_autocomplete",
       "form_placeholder": "eg. Emodnet,  EEA",
-      "help_text": "This is a list of one or more names (e. g. Emodnet, EEA) identifying the ownership of the resource."
+      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the ownership of the resource."
     },
     {
       "field_name": "provider",
       "label": "Provider",
       "preset": "tag_string_autocomplete",
       "form_placeholder": "eg. Emodnet, EEA",
-      "help_text": "This is a list of one or more names (e. g. Emodnet, EEA) identifying the provider of the resource. E. g. This could be the owner of the geo-portal or SDI through which the resource is available."
+      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the provider of the resource. E. g. This could be the owner of the geo-portal or SDI through which the resource is available."
     },
     {
       "field_name": "data_portal",
@@ -196,7 +198,7 @@
     {
       "field_name": "presentation_form",
       "label": "Presentation form",
-      "help_text": "Select always  'map', unless you are referring to a non-spatial data. Please be aware that non-spatial data must be avoided and used only to report a priority spatial datasets not yet available",
+      "help_text": "Select the value from the list which is closer to the type of structure and presentation form of the dataset.",
       "preset": "select",
       "choices": [
           {
@@ -253,6 +255,7 @@
       "field_name": "spatial_representation",
       "label": "Spatial representation",
       "preset": "select",
+      "help_text": "In case of geospatial information, select the specific type of spatial representation from the list; if the dataset has no geospatial coomponent, select \"No geo\".",	
       "choices": [
           {
               "value": "vector_point",
@@ -311,7 +314,8 @@
     {
       "field_name": "crs_other",
       "label": " ",
-      "help_text": "Identifier of the coordinate reference system(s) used in the data set. Only identifiers contained in the EPSG Geodetic Parameter Dataset shall be used (e.g. 4326). Refer to the following URLs for more info and to find the proper EPSG code: https://epsg.io/ or http://spatialreference.org/.",
+      "help_text": "Identifier of the coordinate reference system(s) used in the data set. Only identifiers contained in the EPSG Geodetic Parameter Dataset shall be used (e.g. 4326). Refer to the following URLs for more info and to find the proper EPSG code: <a href=\"https://epsg.io/\" target=\"_blank\">epsg.io</a> or <a href=\"http://spatialreference.org/\" target=\"_blank\">spatialreference.org</a>.",
+      "help_allow_html": true,
       "form_placeholder": "Other epsg codes. E.g. 4326, 3035"
     },
     {
@@ -348,7 +352,7 @@
       "field_name": "derives_from_string",
       "label": "Derives from",
       "preset": "tag_string_autocomplete",
-      "help_text": "Select related datasets",
+      "help_text": "If this dataset derives (as a subset, elaboration, derived product, ...) from another dataset already present in the catalogue, select that dataset in this field.",
       "display_snippet": "multiple_datasets.html",
       "form_attrs": {
         "data-module": "autocomplete",
@@ -392,7 +396,7 @@
       "field_name": "temporal_extent_end",
       "label": " ",
       "preset": "date",
-      "help_text": "Use this field to specify the END date of a time period."
+      "help_text": "Use this field in combination with the previous one to specify the END date of a time period."
     },
     {
       "field_name": "spatial_geojson",
@@ -404,18 +408,19 @@
       "label": "Data accessibility",
       "form_snippet": "markdown.html",
       "form_placeholder": "A description of the level of resource accessibility.",
-      "help_text": "Indicate the data accessibility: visible, downloadable, sent on request, not accessible, etc. Please add information useful to explain limitations and restrictions to access or use."
+      "help_text": "Indicate whether and how the dataset is accessible (visible, downloadable, sent on request, not accessible, etc.) Add information to explain limitations and restrictions to access or use. Use this field alone or to supplement the 'Licence' field."
     },
     {
       "field_name": "license_id",
       "label": "License",
       "form_snippet": "license.html",
-      "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+      "help_text": "If the dataset has an explicit license associated, select it form the list. If useful, use the filed \"Data accessibility\" to add/specify details regarding the license."
     },
     {
       "field_name": "validation_level",
       "label": "Validation level",
       "preset": "select",
+      "help_text": "Select from the list a value describing the level of validation to which the dataset has been subjected.",
       "choices": [
           {
               "value": "draft",
@@ -447,7 +452,8 @@
       "field_name": "additional_informations",
       "label": "Additional information",
       "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Additional informations"
+      "form_placeholder": "eg. Additional informations",
+      "help_text": "Add here any information you consider useful to better describe the dataset or to integrate the information present in the abstract."
     },
     {
       "field_name": "pdm_testing_relevance",
@@ -523,6 +529,7 @@
       "field_name": "metadata_completeness",
       "label": "Metadata completeness",
       "preset": "select",
+      "help_text": "Use this field to keep track of whether you feel the dataset has been described by all fields, to the best of your knowledge, or whether you have yet to complete some of them.",
       "choices": [
           {
               "value": "draft",
@@ -538,7 +545,8 @@
       "field_name": "autonotes",
       "label": "Notes",
       "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Notes"
+      "form_placeholder": "eg. Notes",
+      "help_text": "Use this field to note down doubts, points you are unsure of or annotations useful to other metadata editors. When the dataset has been fully described this field should be empty."
     },
     {
       "start_form_page": {
@@ -2128,7 +2136,7 @@
       "field_name": "mspkc_resource_type",
       "label": "Resource type",
       "preset": "select",
-      "help_text": "It's mandatory to provide a 'Geospatial dataset' resource.",
+      "help_text": "Select from the list the type of resource.",
       "choices": [
           {
               "value": "WebService",
@@ -2169,7 +2177,8 @@
       "label": "Source",
       "preset": "resource_url_upload",
       "form_placeholder": "http://example.com/my-camel-photo.jpg",
-      "upload_label": "Source"
+      "upload_label": "Source",
+      "help_text": "If you refer to a resource already available elsewhere, use 'Link' to add the URL where it is accessible. Otherwise, you can upload the resource directly to the catalogue via 'Upload'."
     },
     {
       "field_name": "name",
@@ -2179,7 +2188,7 @@
     {
       "field_name": "description",
       "label": "Description",
-      "help_text": "Brief description of all relevant attribute fields",
+      "help_text": "Brief description of the resource (e.g. content of a document or of a web page, description of all relevant attribute fields for a geospatial dataset, ...).",
       "form_snippet": "markdown.html",
       "form_placeholder": "Some useful notes about the data"
     },
@@ -2187,7 +2196,7 @@
       "field_name": "format",
       "label": "Format",
       "preset": "resource_format_autocomplete",
-      "help_text": "SHP or GeoTIFF"
+      "help_text": "Please select the format of the data resouce, e.g. wms, wfs, html, ecc. (for web pages, inclung mapviewers)."
     }
   ]
 }

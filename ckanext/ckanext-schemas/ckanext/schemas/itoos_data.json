@@ -5,8 +5,8 @@
   "dataset_fields": [
     {
       "start_form_page": {
-        "title": "Main metadata (Who)",
-        "description": "Main metadata (Who)"
+        "title": "Main metadata (What)",
+        "description": "Main metadata (WHat)"
       },
       "field_name": "owner_org",
       "label": "Organization",
@@ -15,9 +15,10 @@
       "help_text": "Select the organization for which you manage this dataset."
     },
     {
-      "field_name": "dataset_name",
-      "label": "Data set name",
-      "form_placeholder": "Unique name of dataset",
+      "field_name": "title",
+      "label": "Resource title",
+      "preset": "title",
+      "form_placeholder": "eg. Maritime transport, Coralligenous communities, Offshore sand deposits",
       "required": true,
       "help_text": "The following scheme should be used (optional elements, indicated in square brackets): \"Original Title of the resource (in English) - [Location] - [Acronym] - [Year] [Resource owner/provider, in brackets]\". Be concise, using optional elements when they help to better identify a specific resource among similar ones. Example: \"Fisheries sectors - Southern Adriatic Sea - GSA - 2015 (FAO)\"."
     },
@@ -27,61 +28,96 @@
       "preset": "dataset_slug",
       "form_placeholder": "eg. my-dataset"
     },
+    
+    {
+      "field_name": "pdm_partner",
+      "label": "Partner",
+      "preset": "select",
+      "form_snippet": null,
+      "display_snippet": null,
+      "help_text": "Please, do not change this value",
+      "choices": [
+          {
+              "value": "LP",
+              "label": "LP"
+          },
+          {
+              "value": "PP2",
+              "label": "PP2"
+          },
+          {
+              "value": "PP3",
+              "label": "PP3"
+          },
+          {
+              "value": "PP4",
+              "label": "PP4"
+          },
+          {
+              "value": "PP5",
+              "label": "PP5"
+          },
+          {
+              "value": "PP6",
+              "label": "PP6"
+          },
+          {
+              "value": "PP7",
+              "label": "PP7"
+          },
+          {
+              "value": "PP8",
+              "label": "PP8"
+          },
+          {
+              "value": "PP9",
+              "label": "PP9"
+          },
+          {
+              "value": "PP10",
+              "label": "PP10"
+          },
+          {
+              "value": "PP11",
+              "label": "PP11"
+          }
+      ]
+    },
+    {
+      "field_name": "original-title",
+      "label": "Original title",
+      "help_text": "Resource title in its native language (unless this is English), if already available"
+    },
+    {
+      "field_name": "original-abstract",
+      "label": "Original abstract",
+      "help_text": "Abstract in its native language (unless this is English), if already available"
+    },
+    
     {
       "field_name": "discipline",
-      "label": "Discipline",
       "preset": "tag_string_autocomplete",
-      "required": true,
-      "help_text": "e.g Physical oceanography",
-      "display_snippet": "multiple_values.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "true",
-        "class": ""
-      }
+      "label": "Discipline",
+      "required": true
+
     },
     {
       "field_name": "parameters_group",
-      "label": "Parameters group",
       "preset": "tag_string_autocomplete",
-      "required": true,
-      "help_text": "e.g Waves",
-      "display_snippet": "multiple_values.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "true",
-        "class": ""
-      }
+      "label": "Parameters group"
+ 
     },
     {
       "field_name": "discovery_parameters",
       "label": "Discovery parameter",
       "preset": "tag_string_autocomplete",
-      "required": true,
-      "help_text": "EOV or ECV in the dataset",
-      "display_snippet": "multiple_values.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "true",
-        "class": ""
-      }
+      "required": true
     },    
     {
       "field_name": "inspire_themes",
       "label": "GEMET-INSPIRE themes",
       "preset": "tag_string_autocomplete",
-      "required": true,
-      "help_text": "EOV or ECV in the dataset",
-      "display_snippet": "multiple_values.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "true",
-        "class": ""
-      }
+      "required": false
     },     
     {
       "field_name": "notes",
@@ -101,7 +137,7 @@
     {
       "field_name": "format",
       "label": "Data format",
-      "form_snippet": "markdown.html",
+      "preset": "tag_string_autocomplete",
       "form_placeholder": "one or more formats in which the data is available (e.g. csv, netcdf)",
       "required": false
     }, 
@@ -141,6 +177,56 @@
           {"label": "Unknown", "value": "unk"}
       ]
     },
+     {
+      "field_name": "subsystem",
+      "label": "Subsystem or Research Infrastructure",
+      "preset": "select",
+      "help_text": "Name of the resaerch infrastructure or subsystem of IT-IOOS that provide the data",
+      "choices": [
+          {"label": "DANUBIUS", "value": "danubius"} ,
+          {"label": "eLTER", "value": "elter"},
+          {"label": "EMSO", "value": "emso"},
+          {"label": "EuroARGO", "value": "euroargo"}, 
+          {"label": "EuroFleet (Gaia Blu)", "value": "eurofleet"},
+          {"label": "GEOSCIENCE", "value": "geoscience"},
+          {"label": "ICOS", "value": "icos"},
+          {"label": "JERICO", "value": "jerico"}, 
+          {"label": "Laura Bassi", "value": "laurabassi"},
+          {"label": "LNS", "value": "lns"},
+          {"label": "SIOS", "value": "sios"},
+    {"label": "Marine Data Store", "value": "datastore"},
+    {"label": "Marine Data Portal", "value": "dataportal"}
+      ]
+    },
+    {
+      "field_name": "owner",
+      "label": "Data originator",
+      "preset": "tag_string_autocomplete",
+      "form_placeholder": "eg. Emodnet,  EEA",
+      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the ownership of the resource."
+    },
+    {
+      "field_name": "provider",
+      "label": "Data custodian",
+      "preset": "tag_string_autocomplete",
+      "form_placeholder": "eg. Emodnet, EEA",
+      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the provider of the resource. E. g. This could be the owner of the geo-portal or SDI through which the resource is available."
+    },
+    {
+      "field_name": "category",
+      "label": "Topic category",
+      "preset": "tag_string_autocomplete",
+      "required": false,
+      "help_text": "High-level dataset thematic classification to assist in the grouping and search of available datasets.",
+      "display_snippet": "multiple_values.html",
+      "form_attrs": {
+        "data-module": "autocomplete",
+        "data-module-tags": "",
+        "data-module-createtags": "false",
+        "data-module-source": "/scheming/api/util/category/autocomplete?incomplete=?",
+        "class": ""
+      }
+    },
     {
 	 "start_form_page": {
         "title": "Location metadata",
@@ -159,20 +245,6 @@
         "data-module-source": "/scheming/api/util/domain_area/autocomplete?incomplete=?",
         "class": ""
       }
-    },
-    {
-      "field_name": "owner",
-      "label": "Data originator",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. Emodnet,  EEA",
-      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the ownership of the resource."
-    },
-    {
-      "field_name": "provider",
-      "label": "Data custodian",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. Emodnet, EEA",
-      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the provider of the resource. E. g. This could be the owner of the geo-portal or SDI through which the resource is available."
     },
     {
       "field_name": "data_portal",
@@ -412,6 +484,29 @@
       "form_snippet": "markdown.html",
       "form_placeholder": "eg. Additional informations",
       "help_text": "Add here any information you consider useful to better describe the dataset or to integrate the information present in the abstract."
+    },
+    {
+      "field_name": "metadata_completeness",
+      "label": "Metadata completeness",
+      "preset": "select",
+      "help_text": "Use this field to keep track of whether you feel the dataset has been described by all fields, to the best of your knowledge, or whether you have yet to complete some of them.",
+      "choices": [
+          {
+              "value": "draft",
+              "label": "Draft"
+          },
+          {
+              "value": "complete",
+              "label": "Complete"
+          }
+      ]
+    },
+    {
+      "field_name": "autonotes",
+      "label": "Notes",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "eg. Notes",
+      "help_text": "Use this field to note down doubts, points you are unsure of or annotations useful to other metadata editors. When the dataset has been fully described this field should be empty."
     }
   ],
   "resource_fields": [

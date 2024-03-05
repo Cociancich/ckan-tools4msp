@@ -16,8 +16,10 @@ function conf_set_list() {
 
 #ckan
 crudini --set "$conf" DEFAULT debug "false"
-conf_set ckan.site_title "Tools4MSP"
-conf_set ckan.site_description "This is the portal of the catalogue-tools4msp project."
+conf_set ckan.site_title "ITINERIS Catalogue"
+conf_set ckan.site_description "This is the portal of the catalogue of WP5 Itineris project."
+conf_set ckan.site_url "$CKAN_SITE_URL"
+conf_set ckan.root_path "$CKAN_ROOT_PATH"
 conf_set ckan.site_logo "/logo.png"
 conf_set ckan.favicon "favicon.png"
 #conf_set ckan.site_intro_text ""
@@ -37,7 +39,7 @@ conf_set_list ckan.plugins branding
 
 #ckanext-schemas
 conf_set_list ckan.plugins schemas
-conf_set scheming.dataset_schemas "ckanext.schemas:custom_schema.yaml ckanext.schemas:msp_data.json ckanext.schemas:msp_portal.json ckanext.schemas:msp_tool.json"
+conf_set scheming.dataset_schemas "ckanext.schemas:custom_schema.yaml ckanext.schemas:msp_data.json ckanext.schemas:itoos_data.json  ckanext.schemas:msp_portal.json ckanext.schemas:msp_tool.json"
 #conf_set ckan.default.package_type "msp-data" # CKAN > 2.9
 DOMAINAREAS_PATH="/usr/lib/ckan/domainareas.json"
 wget -nv "$DOMAINAREAS_URL" -O "$DOMAINAREAS_PATH"

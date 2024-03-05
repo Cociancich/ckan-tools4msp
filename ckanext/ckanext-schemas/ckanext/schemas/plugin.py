@@ -18,8 +18,9 @@ CKAN_SORL_SCHEMA = CKAN_SOLR_URL + '/schema'
 SCHEMA = load_schemas(
     config.get('scheming.dataset_schemas').split(),
     "dataset_type"
-)["msp-data"]
+)["itoos-data"]# was msp-data
 
+# this gaves error if no cluster in schema?
 CLUSTERS = defaultdict(list)
 for field in SCHEMA["dataset_fields"]:
     if "cluster" in field:
@@ -114,6 +115,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
             pkg_dict["spatial_geom"] = shape.wkt
 
         pkg_dict["vocab_clusters"] = []
+        # the following seems to raise error for schema without cluster
         for cluster, fields in CLUSTERS.items():
             for field in fields:
                 data = pkg_dict.get(field["field_name"])

@@ -18,7 +18,8 @@ CKAN_SORL_SCHEMA = CKAN_SOLR_URL + '/schema'
 SCHEMA = load_schemas(
     config.get('scheming.dataset_schemas').split(),
     "dataset_type"
-)["msp-data"]
+)["itoos-data"]# was msp-data
+
 
 CLUSTERS = defaultdict(list)
 for field in SCHEMA["dataset_fields"]:
@@ -63,12 +64,13 @@ class SchemasPlugin(plugins.SingletonPlugin):
         for facet in ('organization', 'groups', 'tags', 'res_format', 'license_id'):
             if facet in facets_dict:
                 del facets_dict[facet]
-        facets_dict['vocab_category'] = toolkit._('Category')
-        facets_dict['sub_category'] = toolkit._('Sub Category')
+        facets_dict['subsystem'] = toolkit._('Subsystem')       
+        #facets_dict['vocab_category'] = toolkit._('Category')
+        #facets_dict['sub_category'] = toolkit._('Sub Category')
         facets_dict['owner'] = toolkit._('Owner')
         facets_dict['vocab_web_services'] = toolkit._('Web services')
         facets_dict['vocab_domain_area'] = toolkit._('Domain area')
-        facets_dict['vocab_clusters'] = toolkit._('Clusters')
+        #facets_dict['vocab_clusters'] = toolkit._('Clusters')
         facets_dict['metadata_completeness'] = toolkit._('Metadata completeness')
         return facets_dict
 
@@ -114,6 +116,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
             pkg_dict["spatial_geom"] = shape.wkt
 
         pkg_dict["vocab_clusters"] = []
+        # the following seems to raise error for schema without cluster
         for cluster, fields in CLUSTERS.items():
             for field in fields:
                 data = pkg_dict.get(field["field_name"])

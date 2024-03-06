@@ -11,6 +11,10 @@ ARG CKANEXT_SPATIAL_VERSION=v2.0.0
 RUN wget -q https://raw.githubusercontent.com/ckan/ckanext-spatial/${CKANEXT_SPATIAL_VERSION}/requirements.txt -O requirements-ckanext-spatial.txt && \
     ckan-pip3 --no-cache install -r requirements-ckanext-spatial.txt && \
     ckan-pip3 --no-cache install git+https://github.com/ckan/ckanext-spatial.git@${CKANEXT_SPATIAL_VERSION}
+    
+RUN ckan-pip3 --no-cache install ckanext-geoview
+
+RUN ckan-pip3 --no-cache install -e git+https://github.com/ckan/ckanext-harvest.git#egg=ckanext-harvest
 
 COPY ckanext/ckanext-branding /usr/lib/ckan/venv/src/ckanext/ckanext-branding
 RUN ckan-pip3 install -e /usr/lib/ckan/venv/src/ckanext/ckanext-branding

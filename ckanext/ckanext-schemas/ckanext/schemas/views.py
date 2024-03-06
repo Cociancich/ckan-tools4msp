@@ -22,6 +22,8 @@ def autocomplete(field):
         tags = [tag['value'] for tag in helpers.scheming_categories_choices(field)]
     elif field == "domain_area":
         tags = [tag['value'] for tag in helpers.scheming_domainareas_choices(field)]
+    elif field == "owner" or field == "provider":
+        tags = [tag['value'] for tag in helpers.scheming_edmolist_choices(field)]        
     else:
         pass
     results = []

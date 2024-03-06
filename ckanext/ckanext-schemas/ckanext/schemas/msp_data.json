@@ -22,7 +22,7 @@
       "required": true,
       "help_text": "The following scheme should be used (optional elements, indicated in square brackets): \"Original Title of the resource (in English) - [Location] - [Acronym] - [Year] [Resource owner/provider, in brackets]\". Be concise, using optional elements when they help to better identify a specific resource among similar ones. Example: \"Fisheries sectors - Southern Adriatic Sea - GSA - 2015 (FAO)\"."
     },
-      {
+    {
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
@@ -104,7 +104,7 @@
       "field_name": "category",
       "label": "Topic category",
       "preset": "tag_string_autocomplete",
-      "required": true,
+      "required": false,
       "help_text": "High-level dataset thematic classification to assist in the grouping and search of available datasets.",
       "display_snippet": "multiple_values.html",
       "form_attrs": {

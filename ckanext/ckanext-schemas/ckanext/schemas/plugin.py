@@ -20,7 +20,7 @@ SCHEMA = load_schemas(
     "dataset_type"
 )["itoos-data"]# was msp-data
 
-
+# this gaves error if no cluster in schema?
 CLUSTERS = defaultdict(list)
 for field in SCHEMA["dataset_fields"]:
     if "cluster" in field:
@@ -64,13 +64,12 @@ class SchemasPlugin(plugins.SingletonPlugin):
         for facet in ('organization', 'groups', 'tags', 'res_format', 'license_id'):
             if facet in facets_dict:
                 del facets_dict[facet]
-        facets_dict['subsystem'] = toolkit._('Subsystem')       
-        #facets_dict['vocab_category'] = toolkit._('Category')
-        #facets_dict['sub_category'] = toolkit._('Sub Category')
+        facets_dict['vocab_category'] = toolkit._('Category')
+        facets_dict['sub_category'] = toolkit._('Sub Category')
         facets_dict['owner'] = toolkit._('Owner')
         facets_dict['vocab_web_services'] = toolkit._('Web services')
         facets_dict['vocab_domain_area'] = toolkit._('Domain area')
-        #facets_dict['vocab_clusters'] = toolkit._('Clusters')
+        facets_dict['vocab_clusters'] = toolkit._('Clusters')
         facets_dict['metadata_completeness'] = toolkit._('Metadata completeness')
         return facets_dict
 

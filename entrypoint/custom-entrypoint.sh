@@ -22,7 +22,7 @@ conf_set ckan.site_url "$CKAN_SITE_URL"
 conf_set ckan.root_path "$CKAN_ROOT_PATH"
 conf_set ckan.site_logo "/logo.png"
 conf_set ckan.favicon "favicon.png"
-#conf_set ckan.site_intro_text ""
+conf_set ckan.site_intro_text "Welcome to Itineris WP5 Marine data catalog (work in progress)"
 conf_set ckan.site_about "
 # About
 #$(conf_get ckan.site_intro_text)
@@ -44,6 +44,11 @@ conf_set scheming.dataset_schemas "ckanext.schemas:custom_schema.yaml ckanext.sc
 DOMAINAREAS_PATH="/usr/lib/ckan/domainareas.json"
 wget -nv "$DOMAINAREAS_URL" -O "$DOMAINAREAS_PATH"
 conf_set ckan.domainareas_path "$DOMAINAREAS_PATH"
+EDMOLIST_PATH="/usr/lib/ckan/edmolist.json"
+wget -nv "$EDMOLIST_URL" -O "$EDMOLIST_PATH"
+conf_set ckan.edmolist_path "$EDMOLIST_PATH"
+
+
 
 #ckanext-scheming
 conf_set_list ckan.plugins scheming_datasets
@@ -53,6 +58,11 @@ conf_set ckan.search.show_all_types true
 conf_set_list ckan.plugins spatial_metadata spatial_query
 conf_set ckanext.spatial.search_backend solr-bbox
 conf_set ckan.solr_url "$CKAN_SOLR_URL"
+conf_set ckanext.spatial.common_map.type "custom"
+conf_set ckanext.spatial.common_map.custom.url "https://tiles.emodnet-bathymetry.eu/2020/baselayer/web_mercator/{z}/{x}/{y}.png"
+conf_set ckanext.spatial.common_map.attribution "Tiles from  <a href=\"https://emodnet.ec.europa.eu/en/bathymetry\">Emodnet bathymetry</a>"
+
+
 
 #datapusher
 conf_set_list ckan.plugins datastore datapusher

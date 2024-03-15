@@ -1,21 +1,42 @@
 # catalogue-tools4msp
+This repository contains a customized ckan setup originally developed by ismar for tools4msp catalogue
+here you can find the [original repo](https://gitlab.com/gisdev.io/catalogue-tools4msp) 
+
+
+## Preparation
+install Docker and docker compose
+
+clone this repository into a local directory. To run this stack  in localhost:
+
+copy `docker-compose_localhost` to `docker-compose.yml`
+
+move into traefik directory
+`cd traefik`
+
+start traefik proxy 
+`docker compose up -d`
 
 Type `docker-compose` instead of `docker compose` if you use the Python tool instead of the Docker plugin, when following this README file.
 
-## Setup
+This will start a traefik instance that will route the http requests to docker containers according to docker compose configuration
 
-1. `docker compose --profile prod up --build --force-recreate -d`
+## Setup
+Move back to starting directory
+
+1. `docker compose  up --build --force-recreate -d`
+
+Ckan should be available on (http://localhost/ckan)
 
 ### CKAN Setup
 
-1. [Customize site settings](http://localhost:5000/ckan-admin/config)
+
+1. [Customize site settings](http://localhost/ckan//ckan-admin/config)
    1. Set `Homepage:` to the second or third choice (because of a [CSS glitch](https://github.com/ckan/ckan/issues/6542))
 
 ### Add admin
-
-1. [Login](http://localhost:5000/user/login)
+1. register a new user (e.g. ckan) and [Login](http://localhost/ckan/user/login)
 1. Set your user (`$USER`) as administrator
-   1. `docker compose --profile prod exec ckan ckan -c /etc/ckan/production.ini sysadmin add $USER`
+   1. `docker compose exec ckan ckan -c /etc/ckan/production.ini sysadmin add $USER`
 
 ## Reset
 
@@ -25,23 +46,6 @@ This command will delete all the containers and all the volumes (`-v`).
 docker compose --profile prod down -v
 ```
 
-## Development
-
-Run development environment with
-
-```
-# This will create the containers, ckan container will have a pdb session active
-docker compose --profile dev build
-docker compose --profile dev run --service-ports ckan-dev
-# On source changes
-[CTRL+C]
-(Pdb) restart
-(Pdb) c
-# Stop the server
-(Pdb) q
-# Stop the containers
-docker compose --profile prod down
-```
 
 For modifications to CSS with livereload
 ```
@@ -64,7 +68,7 @@ The script generates a partial CKAN JSON schema from a data cluster spreadsheet,
 [meld](https://meldmerge.org/) is the suggested graphical tool to check the differences between the complete schema file and the partial one, generated from the data cluster file. It can be executed like this:
 
 ```bash
-meld ckanext/ckanext-schemas/ckanext/schemas/msp_data.json struttura.json
+meld ckanext/ckanext-schemas/ckanext/schemas/itoos_data.json struttura.json
 ```
 
 # Common issues

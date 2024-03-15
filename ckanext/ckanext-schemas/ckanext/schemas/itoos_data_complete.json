@@ -28,17 +28,6 @@
       "preset": "dataset_slug",
       "form_placeholder": "eg. my-dataset"
     },
-   {
-      "field_name": "original-title",
-      "label": "Original title",
-      "help_text": "Resource title in its native language (unless this is English), if already available"
-    },
-    {
-      "field_name": "original-abstract",
-      "label": "Original abstract",
-      "help_text": "Abstract in its native language (unless this is English), if already available"
-    },
-    
     {
       "field_name": "discipline",
       "preset": "tag_string_autocomplete",
@@ -148,15 +137,7 @@
       "label": "Data originator",
       "preset": "tag_string_autocomplete",
       "form_placeholder": "eg. Emodnet,  EEA",
-      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the ownership of the resource.",
-      "display_snippet": "multiple_values.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "false",
-        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
-        "class": ""
-      }
+      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the ownership of the resource."
     },
     {
       "field_name": "provider",
@@ -414,7 +395,7 @@
       "help_text": "Use this field in combination with the previous one to specify the END date of a time period."
     },
     {
-      "field_name": "spatial_geojson",
+      "field_name": "spatial",
       "label": "Spatial extent",
       "help_text": "GeoJSON feature"
     },
@@ -437,29 +418,6 @@
       "form_snippet": "markdown.html",
       "form_placeholder": "eg. Additional informations",
       "help_text": "Add here any information you consider useful to better describe the dataset or to integrate the information present in the abstract."
-    },
-    {
-      "field_name": "metadata_completeness",
-      "label": "Metadata completeness",
-      "preset": "select",
-      "help_text": "Use this field to keep track of whether you feel the dataset has been described by all fields, to the best of your knowledge, or whether you have yet to complete some of them.",
-      "choices": [
-          {
-              "value": "draft",
-              "label": "Draft"
-          },
-          {
-              "value": "complete",
-              "label": "Complete"
-          }
-      ]
-    },
-    {
-      "field_name": "autonotes",
-      "label": "Notes",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Notes",
-      "help_text": "Use this field to note down doubts, points you are unsure of or annotations useful to other metadata editors. When the dataset has been fully described this field should be empty."
     }
   ],
   "resource_fields": [

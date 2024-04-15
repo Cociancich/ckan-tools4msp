@@ -5,15 +5,15 @@
   "dataset_fields": [
     {
       "start_form_page": {
-        "title": "Main metadata (What)",
-        "description": "Main metadata (WHat)"
+        "title": "Main",
+        "description": "Main"
       },
       "field_name": "owner_org",
       "label": "Organization",
       "preset": "dataset_organization",
-      "required": false,
+      "required": true,
       "help_text": "Select the organization for which you manage this dataset."
-    },
+      },
     {
       "field_name": "title",
       "label": "Resource title",
@@ -28,438 +28,325 @@
       "preset": "dataset_slug",
       "form_placeholder": "eg. my-dataset"
     },
-   {
-      "field_name": "original-title",
-      "label": "Original title",
-      "help_text": "Resource title in its native language (unless this is English), if already available"
+      {
+      "start_form_page": {
+        "title": "Subsystem or Research Infrastructure",
+        "description": "Subsystem or Research Infrastructure"
+      },
+      "field_name": "ri-name",
+      "label": "Name of the substystem or Research Infrastructure",
+      "preset": "select",
+      "choices": [
+        {
+          "value": null,
+          "label": null
+        },
+        {
+          "value": "danubius",
+          "label": "DANUBIUS"
+        },
+        {
+          "value": "elter",
+          "label": "eLTER"
+        },
+        {
+          "value": "emso",
+          "label": "EMSO"
+        },
+        {
+          "value": "euroargo",
+          "label": "EuroARGO"
+        },
+        {
+          "value": "eurofleet-gaia-blu",
+          "label": "EuroFleet (Gaia Blu)"
+        },
+        {
+          "value": "geoscience",
+          "label": "GEOSCIENCE"
+        },
+        {
+          "value": "icos",
+          "label": "ICOS"
+        },
+        {
+          "value": "jerico",
+          "label": "JERICO"
+        },
+        {
+          "value": "laura-bassi",
+          "label": "Laura Bassi"
+        },
+        {
+          "value": "lns",
+          "label": "LNS"
+        },
+        {
+          "value": "sios",
+          "label": "SIOS"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
+      ],
+      "help_text": "Program Name, free text",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "original-abstract",
-      "label": "Original abstract",
-      "help_text": "Abstract in its native language (unless this is English), if already available"
+      "field_name": "ri-acronym",
+      "label": "RI_acronym",
+      "help_text": "Free text",
+      "help_position": "top",
+      "help_allow_html": true
     },
-    
+    {
+      "field_name": "ri-start-date",
+      "label": "RI_Start_date",
+      "help_text": "Program Start date",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "ri-coordinating-institute",
+      "label": "RI_Coordinating_institute",
+      "help_text": "Coordinating institute, EDMO reference",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "ri-coordinating-person",
+      "label": "RI_Coordinating_person",
+      "help_text": "Principal Investigator (Name/Names, free text)",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "ri-geographical-coverage",
+      "label": "RI_Geographical_coverage",
+      "help_text": "Sea-areas C19 - SEAVOX SALT AND FRESH WATER BODY GAZETTEER",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "ri-abstract",
+      "label": "RI_Abstract",
+      "help_text": "Abstract",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "start_form_page": {
+        "title": "Operating facility or platform",
+        "description": "Operating facility or platform"
+      },
+      "field_name": "of-name",
+      "label": "Operating facility name",
+      "help_text": "Platform Name, free text",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "of-type",
+      "label": "Type of platform (RV, float, offshore structure, fixed benthic node, …)",
+      "help_text": "Platform class L06 - SEAVOX PLATFORM CATEGORIES",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "of-owner-instituion",
+      "label": "Operating facility owner, institute",
+      "help_text": "Platform Owner, EDMO reference",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "of-owner-person",
+      "label": "Operating facility owner, person",
+      "help_text": "Name/Names, free text",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "data-portal",
+      "label": "Data portal",
+      "help_text": "Original title or Series Name, free text",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "start_form_page": {
+        "title": "Metadata of the Dataset",
+        "description": "This group of Metadata describe additional info on the dataset"
+      },
+      "field_name": "dataset-name",
+      "label": "Dataset_Name",
+      "help_text": "Acronym, free text",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "dataset-short-name",
+      "label": "Dataset_Short_Name",
+      "help_text": "Instrument class L05 - SEADATANET DEVICE CATEGORIES",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "type-of-device-meteorological-packages-sediment-traps-ocean-models",
+      "label": "Type_of_device",
+      "help_text": "Instrument code L22 - SEAVOX DEVICE CATALOGUE",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "instrument-rm-young-32500-sea-bird-sbe-911-ctd",
+      "label": "Instrument",
+      "help_text": "Instrument Serial number",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
+      "field_name": "instrument-serial-number",
+      "label": "Instrument_serial_number",
+      "help_text": "P08 - SeaDataNet Parameter Disciplines",
+      "help_position": "top",
+      "help_allow_html": true
+    },
     {
       "field_name": "discipline",
-      "preset": "tag_string_autocomplete",
       "label": "Discipline",
-      "required": true
-
+      "help_text": "P03 - SeaDataNet Agreed Parameter Groups",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "parameters_group",
-      "preset": "tag_string_autocomplete",
-      "label": "Parameters group"
- 
+      "field_name": "parameters-group",
+      "label": "Parameters_group",
+      "help_text": "List of variables, P02 - SEADATANET PARAMETER DISCOVERY VOCABULARY",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "discovery_parameters",
-      "label": "Discovery parameter",
-      "preset": "tag_string_autocomplete",
-      "required": true
-    },    
-    {
-      "field_name": "inspire_themes",
-      "label": "GEMET-INSPIRE themes",
-      "preset": "tag_string_autocomplete",
-      "required": false
-    },     
-    {
-      "field_name": "notes",
-      "label": "Abstract",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Abstract about the dataset",
-      "required": true,
-      "help_text": "Describe in a few sentences the content and the purpose of the resource."
+      "field_name": "discovery-parameter",
+      "label": "Discovery_parameter",
+      "help_text": "Dataset Date and Time or time domain - Start date",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "emded",
-      "label": "Related EDMED dataset",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Abstract about the dataset",
-      "required": false
+      "field_name": "temporal-extent",
+      "label": "Temporal_extent"
     },
     {
-      "field_name": "format",
-      "label": "Data format",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "one or more formats in which the data is available (e.g. csv, netcdf)",
-      "required": false
-    }, 
-    {
-      "field_name": "language",
-      "label": "Resource language",
-      "preset": "select",
-      "required": true,
-      "help_text": "Language of the dataset as found, for example, in attribute tables for geospatial datasets or in text for documents.",
-      "choices": [
-          {"label": "English", "value": "eng"},
-          {"label": "Bulgarian", "value": "bul"},
-          {"label": "Croatian", "value": "hrv"},
-          {"label": "Czech", "value": "cze"},
-          {"label": "Danish", "value": "dan"},
-          {"label": "Dutch", "value": "dut"},
-          {"label": "Estonian", "value": "est"},
-          {"label": "Finnish", "value": "fin"},
-          {"label": "French", "value": "fre"},
-          {"label": "German", "value": "ger"},
-          {"label": "Greek", "value": "gre"},
-          {"label": "Hungarian", "value": "hun"},
-          {"label": "Irish", "value": "gle"},
-          {"label": "Italian", "value": "ita"},
-          {"label": "Latvian", "value": "lav"},
-          {"label": "Lithuanian", "value": "lit"},
-          {"label": "Maltese", "value": "mlt"},
-          {"label": "Montenegro", "value": "cnr"},
-          {"label": "Polish", "value": "pol"},
-          {"label": "Portuguese", "value": "por"},
-          {"label": "Romanian", "value": "rum"},
-          {"label": "Slovak", "value": "slo"},
-          {"label": "Slovenian", "value": "slv"},
-          {"label": "Spanish", "value": "spa"},
-          {"label": "Swedish", "value": "swe"},
-          {"label": "Multiple", "value": "mul"},
-          {"label": "Unknown", "value": "unk"}
-      ]
-    },
-     {
-      "field_name": "subsystem",
-      "label": "Subsystem or Research Infrastructure",
-      "preset": "select",
-      "help_text": "Name of the resaerch infrastructure or subsystem of IT-IOOS that provide the data",
-      "choices": [
-          {"label": "DANUBIUS", "value": "danubius"} ,
-          {"label": "eLTER", "value": "elter"},
-          {"label": "EMSO", "value": "emso"},
-          {"label": "EuroARGO", "value": "euroargo"}, 
-          {"label": "EuroFleet (Gaia Blu)", "value": "eurofleet"},
-          {"label": "GEOSCIENCE", "value": "geoscience"},
-          {"label": "ICOS", "value": "icos"},
-          {"label": "JERICO", "value": "jerico"}, 
-          {"label": "Laura Bassi", "value": "laurabassi"},
-          {"label": "LNS", "value": "lns"},
-          {"label": "SIOS", "value": "sios"},
-    {"label": "Marine Data Store", "value": "datastore"},
-    {"label": "Marine Data Portal", "value": "dataportal"}
-      ]
+      "field_name": "data-type-nrt-dmt",
+      "label": "Data_type"
     },
     {
-      "field_name": "owner",
-      "label": "Data originator",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. Emodnet,  EEA",
-      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the ownership of the resource.",
-      "display_snippet": "multiple_values.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "false",
-        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
-        "class": ""
-      }
+      "field_name": "spatial-extent",
+      "label": "Spatial_extent",
+      "help_text": "Dataset Latitude, longitude or spatial domain - Geographic coverage (bounding box)",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "provider",
-      "label": "Data custodian",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. Emodnet, EEA",
-      "help_text": "This is a list of one or more names (e.g. EMODnet, EEA, Eurostat) identifying the provider of the resource. E. g. This could be the owner of the geo-portal or SDI through which the resource is available."
+      "field_name": "coordinate-reference-system",
+      "label": "Coordinate_reference_system",
+      "help_text": "Coordinate reference system",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "category",
-      "label": "Topic category",
-      "preset": "tag_string_autocomplete",
-      "required": false,
-      "help_text": "High-level dataset thematic classification to assist in the grouping and search of available datasets.",
-      "display_snippet": "multiple_values.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "false",
-        "data-module-source": "/scheming/api/util/category/autocomplete?incomplete=?",
-        "class": ""
-      }
+      "field_name": "data-licence",
+      "label": "Data_licence",
+      "help_text": "Data Access Restriction, L08 - Data Access Restriction (default CC-BY-4.0)",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-	 "start_form_page": {
-        "title": "Location metadata",
-        "description": "Location metadata (Where)"
-      },
-      "field_name": "domain_area",
-      "label": "Domain area",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. Mediterranean, Adriatic, Ionian, ",
-      "display_snippet": "multiple_values.html",
-      "help_text": "Geographical area covered or representative of the dataset. (Please start typing to search).",	
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "false",
-        "data-module-source": "/scheming/api/util/domain_area/autocomplete?incomplete=?",
-        "class": ""
-      }
+      "field_name": "qc-procedures",
+      "label": "QC_procedures",
+      "help_text": "L12 - SEADATANET PARAMETER QUALITY CONTROL PROCEDURES",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "data_portal",
-      "label": "Data portal",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. ADRIPLAN, SHAPE, EMODNet Human activities",
-      "help_text": "Portal where the dataset is published/downloadable/etc. (if any)."
+      "field_name": "dataset-originator-institute",
+      "label": "Dataset_originator,_institute",
+      "help_text": "EDMO reference",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "presentation_form",
-      "label": "Presentation form",
-      "help_text": "Select the value from the list which is closer to the type of structure and presentation form of the dataset.",
-      "preset": "select",
-      "choices": [
-          {
-              "value": "map",
-              "label": "Map (map represented in raster or vector form)"
-          },
-          {
-              "value": "image",
-              "label": "Image"
-          },
-          {
-              "value": "document",
-              "label": "Document"
-          },
-          {
-              "value": "table",
-              "label": "Table"
-          },
-          {
-              "value": "model",
-              "label": "Model"
-          },
-          {
-              "value": "profile",
-              "label": "Profile"
-          },
-          {
-              "value": "video",
-              "label": "Video"
-          },
-          {
-              "value": "audio",
-              "label": "Audio"
-          },
-          {
-              "value": "diagram",
-              "label": "Diagram"
-          },
-          {
-              "value": "multimedia",
-              "label": "Multimedia"
-          },
-          {
-              "value": "rawdata",
-              "label": "Raw data"
-          },
-          {
-              "value": "fixme",
-              "label": "FIXME"
-          }
-      ]
+      "field_name": "dataset-originator-person",
+      "label": "Dataset_originator,_person",
+      "help_text": "Free text",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "spatial_representation",
-      "label": "Spatial representation",
-      "preset": "select",
-      "help_text": "In case of geospatial information, select the specific type of spatial representation from the list; if the dataset has no geospatial coomponent, select \"No geo\".",	
-      "choices": [
-          {
-              "value": "vector_point",
-              "label": "Vector - point"
-          },
-          {
-              "value": "vector_line",
-              "label": "Vector - line (or polyline)"
-          },
-          {
-              "value": "vector_polygon",
-              "label": "Vector - polygon"
-          },
-          {
-              "value": "vector_mixed",
-              "label": "Vector - mixed types"
-          },
-          {
-              "value": "raster",
-              "label": "Raster (grid)"
-          },
-          {
-              "value": "nogeo",
-              "label": "No geo"
-          },
-          {
-              "value": "fixme",
-              "label": "FIXME"
-          }
-      ]
+      "field_name": "dataset-provider-institute",
+      "label": "Dataset_provider,_institute",
+      "help_text": "Dataset provider/custodian institute, EDMO reference",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "crs",
-      "label": "Coordinate reference system",
-      "preset": "multiple_checkbox",
-      "choices": [
-          {"value": "4326", "label": "epsg:4326 - WGS84 (degree)"},
-          {"value": "3035", "label": "epsg:3035 - ETRS89 / LAEA Europe"},
-          {"value": "32633", "label": "epsg:32633 - WGS 84 / UTM zone 33N"},
-          {"value": "32634", "label": "epsg:32634 - WGS 84 / UTM zone 33N"},
-          {"value": "32635", "label": "epsg:32635 - WGS 84 / UTM zone 33N"},
-          {"value": "32636", "label": "epsg:32636 - WGS 84 / UTM zone 33N"},
-          {"value": "3857", "label": "epsg:3857 WGS 84 / Pseudo-Mercator"},
-          {"value": "4936", "label": "epsg:4936 ETRS89 Geocentric coordinate system"},
-          {"value": "3003", "label": "epsg:3003 Monte Mario / Italy zone 1"},
-          {"value": "3765", "label": "epsg:3765 HTRS96 / Croatia TM"},
-          {"value": "3604", "label": "epsg:3604 NAD83(NSRS2007) / Montana"},
-          {"value": "6404", "label": "epsg:6404 NAD83(2011) / Arizona Central"},
-          {"value": "32662", "label": "epsg:32662 WGS 84 / Plate Carree"},
-          {"value": "3034", "label": "epsg:3034 ETRS89 / LCC Europe"},
-          {"value": "41001", "label": "epsg:41001 WGS84 / Simple Mercator -- Spherical Mercator "},
-          {"value": "fixme", "label": "FIXME"},
-          {"value": "other", "label": "Other"}
-      ]
+      "field_name": "dataset-provider-person",
+      "label": "Dataset_provider,_person",
+      "help_text": "Dataset provider/custodian person, Free text (Name, Surname, email)",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "crs_other",
-      "label": " ",
-      "help_text": "Identifier of the coordinate reference system(s) used in the data set. Only identifiers contained in the EPSG Geodetic Parameter Dataset shall be used (e.g. 4326). Refer to the following URLs for more info and to find the proper EPSG code: <a href=\"https://epsg.io/\" target=\"_blank\">epsg.io</a> or <a href=\"http://spatialreference.org/\" target=\"_blank\">spatialreference.org</a>.",
-      "help_allow_html": true,
-      "form_placeholder": "Other epsg codes. E.g. 4326, 3035"
+      "field_name": "funding-source-e-g-pnrr-itineris",
+      "label": "Funding_source",
+      "help_text": "Project in EDMERP reference ",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "web_services",
-      "label": "Web services",
-      "preset": "multiple_checkbox",
-      "choices": [
-          {
-              "value": "OGC_WMS",
-              "label": "OGC-WMS"
-          },
-          {
-              "value": "OGC_WFS",
-              "label": "OGC-WFS"
-          },
-          {
-              "value": "OGC_WCS",
-              "label": "OGC-WCS"
-          },
-          {
-              "value": "OGC_SOS",
-              "label": "OGC-SOS"
-          },
-          {"value": "other", "label": "Other"}
-      ]
+      "field_name": "endpoint",
+      "label": "Endpoint"
     },
     {
-      "field_name": "web_services_other",
-      "label": " ",
-      "help_text": "Available interoperable services to view or download the resource.",
-      "form_placeholder": "Other download services."
+      "field_name": "web-services",
+      "label": "Web_services"
     },
     {
-      "field_name": "derives_from_string",
-      "label": "Derives from",
-      "preset": "tag_string_autocomplete",
-      "help_text": "If this dataset derives (as a subset, elaboration, derived product, ...) from another dataset already present in the catalogue, select that dataset in this field.",
-      "display_snippet": "multiple_datasets.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "false",
-        "data-module-source": "/scheming/api/util/dataset/autocomplete?incomplete=?",
-        "class": ""
-      }
+      "field_name": "doi",
+      "label": "DOI"
     },
     {
-      "field_name": "derived",
-      "label": "Derived datasets",
-      "display_snippet": "multiple_datasets.html"
+      "field_name": "related-edmed-dataset",
+      "label": "Related_EDMED_dataset"
     },
     {
-      "field_name": "child_of_string",
-      "label": "Successor of",
-      "preset": "tag_string_autocomplete",
-      "help_text": "Select related datasets",
-      "display_snippet": "multiple_datasets.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-tags": "",
-        "data-module-createtags": "false",
-        "data-module-source": "/scheming/api/util/dataset/autocomplete?incomplete=?",
-        "class": ""
-      }
+      "field_name": "related-edios-dataset",
+      "label": "Related_EDIOS_dataset"
     },
     {
-      "field_name": "children",
-      "label": "Predecessor of",
-      "display_snippet": "multiple_datasets.html"
+      "field_name": "data-format",
+      "label": "Data_format"
     },
     {
-	 "start_form_page": {
-        "title": "Temporal extent",
-        "description": "Temporal extent (When)"
-      },		
-      "field_name": "temporal_extent",
-      "label": "Temporal extent",
-      "preset": "date",
-      "help_text": "Time period covered by the content of the dataset. Use this field to specify ad individual date or to specify the START date of a time period."
+      "field_name": "additional-information",
+      "label": "Additional_information"
     },
     {
-      "field_name": "temporal_extent_end",
-      "label": " ",
-      "preset": "date",
-      "help_text": "Use this field in combination with the previous one to specify the END date of a time period."
+      "field_name": "visibility",
+      "label": "Visibility",
+      "help_text": "Set by the catalogue Administrator (Public/Private)",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
-      "field_name": "spatial_geojson",
-      "label": "Spatial extent",
-      "help_text": "GeoJSON feature"
-    },
-    {
-      "field_name": "data_accessibility",
-      "label": "Data accessibility",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "A description of the level of resource accessibility.",
-      "help_text": "Indicate whether and how the dataset is accessible (visible, downloadable, sent on request, not accessible, etc.) Add information to explain limitations and restrictions to access or use. Use this field alone or to supplement the 'Licence' field."
-    },
-    {
-      "field_name": "license_id",
-      "label": "License",
-      "form_snippet": "license.html",
-      "help_text": "If the dataset has an explicit license associated, select it form the list. If useful, use the filed \"Data accessibility\" to add/specify details regarding the license."
-    },
-    {
-      "field_name": "additional_informations",
-      "label": "Additional information",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Additional informations",
-      "help_text": "Add here any information you consider useful to better describe the dataset or to integrate the information present in the abstract."
-    },
-    {
-      "field_name": "metadata_completeness",
-      "label": "Metadata completeness",
-      "preset": "select",
-      "help_text": "Use this field to keep track of whether you feel the dataset has been described by all fields, to the best of your knowledge, or whether you have yet to complete some of them.",
-      "choices": [
-          {
-              "value": "draft",
-              "label": "Draft"
-          },
-          {
-              "value": "complete",
-              "label": "Complete"
-          }
-      ]
-    },
-    {
-      "field_name": "autonotes",
-      "label": "Notes",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Notes",
-      "help_text": "Use this field to note down doubts, points you are unsure of or annotations useful to other metadata editors. When the dataset has been fully described this field should be empty."
+      "field_name": "state",
+      "label": "State",
+      "help_text": "Set by the catalogue Administrator (active/hidden=deleted)",
+      "help_position": "top",
+      "help_allow_html": true
     }
   ],
   "resource_fields": [

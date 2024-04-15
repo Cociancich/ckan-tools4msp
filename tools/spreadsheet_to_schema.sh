@@ -4,7 +4,7 @@
 # - https://duckdb.org/
 # - https://jqlang.github.io/jq/
 
-SPREADSHEET="Data cluster matrices_20231004.xlsx"
+SPREADSHEET="itineris_schema.xlsx"
 WORKSHEET="Struttura_catalogue"
 SCHEMA="struttura.json"
 
@@ -35,10 +35,10 @@ select case when any_value(start_form_page_title) is not null then
          labelize(any_value(cluster))
        else null
        end as cluster,
-       case when field_type in ('multiple_checkbox', 'radio')
+       case when field_type in ('multiple_checkbox', 'radio', 'select')
             then field_type
        end as preset,
-       case when field_type in ('multiple_checkbox', 'radio') then
+       case when field_type in ('multiple_checkbox', 'radio', 'select') then
        json_group_array(
          json_object(
            'value', labelize(label),
@@ -57,8 +57,9 @@ select case when any_value(start_form_page_title) is not null then
        else null
        end as help_allow_html
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
- where field_type in ('multiple_checkbox', 'radio', 'text')
- group by field_name, field_type
+ where field_type in ('multiple_checkbox', 'radio', 'text', 'select')
+ group by id, field_name, field_type
+ order by id
 ) to '/dev/stdout' (format json);
 EOF
 
@@ -72,7 +73,7 @@ load json;
 .mode ascii
 select count(*)
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
- where field_type in ('multiple_checkbox', 'radio', 'text')
+ where field_type in ('multiple_checkbox', 'radio', 'text', 'select')
 EOF
 echo
 
@@ -86,5 +87,5 @@ load json;
 .mode markdown
 select *
   from st_read('$SPREADSHEET', layer='$WORKSHEET')
- where field_type not in ('multiple_checkbox', 'radio', 'text')
+ where field_type not in ('multiple_checkbox', 'radio', 'text', 'select')
 EOF

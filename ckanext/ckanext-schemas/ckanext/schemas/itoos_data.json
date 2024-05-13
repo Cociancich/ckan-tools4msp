@@ -50,8 +50,8 @@
           "label": "eLTER"
         },
         {
-          "value": "emso",
-          "label": "EMSO"
+          "value": "emso-eric",
+          "label": "EMSO ERIC"
         },
         {
           "value": "euroargo",
@@ -159,7 +159,13 @@
       "label": "Operating facility owner, institute",
       "help_text": "Platform Owner, EDMO reference",
       "help_position": "top",
-      "help_allow_html": true
+      "help_allow_html": true,
+      "display_snippet": "multiple_values.html",
+      "form_attrs": {
+        "data-module": "autocomplete",
+        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
+        "class": ""
+      }
     },
     {
       "field_name": "of-owner-person",

@@ -59,19 +59,19 @@ class SchemasPlugin(plugins.SingletonPlugin):
             response.raise_for_status()
 
     # IFacets
-
+    # Recreate dictionary for facets filter on start page
     def dataset_facets(self, facets_dict, package_type):
-        for facet in ('organization', 'groups', 'tags', 'res_format', 'license_id'):
-            if facet in facets_dict:
-                del facets_dict[facet]
-        facets_dict['subsystem'] = toolkit._('Subsystem')       
+        #for facet in ('organization', 'groups', 'tags', 'res_format', 'license_id'):
+        #    if facet in facets_dict:
+        #        del facets_dict[facet]
+        facets_dict['ri-name'] = toolkit._('Subsystem')       
         #facets_dict['vocab_category'] = toolkit._('Category')
         #facets_dict['sub_category'] = toolkit._('Sub Category')
         facets_dict['owner'] = toolkit._('Owner')
-        facets_dict['vocab_web_services'] = toolkit._('Web services')
-        facets_dict['vocab_domain_area'] = toolkit._('Domain area')
+        #facets_dict['vocab_web_services'] = toolkit._('Web services')
+        #facets_dict['vocab_domain_area'] = toolkit._('Domain area')
         #facets_dict['vocab_clusters'] = toolkit._('Clusters')
-        facets_dict['metadata_completeness'] = toolkit._('Metadata completeness')
+        #facets_dict['metadata_completeness'] = toolkit._('Metadata completeness')
         return facets_dict
 
     def group_facets(self, facets_dict, group_type, package_type):
@@ -104,7 +104,7 @@ class SchemasPlugin(plugins.SingletonPlugin):
         geojson = pkg_dict.get("spatial_geojson")
         try:
             geometry = json.loads(geojson)
-        except json.decoder.JSONDecodeError:
+        except (TypeError, json.decoder.JSONDecodeError):
             geometry = None
         if geometry:
             shape = shapely.geometry.shape(geometry)

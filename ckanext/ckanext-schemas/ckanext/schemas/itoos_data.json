@@ -111,9 +111,15 @@
     {
       "field_name": "ri-coordinating-institute",
       "label": "RI_Coordinating_institute",
-      "help_text": "Coordinating institute, EDMO reference",
+      "help_text": "Coordinating institute, EDMO reference from seadatanet",
       "help_position": "top",
-      "help_allow_html": true
+      "help_allow_html": true,
+      "display_snippet": "text.html",
+      "form_attrs": {
+        "data-module": "autocomplete",
+        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
+        "class": ""
+      }      
     },
     {
       "field_name": "ri-coordinating-person",
@@ -160,7 +166,7 @@
       "help_text": "Platform Owner, EDMO reference",
       "help_position": "top",
       "help_allow_html": true,
-      "display_snippet": "multiple_values.html",
+      "display_snippet": "text.html",
       "form_attrs": {
         "data-module": "autocomplete",
         "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
@@ -250,8 +256,8 @@
       "label": "Data_type"
     },
     {
-      "field_name": "spatial-extent",
-      "label": "Spatial_extent",
+      "field_name": "bbox",
+      "label": "bbox",
       "help_text": "Dataset Latitude, longitude or spatial domain - Geographic coverage (bounding box)",
       "help_position": "top",
       "help_allow_html": true
@@ -264,11 +270,10 @@
       "help_allow_html": true
     },
     {
-      "field_name": "data-licence",
-      "label": "Data_licence",
-      "help_text": "Data Access Restriction, L08 - Data Access Restriction (default CC-BY-4.0)",
-      "help_position": "top",
-      "help_allow_html": true
+      "field_name": "license_id",
+      "label": "Data-License",
+      "form_snippet": "license.html",
+      "help_text": "If the dataset has an explicit license associated, select it form the list. If useful, use the filed \"Data accessibility\" to add/specify details regarding the license."
     },
     {
       "field_name": "qc-procedures",
@@ -280,9 +285,15 @@
     {
       "field_name": "dataset-originator-institute",
       "label": "Dataset_originator,_institute",
-      "help_text": "EDMO reference",
+      "help_text": "EDMO reference from seadatanet",
       "help_position": "top",
-      "help_allow_html": true
+      "help_allow_html": true,
+      "display_snippet": "text.html",
+      "form_attrs": {
+        "data-module": "autocomplete",
+        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
+        "class": ""
+      }
     },
     {
       "field_name": "dataset-originator-person",
@@ -294,9 +305,15 @@
     {
       "field_name": "dataset-provider-institute",
       "label": "Dataset_provider,_institute",
-      "help_text": "Dataset provider/custodian institute, EDMO reference",
+      "help_text": "Dataset provider/custodian institute, EDMO reference from seadatanet",
       "help_position": "top",
-      "help_allow_html": true
+      "help_allow_html": true,
+      "display_snippet": "text.html",
+      "form_attrs": {
+        "data-module": "autocomplete",
+        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
+        "class": ""
+      }
     },
     {
       "field_name": "dataset-provider-person",
@@ -307,7 +324,7 @@
     },
     {
       "field_name": "funding-source-e-g-pnrr-itineris",
-      "label": "Funding_source",
+      "label": "Funding_source (e.g. PNRR ITINERIS",
       "help_text": "Project in EDMERP reference ",
       "help_position": "top",
       "help_allow_html": true
@@ -344,13 +361,6 @@
       "field_name": "visibility",
       "label": "Visibility",
       "help_text": "Set by the catalogue Administrator (Public/Private)",
-      "help_position": "top",
-      "help_allow_html": true
-    },
-    {
-      "field_name": "state",
-      "label": "State",
-      "help_text": "Set by the catalogue Administrator (active/hidden=deleted)",
       "help_position": "top",
       "help_allow_html": true
     }

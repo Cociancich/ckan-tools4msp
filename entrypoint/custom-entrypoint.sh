@@ -20,6 +20,9 @@ conf_set ckan.site_title "ITINERIS Catalogue"
 conf_set ckan.site_description "This is the portal of the catalogue of WP5 Itineris project."
 conf_set ckan.site_url "$CKAN_SITE_URL"
 conf_set ckan.root_path "$CKAN_ROOT_PATH"
+# add root path to login urls
+sed -i -E  "s@= (/[user|login])@= $CKAN_ROOT_PATH\1@" /etc/ckan/who.ini
+
 conf_set ckan.site_logo "/logo.png"
 conf_set ckan.favicon "favicon.png"
 conf_set ckan.site_intro_text "Welcome to Itineris WP5 Marine data catalog (work in progress)"

@@ -101,16 +101,10 @@
       "help_position": "top",
       "help_allow_html": true
     },
-    {
-      "field_name": "ri-start-date",
-      "label": "RI_Start_date",
-      "help_text": "Program Start date",
-      "help_position": "top",
-      "help_allow_html": true
-    },
+
     {
       "field_name": "ri-coordinating-institute",
-      "label": "RI_Coordinating_institute",
+      "label": "Coordinating institute",
       "help_text": "Coordinating institute, EDMO reference from seadatanet",
       "help_position": "top",
       "help_allow_html": true,
@@ -123,21 +117,28 @@
     },
     {
       "field_name": "ri-coordinating-person",
-      "label": "RI_Coordinating_person",
+      "label": "RI Coordinating person",
       "help_text": "Principal Investigator (Name/Names, free text)",
       "help_position": "top",
       "help_allow_html": true
     },
     {
+      "field_name": "ri-start-date",
+      "label": "RI Start date",
+      "help_text": "Program Start date",
+      "help_position": "top",
+      "help_allow_html": true
+    },
+    {
       "field_name": "ri-geographical-coverage",
-      "label": "RI_Geographical_coverage",
+      "label": "RI Geographical coverage",
       "help_text": "Sea-areas C19 - SEAVOX SALT AND FRESH WATER BODY GAZETTEER",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "ri-abstract",
-      "label": "RI_Abstract",
+      "label": "RI Abstract",
       "help_text": "Abstract",
       "help_position": "top",
       "help_allow_html": true
@@ -155,35 +156,8 @@
     },
     {
       "field_name": "of-type",
-      "label": "Type of platform (RV, float, offshore structure, fixed benthic node, …)",
-      "help_text": "Platform class L06 - SEAVOX PLATFORM CATEGORIES",
-      "help_position": "top",
-      "help_allow_html": true
-    },
-    {
-      "field_name": "of-owner-instituion",
-      "label": "Operating facility owner, institute",
-      "help_text": "Platform Owner, EDMO reference",
-      "help_position": "top",
-      "help_allow_html": true,
-      "display_snippet": "text.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
-        "class": ""
-      }
-    },
-    {
-      "field_name": "of-owner-person",
-      "label": "Operating facility owner, person",
-      "help_text": "Name/Names, free text",
-      "help_position": "top",
-      "help_allow_html": true
-    },
-    {
-      "field_name": "data-portal",
-      "label": "Data portal",
-      "help_text": "Original title or Series Name, free text",
+      "label": "Type of platform",
+      "help_text": "Platform class L06 - SEAVOX PLATFORM CATEGORIES (RV, float, offshore structure, fixed benthic node, …)",
       "help_position": "top",
       "help_allow_html": true
     },
@@ -192,150 +166,94 @@
         "title": "Metadata of the Dataset",
         "description": "This group of Metadata describe additional info on the dataset"
       },
-      "field_name": "dataset-name",
-      "label": "Dataset_Name",
-      "help_text": "Acronym, free text",
-      "help_position": "top",
-      "help_allow_html": true
-    },
-    {
-      "field_name": "dataset-short-name",
-      "label": "Dataset_Short_Name",
-      "help_text": "Instrument class L05 - SEADATANET DEVICE CATEGORIES",
+      "field_name": "of-owner-person",
+      "label": "Dataset originator, person",
+      "help_text": "free text",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "type-of-device-meteorological-packages-sediment-traps-ocean-models",
-      "label": "Type_of_device",
-      "help_text": "Instrument code L22 - SEAVOX DEVICE CATALOGUE",
+      "label": "Type of device",
+      "help_text": "Instrument class L05 - SEADATANET DEVICE CATEGORIES",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "instrument-rm-young-32500-sea-bird-sbe-911-ctd",
       "label": "Instrument",
-      "help_text": "Instrument Serial number",
-      "help_position": "top",
-      "help_allow_html": true
-    },
-    {
-      "field_name": "instrument-serial-number",
-      "label": "Instrument_serial_number",
-      "help_text": "P08 - SeaDataNet Parameter Disciplines",
+      "help_text": "Instrument code L22 - SEAVOX DEVICE CATALOGUE",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "discipline",
       "label": "Discipline",
-      "help_text": "P03 - SeaDataNet Agreed Parameter Groups",
+      "help_text": "P08 - SeaDataNet Parameter Disciplines",      
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "parameters-group",
-      "label": "Parameters_group",
-      "help_text": "List of variables, P02 - SEADATANET PARAMETER DISCOVERY VOCABULARY",
+      "label": "Parameters group",
+      "help_text": "P03 - SeaDataNet Agreed Parameter Groups",      
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "discovery-parameter",
-      "label": "Discovery_parameter",
-      "help_text": "Dataset Date and Time or time domain - Start date",
+      "label": "Discovery parameter",
+      "help_text": "List of variables, P02 - SEADATANET PARAMETER DISCOVERY VOCABULARY",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "temporal-extent",
-      "label": "Temporal_extent"
+      "label": "Temporal extent",
+      "help_text": "Dataset Date and Time or time domain - Start date",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
       "field_name": "data-type-nrt-dmt",
-      "label": "Data_type"
+      "label": "Data type",
+      "help_text": "NRT/DMT",
+      "help_position": "top",
+      "help_allow_html": true
     },
     {
       "field_name": "bbox",
-      "label": "bbox",
+      "label": "Spatial extent",
       "help_text": "Dataset Latitude, longitude or spatial domain - Geographic coverage (bounding box)",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "coordinate-reference-system",
-      "label": "Coordinate_reference_system",
+      "label": "Coordinate reference system",
       "help_text": "Coordinate reference system",
       "help_position": "top",
       "help_allow_html": true
     },
     {
       "field_name": "license_id",
-      "label": "Data-License",
+      "label": "Data License",
       "form_snippet": "license.html",
-      "help_text": "If the dataset has an explicit license associated, select it form the list. If useful, use the filed \"Data accessibility\" to add/specify details regarding the license."
+      "help_text": "Data Access Restriction, L08 - Data Access Restriction (default CC-BY-4.0)"
     },
     {
       "field_name": "qc-procedures",
-      "label": "QC_procedures",
+      "label": "QC procedures",
       "help_text": "L12 - SEADATANET PARAMETER QUALITY CONTROL PROCEDURES",
       "help_position": "top",
       "help_allow_html": true
     },
     {
-      "field_name": "dataset-originator-institute",
-      "label": "Dataset_originator,_institute",
-      "help_text": "EDMO reference from seadatanet",
-      "help_position": "top",
-      "help_allow_html": true,
-      "display_snippet": "text.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
-        "class": ""
-      }
-    },
-    {
-      "field_name": "dataset-originator-person",
-      "label": "Dataset_originator,_person",
-      "help_text": "Free text",
-      "help_position": "top",
-      "help_allow_html": true
-    },
-    {
-      "field_name": "dataset-provider-institute",
-      "label": "Dataset_provider,_institute",
-      "help_text": "Dataset provider/custodian institute, EDMO reference from seadatanet",
-      "help_position": "top",
-      "help_allow_html": true,
-      "display_snippet": "text.html",
-      "form_attrs": {
-        "data-module": "autocomplete",
-        "data-module-source": "/scheming/api/util/owner/autocomplete?incomplete=?",
-        "class": ""
-      }
-    },
-    {
-      "field_name": "dataset-provider-person",
-      "label": "Dataset_provider,_person",
-      "help_text": "Dataset provider/custodian person, Free text (Name, Surname, email)",
-      "help_position": "top",
-      "help_allow_html": true
-    },
-    {
       "field_name": "funding-source-e-g-pnrr-itineris",
-      "label": "Funding_source (e.g. PNRR ITINERIS",
-      "help_text": "Project in EDMERP reference ",
+      "label": "Funding source",
+      "help_text": "Project in EDMERP reference (e.g. PNRR ITINERIS)",
       "help_position": "top",
       "help_allow_html": true
-    },
-    {
-      "field_name": "endpoint",
-      "label": "Endpoint"
-    },
-    {
-      "field_name": "web-services",
-      "label": "Web_services"
     },
     {
       "field_name": "doi",
@@ -343,19 +261,11 @@
     },
     {
       "field_name": "related-edmed-dataset",
-      "label": "Related_EDMED_dataset"
+      "label": "Related EDMED dataset"
     },
     {
       "field_name": "related-edios-dataset",
-      "label": "Related_EDIOS_dataset"
-    },
-    {
-      "field_name": "data-format",
-      "label": "Data_format"
-    },
-    {
-      "field_name": "additional-information",
-      "label": "Additional_information"
+      "label": "Related EDIOS dataset"
     },
     {
       "field_name": "visibility",
